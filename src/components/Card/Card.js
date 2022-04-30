@@ -1,8 +1,8 @@
 import React from "react";
-import './Card.less';
+import style from './Card.less';
 
 const Card = () => {
-    return <div className="main">123</div>
+    return <div className={style.main}>123</div>
 };
 
 export default Card;
