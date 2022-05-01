@@ -14,7 +14,7 @@ const TabsContainer = styled(Box)(({theme}) => ({
     justifyContent: 'space-between',
     alignItems: 'center',
     boxSizing: 'border-box',
-    padding: '12px 60px',
+    padding: '2px 60px',
 }));
 
 const StyledTabs = styled((props) => (
@@ -64,18 +64,21 @@ const TopBar = (props) => {
         <Box sx={{ width: '100%' }} className={style.main}>
             <TabsContainer>
                 <Box sx={{display: 'flex', alignItems: 'center'}}>
-                    <Avatar sx={{ width: 60, height: 60 }} src="./photo.png"/>
-                    <div className={style.name}>Jiaxiu Li</div>
+                    <Avatar sx={{ width: 56, height: 56 }} src="./photo.png"/>
+                    <Box className={style.topBarText}>
+                        <div className={style.name}>Jiaxiu Li</div>
+                        <div className={style.intro}>Software Engineer & Music Lover</div>
+                    </Box>
                 </Box>
                 <StyledTabs
                     value={props.tabValue}
                     onChange={handleChange}
-                    aria-label="styled tabs example"
                 >
-                    <StyledTab label="Home" />
-                    <StyledTab label="Workflows" />
-                    <StyledTab label="Datasets" />
-                    <StyledTab label="Connections" />
+                    <StyledTab label="About" />
+                    <StyledTab label="Education" />
+                    <StyledTab label="Work Experience" />
+                    <StyledTab label="Projects" />
+                    <StyledTab label="Other & contact" />
                 </StyledTabs>
             </TabsContainer>
         </Box>

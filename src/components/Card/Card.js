@@ -5,13 +5,7 @@ import style from './Card.less';
 const Card = (props) => {
 
     return (
-        <Box
-            className={style.main}
-            sx={{ 
-                background: props.background,
-                height: props.isFirst ? 'calc(100vh - 150px)' : 'calc(100vh - 84px)'
-            }}
-        >
+        <Box className={style.main} style={{ background: props.color }}>
             <img src="./logo512.png"/>
         </Box>
     );  

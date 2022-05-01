@@ -27,17 +27,15 @@ const Home = () => {
     const [tabValue, setTabValue] = useState(0);
     const [offsetTopList, setOffsetTopList] = useState([]);
 
-    useEffect(() => {
-        const cardList = cardContainer.current.childNodes;
-        const offsetTops = [];
-        for (let i = 1 ; i < cardList.length ; i++) {
-            offsetTops.push($(cardList[i]).offset().top - (window.innerHeight / 2));
-        }
-        offsetTops.push(Number.POSITIVE_INFINITY);
-        setOffsetTopList(() => offsetTops);
+    window.onresize = () => {
+        getOffsetTopList();
+    };
 
+    useEffect(() => {
+        getOffsetTopList();
         return () => {
             window.onscroll = null;
+            window.onresize = null;
         }
     }, []);
 
@@ -56,7 +54,7 @@ const Home = () => {
             window.onscroll = null;
             $('html, body').stop().animate(
                 {
-                    scrollTop: !newValue ? 0 : $(cardList[newValue]).offset().top - 84
+                    scrollTop: !newValue ? 0 : $(cardList[newValue]).offset().top - 66
                 },
                 1000,
                 'easeInOutQuart',
@@ -75,14 +73,25 @@ const Home = () => {
         }, 0);
     }
 
+    const getOffsetTopList = () => {
+        const cardList = cardContainer.current.childNodes;
+        const offsetTops = [];
+        for (let i = 1 ; i < cardList.length ; i++) {
+            offsetTops.push($(cardList[i]).offset().top - (window.innerHeight / 2));
+        }
+        offsetTops.push(Number.POSITIVE_INFINITY);
+        setOffsetTopList(() => offsetTops);
+    }
+
     return (
         <div className={style.main}>
             <TopBar handleTabChange={handleTabChange} tabValue={tabValue}/>
             <CardContainer ref={cardContainer}>
-                <Card background={"gray"} isFirst={true}/>
-                <Card background={"rgb(45, 23, 0)"}/>
-                <Card background={"rgba(0, 0, 0, 0.7)"}/>
-                <Card />
+                <Card color="#91d5ff"/>
+                <Card color="#5cdbd3"/>
+                <Card color="#d3adf7"/>
+                <Card color="#ffadd2"/>
+                <Card color="#8c8c8c"/>
             </CardContainer>
         </div>
     );
