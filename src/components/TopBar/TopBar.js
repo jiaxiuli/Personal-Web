@@ -14,7 +14,7 @@ const TabsContainer = styled(Box)(({theme}) => ({
     justifyContent: 'space-between',
     alignItems: 'center',
     boxSizing: 'border-box',
-    padding: '2px 60px',
+    padding: '8px 60px',
 }));
 
 const StyledTabs = styled((props) => (
@@ -40,7 +40,7 @@ const StyledTab = styled((props) => <Tab disableRipple {...props} />)(
     ({ theme }) => ({
         textTransform: 'uppercase',
         fontWeight: theme.typography.fontWeightBold,
-        fontSize: theme.typography.pxToRem(15),
+        fontSize: theme.typography.pxToRem(14),
         marginRight: theme.spacing(1),
         color: 'rgba(255, 255, 255, 0.6)',
         '&.Mui-selected': {

@@ -54,7 +54,7 @@ const Home = () => {
             window.onscroll = null;
             $('html, body').stop().animate(
                 {
-                    scrollTop: !newValue ? 0 : $(cardList[newValue]).offset().top - 66
+                    scrollTop: !newValue ? 0 : $(cardList[newValue]).offset().top - 72
                 },
                 1000,
                 'easeInOutQuart',
