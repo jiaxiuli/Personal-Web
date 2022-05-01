@@ -4,6 +4,8 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
 import Avatar from '@mui/material/Avatar';
+import LanguageSwitch from '../LanguageSwitch/LanguageSwitch';
+import { useTranslation } from 'react-i18next';
 import style from './TopBar.less';
 
 const TabsContainer = styled(Box)(({theme}) => ({
@@ -15,6 +17,7 @@ const TabsContainer = styled(Box)(({theme}) => ({
     alignItems: 'center',
     boxSizing: 'border-box',
     padding: '8px 60px',
+    paddingRight: '40px'
 }));
 
 const StyledTabs = styled((props) => (
@@ -54,7 +57,7 @@ const StyledTab = styled((props) => <Tab disableRipple {...props} />)(
   
 
 const TopBar = (props) => {
-
+    const { t } = useTranslation();
 
     const handleChange = (event, newValue) => {
       props.handleTabChange(newValue);
@@ -66,20 +69,23 @@ const TopBar = (props) => {
                 <Box sx={{display: 'flex', alignItems: 'center'}}>
                     <Avatar sx={{ width: 56, height: 56 }} src="./photo.png"/>
                     <Box className={style.topBarText}>
-                        <div className={style.name}>Jiaxiu Li</div>
-                        <div className={style.intro}>Software Engineer & Music Lover</div>
+                        <div className={style.name}>{t("description.name")}</div>
+                        <div className={style.intro}>{t("description.intro")}</div>
                     </Box>
                 </Box>
-                <StyledTabs
-                    value={props.tabValue}
-                    onChange={handleChange}
-                >
-                    <StyledTab label="About" />
-                    <StyledTab label="Education" />
-                    <StyledTab label="Work Experience" />
-                    <StyledTab label="Projects" />
-                    <StyledTab label="Other & contact" />
-                </StyledTabs>
+                <Box sx={{display: 'flex', alignItems: 'center'}}>
+                    <StyledTabs
+                        value={props.tabValue}
+                        onChange={handleChange}
+                    >
+                        <StyledTab label={t("description.about")} />
+                        <StyledTab label={t("description.edu")} />
+                        <StyledTab label={t("description.work")} />
+                        <StyledTab label={t("description.project")} />
+                        <StyledTab label={t("description.other_con")}/>
+                    </StyledTabs>
+                    <LanguageSwitch />
+                </Box>
             </TabsContainer>
         </Box>
     )
