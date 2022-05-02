@@ -5,6 +5,7 @@ import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
 import Avatar from '@mui/material/Avatar';
 import LanguageSwitch from '../LanguageSwitch/LanguageSwitch';
+import NavigatorList from '../NavigatorList/NavigatorList';
 import { useTranslation } from 'react-i18next';
 import style from './TopBar.less';
 
@@ -17,7 +18,24 @@ const TabsContainer = styled(Box)(({theme}) => ({
     alignItems: 'center',
     boxSizing: 'border-box',
     padding: '8px 60px',
-    paddingRight: '40px'
+    paddingRight: '40px',
+    height: '74px',
+    "@media screen and (max-width: 1050px)": {
+        padding: '8px 20px',
+    },
+    "@media screen and (max-width: 450px)": {
+        padding: '8px 8px',
+    }
+}));
+
+const MenuBox = styled(Box)(({theme}) => ({
+    display: 'none',
+    color: '#fff',
+    marginRight: '12px',
+    "@media screen and (max-width: 940px)": {
+        display: 'flex',
+        alignItems: 'center',
+    }
 }));
 
 const StyledTabs = styled((props) => (
@@ -26,6 +44,8 @@ const StyledTabs = styled((props) => (
         TabIndicatorProps={{ children: <span className="MuiTabs-indicatorSpan" /> }}
     />
     ))({
+        display: 'flex',
+        alignItems: 'center',
         width: 'fit-content',
         '& .MuiTabs-indicator': {
             display: 'flex',
@@ -37,6 +57,9 @@ const StyledTabs = styled((props) => (
             width: '100%',
             backgroundColor: '#fff',
         },
+        "@media screen and (max-width: 940px)": {
+            width: 0
+        }
     });
 
 const StyledTab = styled((props) => <Tab disableRipple {...props} />)(
@@ -45,6 +68,8 @@ const StyledTab = styled((props) => <Tab disableRipple {...props} />)(
         fontWeight: theme.typography.fontWeightBold,
         fontSize: theme.typography.pxToRem(14),
         marginRight: theme.spacing(1),
+        paddingLeft: '10px',
+        paddingRight: '10px',
         color: 'rgba(255, 255, 255, 0.6)',
         '&.Mui-selected': {
             color: '#fff',
@@ -52,22 +77,47 @@ const StyledTab = styled((props) => <Tab disableRipple {...props} />)(
         '&.Mui-focusVisible': {
             backgroundColor: 'rgba(100, 95, 228, 0.32)',
         },
+        "@media screen and (max-width: 1300px)": {
+            fontSize: theme.typography.pxToRem(12),
+            paddingLeft: '6px',
+            paddingRight: '6px',
+        },
+        "@media screen and (max-width: 1200px)": {
+            fontSize: theme.typography.pxToRem(10),
+            paddingLeft: '2px',
+            paddingRight: '2px',
+        },
     }),
 );
   
 
 const TopBar = (props) => {
+
     const { t } = useTranslation();
+
 
     const handleChange = (event, newValue) => {
       props.handleTabChange(newValue);
     };
 
     return (
-        <Box sx={{ width: '100%' }} className={style.main}>
+        <Box className={style.main}>
             <TabsContainer>
                 <Box sx={{display: 'flex', alignItems: 'center'}}>
-                    <Avatar sx={{ width: 56, height: 56 }} src="./photo.png"/>
+                    <Avatar 
+                        sx={{
+                            width: 56,
+                            height: 56,
+                            "@media screen and (max-width: 450px)": {
+                                width: 45,
+                                height: 45,
+                            },
+                            "@media screen and (max-width: 400px)": {
+                                display: 'none'
+                            },
+                        }}
+                        src="./photo.png"
+                    />
                     <Box className={style.topBarText}>
                         <div className={style.name}>{t("description.name")}</div>
                         <div className={style.intro}>{t("description.intro")}</div>
@@ -75,6 +125,7 @@ const TopBar = (props) => {
                 </Box>
                 <Box sx={{display: 'flex', alignItems: 'center'}}>
                     <StyledTabs
+                        scrollButtons="auto"
                         value={props.tabValue}
                         onChange={handleChange}
                     >
@@ -84,6 +135,9 @@ const TopBar = (props) => {
                         <StyledTab label={t("description.project")} />
                         <StyledTab label={t("description.other_con")}/>
                     </StyledTabs>
+                    <MenuBox>
+                        <NavigatorList onChange={handleChange} tabValue={props.tabValue}/>
+                    </MenuBox>
                     <LanguageSwitch />
                 </Box>
             </TabsContainer>

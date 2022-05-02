@@ -1,5 +1,7 @@
 .main {
     position: fixed;
+    width: 100%;
+    max-width: 100vw;
     top: 0px;
     width: 100%;
     z-index: 1;
@@ -11,7 +13,20 @@
             padding: 5px 28px;
             font-size: 26px;
             font-family: 'Libre Baskerville', serif;
+            white-space: nowrap;
             font-weight: 700;
+            @media screen and (max-width: 1300px) {
+                font-size: 23px;
+            }
+            @media screen and (max-width: 1200px) {
+                font-size: 20px;
+            }
+            @media screen and (max-width: 1050px) {
+                padding: 0px 12px;
+            }
+            @media screen and (max-width: 450px) {
+                font-size: 16px;
+            }
         }
 
         .intro {
@@ -21,6 +36,13 @@
             font-size: 12px;
             font-family: 'Libre Baskerville', serif;
             font-weight: 400;
+            white-space: nowrap;
+            @media screen and (max-width: 1050px) {
+                padding: 5px 12px;
+            }
+            @media screen and (max-width: 350px) {
+                display: none;
+            }
         }
     }
 }

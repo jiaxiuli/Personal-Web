@@ -1,17 +1,17 @@
 import React from "react";
 import Box from '@mui/material/Box';
-import style from './Card.less';
+import style from './Other.less';
 import { useTranslation } from "react-i18next";
 
-const Card = (props) => {
-
+const Other  = () => {
+    
     const { t }  = useTranslation();
 
     return (
-        <Box className={style.main} style={{ background: props.color }}>
-            <img src="./logo512.png"/>
+        <Box className={style.main}>
+            <div style={{ fontSize: '40px', fontWeight: 800 }}>Other</div>
         </Box>
     );  
 };
 
-export default Card;
+export default Other;

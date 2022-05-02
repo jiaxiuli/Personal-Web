@@ -2,10 +2,8 @@ import Box from '@mui/material/Box';
 import { styled } from '@mui/material/styles';
 import MenuList from '@mui/material/MenuList';
 import MenuItem from '@mui/material/MenuItem';
-import LanguageIcon from '@mui/icons-material/Language';
+import MenuIcon from '@mui/icons-material/Menu';
 import { useEffect, useRef, useState } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { setLanguage } from '../../redux/slice/generalSlice';
 import Popper from '@mui/material/Popper';
 import Fade from '@mui/material/Fade';
 import Paper from '@mui/material/Paper';
@@ -19,22 +17,22 @@ const StyledSelection = styled(Box)(({theme}) => ({
     userSelect: 'none',
 }));
 
-const LanguageSwitch = () => {
+const SelectionBar = styled(Box)(({theme}) => ({
+    position: 'absolute',
+    left: 0,
+    width: '4px',
+    height: '16px',
+    background: '#a8071a'
+}));
+
+const titleList = ['description.about', 'description.edu',
+    'description.work', 'description.project', 'description.other_con'];
+
+const NavigatorList = (props) => {
     const [menuOpen, setMenuOpen] = useState(false);
     const [anchorEl, setAnchorEl] = useState(null);
-    const [currentLanguage, setCurrentLanguage] = useState('Eng');
     const icon = useRef();
-    const dispatch = useDispatch();
-    const { i18n }  = useTranslation();
-
-    const languageState = useSelector((state) => state.general.language);
-    const languageList = useSelector((state) => state.general.languageList);
-
-    useEffect(() => {
-        if (languageState) {
-            setCurrentLanguage(languageState.languageName);
-        }
-    }, [languageState]);
+    const { t }  = useTranslation();
 
     useEffect(() => {
         if (icon.current) {
@@ -46,10 +44,9 @@ const LanguageSwitch = () => {
         setMenuOpen(open);
     }
 
-    const handleChangeLanguage = (lang) => {
-        const item = languageList.find((ele) => ele.currentLanguage === lang);
-        dispatch(setLanguage(item));
-        i18n.changeLanguage(lang);
+    const titleSelectionClicked = (index) => {
+        props.onChange(null, index);
+        handleToggleMenu(false);
     }
 
     return (
@@ -61,18 +58,11 @@ const LanguageSwitch = () => {
                 position: 'relative',
                 cursor: 'pointer',
                 height: '40px',
-                width: '60px',
                 display: 'flex',
                 alignItems: 'center',
             }}
         >
-            <LanguageIcon sx={{ color: 'rgba(255, 255, 255, 0.8)' }} />
-            <div style={{ 
-                color: 'rgba(255, 255, 255, 0.8)',
-                padding: '0px 4px',
-                fontSize: '12px',
-                fontFamily: "'Libre Baskerville', serif" 
-            }}>{currentLanguage}</div>
+            <MenuIcon sx={{ color: 'rgba(255, 255, 255, 0.8)', fontSize: '35px' }} />
             <Popper
                 open={menuOpen}
                 anchorEl={anchorEl}
@@ -84,12 +74,18 @@ const LanguageSwitch = () => {
                 <Fade {...TransitionProps} timeout={350}>
                     <Paper>
                           <MenuList>
-                                <MenuItem onClick={() => handleChangeLanguage('en_us')}>
-                                    <StyledSelection>English</StyledSelection>
-                                </MenuItem>
-                                <MenuItem onClick={() => handleChangeLanguage('zh_cn')}>
-                                    <StyledSelection>中文</StyledSelection>
-                                </MenuItem>
+                                {
+                                    titleList.map((title, index) => (
+                                        <MenuItem
+                                            key={index}
+                                            onClick={() => titleSelectionClicked(index)}
+                                            sx={{ color: index === props.tabValue ? '#a8071a' : '#000' }}
+                                        >
+                                            <SelectionBar sx={{ display: index === props.tabValue ? 'block' : 'none' }} />
+                                            <StyledSelection>{t(title)}</StyledSelection>
+                                        </MenuItem>
+                                    ))
+                                }
                         </MenuList>
                     </Paper>
                 </Fade>
@@ -99,4 +95,4 @@ const LanguageSwitch = () => {
     );
 }
 
-export default LanguageSwitch;
+export default NavigatorList;

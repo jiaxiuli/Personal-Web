@@ -1,4 +1,8 @@
-import Card from "../../components/Card/Card";
+import About from '../../components/About/About';
+import Education from '../../components/Education/Education';
+import WorkExp from "../../components/WorkExp/WorkExp";
+import Projects from "../../components/Projects/Projects";
+import Other from "../../components/Other/Other";
 import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import TopBar from "../../components/TopBar/TopBar";
@@ -48,7 +52,6 @@ const Home = () => {
         }
     }, [offsetTopList]);
 
-
     const handleTabChange = (newValue) => {
         const cardList = cardContainer.current.childNodes;
         setTabValue(newValue);
@@ -87,13 +90,16 @@ const Home = () => {
 
     return (
         <div className={style.main}>
-            <TopBar handleTabChange={handleTabChange} tabValue={tabValue}/>
+            <TopBar
+                handleTabChange={handleTabChange}
+                tabValue={tabValue}
+            />
             <CardContainer ref={cardContainer}>
-                <Card color="#91d5ff"/>
-                <Card color="#5cdbd3"/>
-                <Card color="#d3adf7"/>
-                <Card color="#ffadd2"/>
-                <Card color="#8c8c8c"/>
+                <About />
+                <Education />
+                <WorkExp />
+                <Projects />
+                <Other />
             </CardContainer>
         </div>
     );
