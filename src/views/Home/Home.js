@@ -70,6 +70,8 @@ const Home = () => {
 
     const setTabsWhenScroll = () => {
         const scrollTop = $('html, body').scrollTop();
+        console.log('scrollTop', scrollTop);
+        console.log('offsetTopList', offsetTopList);
         offsetTopList.reduce((current, next, index) => {
             if (scrollTop >= current && scrollTop < next) {
                 setTabValue(index);
