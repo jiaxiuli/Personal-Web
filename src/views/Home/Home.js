@@ -36,7 +36,6 @@ const Home = () => {
     window.onresize = () => {
         getOffsetTopList();
     };
-
     useEffect(() => {
         getOffsetTopList();
         return () => {
@@ -46,11 +45,11 @@ const Home = () => {
     }, []);
 
     useEffect(() => {
-        if (offsetTopList) {
+        if (offsetTopList?.length) {
             window.onscroll = setTabsWhenScroll;
             setTabsWhenScroll();
         }
-    }, [offsetTopList]);
+    }, [offsetTopList, offsetTopList.length]);
 
     const handleTabChange = (newValue) => {
         const cardList = cardContainer.current.childNodes;
@@ -85,6 +84,7 @@ const Home = () => {
         const offsetTops = [];
         for (let i = 1 ; i < cardList.length ; i++) {
             console.log('min-height', $(cardList[i]).css('min-height'));
+            console.log('max-height', $(cardList[i]).css('max-height'));
             offsetTops.push($(cardList[i]).offset().top - (window.innerHeight / 2));
         }
         offsetTops.push(Number.POSITIVE_INFINITY);

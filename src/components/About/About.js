@@ -1,3 +1,10 @@
+/*
+ * @Author: 李佳修
+ * @Date: 2022-05-07 13:22:23
+ * @LastEditTime: 2022-05-07 16:51:20
+ * @LastEditors: 李佳修
+ * @FilePath: /Personal-Web/src/components/About/About.js
+ */
 import React from "react";
 import Box from '@mui/material/Box';
 import style from './About.less';

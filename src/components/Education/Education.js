@@ -1,7 +1,7 @@
 /*
  * @Author: 李佳修
  * @Date: 2022-05-07 13:22:23
- * @LastEditTime: 2022-05-07 13:37:39
+ * @LastEditTime: 2022-05-07 16:53:48
  * @LastEditors: 李佳修
  * @FilePath: /Personal-Web/src/components/Education/Education.js
  */
@@ -10,15 +10,15 @@ import Box from '@mui/material/Box';
 import style from './Education.less';
 // import { useTranslation } from "react-i18next";
 
-const About  = () => {
+const Education  = () => {
     
     // const { t }  = useTranslation();
 
     return (
-        <Box className={style.main}>
+        <Box className={style.main} style={{ maxHeight: 'calc(100vh + 9999px)' }}>
             <div style={{ fontSize: '40px', fontWeight: 800 }}>Education</div>
         </Box>
     );  
 };
 
-export default About;
+export default Education;
