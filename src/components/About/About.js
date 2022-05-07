@@ -1,7 +1,7 @@
 /*
  * @Author: 李佳修
  * @Date: 2022-05-07 13:22:23
- * @LastEditTime: 2022-05-07 16:51:20
+ * @LastEditTime: 2022-05-07 17:55:53
  * @LastEditors: 李佳修
  * @FilePath: /Personal-Web/src/components/About/About.js
  */
@@ -18,7 +18,10 @@ const About  = () => {
     const { t }  = useTranslation();
 
     return (
-        <Box className={style.main}>
+        <Box
+            className={style.main}
+            style={{ minHeight: 'calc(100vh - 72px)' }}
+        >
             <TitleContainer title={t('description.about')}/>
             <FlexBox>
                 <Box className={style['text-container']}>

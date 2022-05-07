@@ -1,7 +1,7 @@
 /*
  * @Author: 李佳修
  * @Date: 2022-05-07 13:22:23
- * @LastEditTime: 2022-05-07 16:50:11
+ * @LastEditTime: 2022-05-07 17:54:26
  * @LastEditors: 李佳修
  * @FilePath: /Personal-Web/src/components/WorkExp/WorkExp.js
  */
@@ -15,7 +15,12 @@ const WorkExp  = () => {
     // const { t }  = useTranslation();
 
     return (
-        <Box className={style.main} style={{ maxHeight: 'calc(100vh + 9999px)' }}>
+        <Box
+            className={style.main}
+            style={{ 
+                minHeight: 'calc(100vh - 72px)' 
+            }}
+        >
             <div style={{ fontSize: '40px', fontWeight: 800 }}>Work Experience</div>
         </Box>
     );  
