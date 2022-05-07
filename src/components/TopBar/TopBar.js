@@ -110,7 +110,6 @@ const TopBar = (props) => {
                         sx={{
                             width: 56,
                             height: 56,
-                            border: '1px solid #f0f0f0',
                             boxShadow: 'rgba(100, 100, 111, 0.2) 0px 7px 29px 0px',
                             "@media screen and (max-width: 450px)": {
                                 width: 45,
