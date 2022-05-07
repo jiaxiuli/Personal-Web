@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import About from '../../components/About/About';
 import Education from '../../components/Education/Education';
 import WorkExp from "../../components/WorkExp/WorkExp";
@@ -8,7 +9,6 @@ import Box from '@mui/material/Box';
 import TopBar from "../../components/TopBar/TopBar";
 import style from './Home.less';
 import { useEffect, useRef, useState } from "react";
-import { useTranslation } from "react-i18next";
 import $ from 'jquery';
 
 $.extend($.easing,  
@@ -31,7 +31,6 @@ const Home = () => {
     const cardContainer = useRef();
     const [tabValue, setTabValue] = useState(0);
     const [offsetTopList, setOffsetTopList] = useState([]);
-    const { t } = useTranslation();
 
     window.onresize = () => {
         getOffsetTopList();
