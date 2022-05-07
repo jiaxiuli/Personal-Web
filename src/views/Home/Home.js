@@ -69,8 +69,6 @@ const Home = () => {
 
     const setTabsWhenScroll = () => {
         const scrollTop = $('html, body').scrollTop();
-        console.log('scrollTop', scrollTop);
-        console.log('offsetTopList', offsetTopList);
         offsetTopList.reduce((current, next, index) => {
             if (scrollTop >= current && scrollTop < next) {
                 setTabValue(index);
@@ -83,10 +81,6 @@ const Home = () => {
         const cardList = cardContainer.current.childNodes;
         const offsetTops = [];
         for (let i = 1 ; i < cardList.length ; i++) {
-            console.log('min-height', $(cardList[i]).css('min-height'));
-            console.log('max-height', $(cardList[i]).css('max-height'));
-            console.log('margin-top', $(cardList[i]).css('margin-top'));
-            console.log('\n');
             offsetTops.push($(cardList[i]).offset().top - (window.innerHeight / 2));
         }
         offsetTops.push(Number.POSITIVE_INFINITY);
