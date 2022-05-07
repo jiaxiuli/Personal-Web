@@ -8,11 +8,14 @@
 import React from "react";
 import Box from '@mui/material/Box';
 import style from './Projects.less';
-// import { useTranslation } from "react-i18next";
+import StyledTextContainer from "../common/StyledTextContainer";
+import TitleContainer from "../common/TitleContainer";
+import FlexBox from "../common/FlexBox";
+import { useTranslation } from "react-i18next";
 
 const Projects  = () => {
     
-    // const { t }  = useTranslation();
+    const { t }  = useTranslation();
 
     return (
         <Box
@@ -21,7 +24,14 @@ const Projects  = () => {
                 minHeight: 'calc(100vh - 72px)' 
             }}
         >
-            <div style={{ fontSize: '40px', fontWeight: 800 }}>Projects</div>
+            <TitleContainer title={t('description.project')}/>
+            <FlexBox>
+                <Box className={style['text-container']}>
+                    <StyledTextContainer>
+                        {/* {t('description.about_content')} */}
+                    </StyledTextContainer>
+                </Box>
+            </FlexBox>
         </Box>
     );  
 };

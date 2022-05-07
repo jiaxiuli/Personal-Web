@@ -1,18 +1,16 @@
 import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 
-const StyledTextContainer = styled(Box)(({theme}) => ({
-    fontSize: '16px',
-    fontFamily: "'Libre Baskerville', serif",
-    fontWeight: 600,
+const StyledTextContainer = styled(Box)(({fontWeight=400, fontSize='18px'}) => ({
+    fontSize,
+    fontWeight,
+    width: 'auto',
+    fontFamily: "'Fira Code', monospace",
     padding: '8px',
-    lineHeight: '24px',
+    lineHeight: '26px',
     userSelect: 'none',
     "@media screen and (max-width: 1300px)": {
         fontSize: '14px',
-    },
-    "@media screen and (max-width: 1200px)": {
-        fontSize: '13px',
     },
 }));
 

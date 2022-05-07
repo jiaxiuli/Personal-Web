@@ -11,6 +11,7 @@ import style from './About.less';
 import StyledTextContainer from "../common/StyledTextContainer";
 import TitleContainer from "../common/TitleContainer";
 import FlexBox from "../common/FlexBox";
+import IntroItems from "../common/IntroItems/IntroItems";
 import { useTranslation } from "react-i18next";
 
 const About  = () => {
@@ -25,17 +26,29 @@ const About  = () => {
             <TitleContainer title={t('description.about')}/>
             <FlexBox>
                 <Box className={style['text-container']}>
-                    <StyledTextContainer>
-                        {t('description.about_content_p1')}
+                    <StyledTextContainer fontWeight={600}>
+                        {t('description.about_welcome')}<br />
+                        {t('description.about_Iam')}
                     </StyledTextContainer>
-                    <StyledTextContainer>
-                        {t('description.about_content_p2')}
-                    </StyledTextContainer>
-                    <StyledTextContainer>
-                        {t('description.about_content_p3')}
-                    </StyledTextContainer>
-                    <StyledTextContainer>
-                        {t('description.about_content_p4')}
+                    <StyledTextContainer fontSize='16px'>
+                        <IntroItems
+                            iconPath={'./icons/graduate_icon.png'}
+                            content={t('description.about_graduate')}/>
+                        <IntroItems
+                            iconPath={'./icons/work_icon.png'}
+                            content={t('description.about_current')}/>
+                        <IntroItems
+                            iconPath={'./icons/learn_icon.png'}
+                            content={t('description.about_learn')}/>
+                        <IntroItems
+                            iconPath={'./icons/deploy_icon.png'}
+                            content={t('description.about_deploy')}/>
+                        <IntroItems
+                            iconPath={'./icons/passion_icon.png'}
+                            content={t('description.about_passion')}/>
+                        <IntroItems
+                            iconPath={'./icons/music_icon.png'}
+                            content={t('description.about_music')}/>
                     </StyledTextContainer>
                 </Box>
             </FlexBox>

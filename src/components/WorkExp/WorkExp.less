@@ -2,4 +2,18 @@
     width: 100%;
     height: auto;
     min-height: calc(100vh - 72px);
+
+    .text-container {
+        max-width: 60%;
+        padding-bottom: 20px;
+        @media screen and (max-width: 1300px) {
+            max-width: 70%;
+        }
+        @media screen and (max-width: 1200px) {
+            max-width: 80%;
+        }
+        @media screen and (max-width: 900px) {
+            max-width: 90%;
+        }
+    }
 }

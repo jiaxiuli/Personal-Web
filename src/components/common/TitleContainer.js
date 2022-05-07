@@ -11,18 +11,19 @@ import Box from '@mui/material/Box';
 const TitleContainer = (props) => {
     return (
         <Box sx={{ 
-            fontSize: '32px',
+            fontSize: '30px',
             fontWeight: 600,
-            fontFamily: "'Cinzel', serif",
-            padding: '3% 0px',
+            fontFamily: "'Libre Baskerville', serif",
+            padding: '2% 0px',
             display: 'flex',
             justifyContent: 'center',
-            letterSpacing: '1rem',
+            letterSpacing: '0.5rem',
+            userSelect: 'none',
             "@media screen and (max-width: 800px)": {
                 fontSize: '28px',
             }
         }}>
-            {`- ${props.title} -`}
+            {props.title}
         </Box>
     );
 };

@@ -19,22 +19,33 @@ i18n.use(initReactI18next)
                         work: 'Work Experience',
                         project: 'Projects',
                         other_con: 'Other & Contact',
-                        about_content_p1: `Hi there, My name is Jiaxiu Li. There are two things that make me enjoyable, programming and playing music,
+                        about_welcome: 'Hi there, My name is Jiaxiu Li. Welcome to my personal website.',
+                        about_Iam: 'I am :',
+                        about_graduate: 'A Master graduate from University of Windsor.',
+                        about_current: 'Currently a front-end developer with 1 year+ work exprience.',
+                        about_learn: 'Currently learning back-end development skills about nodeJS and GraphQL.',
+                        about_deploy: 'Trying to complete a full-stack web application and deploy it on AWS.',
+                        about_passion: 'Passionate to continuously explor new development skills and have fun from it.',
+                        about_music: 'A music lover who plays mutiple musical instruments and was a drummer in a band.',
+
+                        about_content: `Hi there, My name is Jiaxiu Li. Welcome to my personal website. I am currently a front-end
+                        developer with 1 year+ work exprience and trying to learn full-stack skills and build full-stack projects on AWS. 
+                        There are two things that make me enjoyable, programming and playing music,
                         one is my career and the other one is the interest in my life. I think I am lucky because I have passion
                         and love in what I do as a job.`,
-                        about_content_p2: `  During my undergraduate years, I majored in IoT(Internet of Things) Engineering, which is a combination of 
+                        undergraduate: `During my undergraduate years, I majored in IoT(Internet of Things) Engineering, which is a combination of 
                         software and hardware. I did lots of interesting experiments in the lab of our university, like let the curtains 
                         close or open automatically according to the intensity of the light. Through these experiences, I found I am more 
                         interested in software development than hardware and started to realize the charm of data structures and
                         algorithms gradually. So, I decided to get a further study in software development and I came to Canada to do this.`,
-                        about_content_p3: `My major in Univeristy of Windsor was Applied Computing, which focuses on practical development techniques. I did a 
+                        post_undergraduate: `My major in Univeristy of Windsor was Applied Computing, which focuses on practical development techniques. I did a 
                         lot of projects with my group in Univeristy of Windsor, my work was mainly about front-end part in these projects, I 
                         started to become interested in front-end and that was the origin of my front-end development career in the future.
                         I think front-end is an interface between the users and the back-end service, the quality of the front-end may directly 
                         affect the user's impression of the overall software product. So high quality code writing and perfect interactive 
                         experience is what I have been pursuing as a front-end developer. I've always believed that software development is 
                         more like creating a work of art and every detail should be paid attention to.`,
-                        about_content_p4: `After I graduated from University of Windsor and got my Master's degree, I worked as a front-end engineer and I have been 
+                        work_content: `After I graduated from University of Windsor and got my Master's degree, I worked as a front-end engineer and I have been 
                         continuously learning development skills. Now, I am trying to develop a complete web application by my own 
                         out of my work, including both front-end and back-end and deploy it on a cloude server.
                         I believe that I will continue to explore technology and get happiness from it in the future, and continue to grow 
