@@ -83,6 +83,7 @@ const Home = () => {
         const cardList = cardContainer.current.childNodes;
         const offsetTops = [];
         for (let i = 1 ; i < cardList.length ; i++) {
+            console.log(i, 'offsetTop: ', $(cardList[i]).offset().top, 'height: ', $(cardList[i]).height())
             offsetTops.push($(cardList[i]).offset().top - (window.innerHeight / 2));
         }
         offsetTops.push(Number.POSITIVE_INFINITY);
