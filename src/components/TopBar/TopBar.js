@@ -11,20 +11,21 @@ import style from './TopBar.less';
 
 const TabsContainer = styled(Box)(({theme}) => ({
     width: '100%',
-    backgroundColor: '#000',
-    position: 'fixed',
+    backgroundColor: '#1D2640',
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
     boxSizing: 'border-box',
-    padding: '8px 60px',
-    paddingRight: '40px',
+    padding: '8px 20px',
+    paddingRight: '20px',
     height: '74px',
+    borderBottom: '2px solid #f0f0f0',
+    boxShadow: 'rgba(100, 100, 111, 0.2) 0px 7px 29px 0px',
     "@media screen and (max-width: 1050px)": {
-        padding: '8px 20px',
+        padding: '8px 10px',
     },
     "@media screen and (max-width: 450px)": {
-        padding: '8px 8px',
+        padding: '8px 5px',
     }
 }));
 
@@ -104,10 +105,13 @@ const TopBar = (props) => {
         <Box className={style.main}>
             <TabsContainer>
                 <Box sx={{display: 'flex', alignItems: 'center'}}>
-                    <Avatar 
+                    <Avatar
+                        variant="circular"
                         sx={{
                             width: 56,
                             height: 56,
+                            border: '1px solid #f0f0f0',
+                            boxShadow: 'rgba(100, 100, 111, 0.2) 0px 7px 29px 0px',
                             "@media screen and (max-width: 450px)": {
                                 width: 45,
                                 height: 45,

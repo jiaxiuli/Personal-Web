@@ -1,3 +1,10 @@
+/*
+ * @Author: 李佳修
+ * @Date: 2022-05-02 23:21:17
+ * @LastEditTime: 2022-05-07 10:39:11
+ * @LastEditors: 李佳修
+ * @FilePath: /Personal-Web/src/components/NavigatorList/NavigatorList.js
+ */
 import Box from '@mui/material/Box';
 import { styled } from '@mui/material/styles';
 import MenuList from '@mui/material/MenuList';
@@ -22,7 +29,7 @@ const SelectionBar = styled(Box)(({theme}) => ({
     left: 0,
     width: '4px',
     height: '16px',
-    background: '#a8071a'
+    background: '#B0734F'
 }));
 
 const titleList = ['description.about', 'description.edu',
@@ -79,7 +86,7 @@ const NavigatorList = (props) => {
                                         <MenuItem
                                             key={index}
                                             onClick={() => titleSelectionClicked(index)}
-                                            sx={{ color: index === props.tabValue ? '#a8071a' : '#000' }}
+                                            sx={{ color: index === props.tabValue ? '#B0734F' : '#000' }}
                                         >
                                             <SelectionBar sx={{ display: index === props.tabValue ? 'block' : 'none' }} />
                                             <StyledSelection>{t(title)}</StyledSelection>
