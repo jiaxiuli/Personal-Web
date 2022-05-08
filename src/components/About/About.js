@@ -14,7 +14,8 @@ import FlexBox from "../common/FlexBox";
 import StyledCard from "../common/StyledCard";
 import Avatar from '@mui/material/Avatar';
 import ResumeDownload from '../common/ResumeDownload';
-import IntroItems from "../common/IntroItems/IntroItems";
+import IntroItems from "../common/IntroItems";
+import StackItems from '../common/StackItems';
 import { useTranslation } from "react-i18next";
 
 const About  = () => {
@@ -97,7 +98,87 @@ const About  = () => {
                                     content={t('description.about_music')}/>
                             </StyledTextContainer>
                         </StyledCard>
-                        <StyledCard sx={{ flex: 1 }}>当前没有内容。。。</StyledCard>
+                        <StyledCard sx={{ flex: 1 }}>
+                            <StyledTextContainer fontWeight={600}>
+                                {t('description.about_techStack')}
+                            </StyledTextContainer>
+                            <StyledTextContainer>
+                                <Box sx={{ display: 'flex'}}>
+                                    <Box sx={{ marginRight: '12px', flex: 1 }}>
+                                        <StackItems 
+                                            iconPath='./stack_icons/react.png'
+                                            title='React.js'
+                                            items={['Redux', 'Router', 'Native']}/>
+                                        <StackItems 
+                                            iconPath='./stack_icons/vue.svg'
+                                            title='Vue.js'
+                                            items={['Vuex', 'Router']}/>
+                                        <StackItems 
+                                            iconPath='./stack_icons/css.png'
+                                            title='CSS Pre-processor'
+                                            items={['Sass', 'Less']}/>
+                                        <StackItems 
+                                            iconPath='./stack_icons/api.png'
+                                            title='APIs'
+                                            items={['Ajax', 'Axios', 'REST', 'GraphQL']}/>
+                                        <StackItems 
+                                            iconPath='./stack_icons/database.png'
+                                            title='Database'
+                                            items={['MySQL', 'MongoDB']}/>
+                                    </Box>
+                                    <Box style={{flex: 1}}>
+                                        <StackItems 
+                                            iconPath='./stack_icons/tool.png'
+                                            title='Other Tools & Libs'
+                                            items={['jQuery', 'Bootstrap', 'Express', 'Git']}/>
+                                        <StackItems 
+                                            iconPath='./stack_icons/programming-language.png'
+                                            title='Programming Languages'
+                                            languages={[{
+                                                name: 'HTML',
+                                                path: './stack_icons/html.png'
+                                            },{
+                                                name: 'CSS',
+                                                path: './stack_icons/css.png'
+                                            },{
+                                                name: 'Javascript',
+                                                path: './stack_icons/js.png'
+                                            },{
+                                                name: 'Typescript',
+                                                path: './stack_icons/ts.png'
+                                            },{
+                                                name: 'Python',
+                                                path: './stack_icons/python.png'
+                                            },{
+                                                name: 'Java',
+                                                path: './stack_icons/java.png'
+                                            }]}/>
+                                        <StackItems 
+                                            iconPath='./stack_icons/platform.png'
+                                            title='Platforms & Editors'
+                                            languages={[{
+                                                name: 'Visual Studio Code',
+                                                path: './stack_icons/vscode.svg'
+                                            },{
+                                                name: 'Pycharm',
+                                                path: './stack_icons/pycharm.png'
+                                            },{
+                                                name: 'Github',
+                                                path: './stack_icons/github.png'
+                                            },{
+                                                name: 'Gerrit',
+                                                path: './stack_icons/gerrit.svg'
+                                            },{
+                                                name: 'Gitlab',
+                                                path: './stack_icons/gitlab.png'
+                                            },{
+                                                name: 'Amazon Web Services',
+                                                path: './stack_icons/aws.svg'
+                                            }]}/>
+                                    </Box>
+                                </Box>
+                            </StyledTextContainer>
+                        </StyledCard>
                     </Box>
                 </Box>
             </FlexBox>

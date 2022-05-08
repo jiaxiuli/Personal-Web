@@ -28,7 +28,7 @@ i18n.use(initReactI18next)
                         about_deploy: 'Trying to complete a full-stack web application and deploy it on AWS.',
                         about_passion: 'Passionate to continuously explor new development skills and have fun from it.',
                         about_music: 'A music lover who plays mutiple musical instruments and was a drummer in a band.',
-
+                        about_techStack: 'Tech Stack :',
                         about_content: `Hi there, My name is Jiaxiu Li. Welcome to my personal website. I am currently a front-end
                         developer with 1 year+ work exprience and trying to learn full-stack skills and build full-stack projects on AWS. 
                         There are two things that make me enjoyable, programming and playing music,
