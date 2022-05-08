@@ -7,7 +7,7 @@ const IntroItems = ({ iconPath, content }) => {
             width: 'auto',
             display: 'flex',
             alignItems: 'center',
-            marginLeft: '12px',
+            marginLeft: '8px',
             padding: '4px 0px'
         }}>
             <div 
