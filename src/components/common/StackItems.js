@@ -22,23 +22,22 @@ const StackItems = ({
             >
                 <img
                     src={iconPath}
+                    className={style['img-icon']}
                     style={{
-                        width: 30,
-                        height: 30,
-                        marginRight: '12px'
-                    }}/>
+                        // width: 30,
+                        // height: 30,
+                        // marginRight: '12px'
+                    }}
+                />
                 <StyledTextContainer fontWeight={500}>{title}</StyledTextContainer>
             </div>
-            <div
-                style={{
-                    marginLeft: '42px'
-                }}
-            >
+            <div className={style['stack-detail']}>
                 <StyledTextContainer fontSize={16}>{items.join(' | ')}</StyledTextContainer>
                 <div>
                     {
                         languages.map((item) => (
                                  <img
+                                    key={item.name}
                                     title={item.name}
                                     src={item.path}
                                     className={style['img-list']}
