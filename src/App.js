@@ -19,7 +19,7 @@ const App = () => {
     const loading = useRef();
 
     const handleImagesLoaded = () => {
-        // $(loading.current).fadeOut(800);
+        $(loading.current).fadeOut(800);
     }
     window.onload = handleImagesLoaded;
     return (
