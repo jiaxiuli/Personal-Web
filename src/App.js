@@ -19,7 +19,7 @@ const App = () => {
     const loading = useRef();
 
     const handleImagesLoaded = () => {
-        $(loading.current).fadeOut(800);
+        // $(loading.current).fadeOut(800);
     }
     window.onload = handleImagesLoaded;
     return (
@@ -36,18 +36,19 @@ const App = () => {
                     height: '100vh',
                     top: 0,
                     left: 0,
-                    background: '#000',
+                    background: '#fff',
                     zIndex: 100
                 }}
             >
                 <CircularProgress
                     size={50}
-                    style={{ color: '#D1D1D1' }}
+                    style={{ color: '#000' }}
                 />
                 <div style={{
                     fontSize: '20px',
                     padding: '40px 0px',
-                    color: '#D1D1D1'
+                    color: '#000',
+                    fontFamily: 'fantasy'
                 }}>Resources are loading...</div>
             </Box>
             <Home />
