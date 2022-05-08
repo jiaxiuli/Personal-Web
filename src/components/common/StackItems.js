@@ -37,6 +37,7 @@ const StackItems = ({
                     {
                         languages.map((item) => (
                                  <img
+                                    alt={item.name}
                                     key={item.name}
                                     title={item.name}
                                     src={item.path}

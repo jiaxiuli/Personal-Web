@@ -21,11 +21,14 @@ const IntroItems = ({ iconPath, content }) => {
                 }}
             >
             </div>
-            <img src={iconPath} style={{
-                width: '22px',
-                height: '22px',
-                margin: '0px 16px',
-            }}/>
+            <img
+                alt={'icon'} 
+                src={iconPath} 
+                style={{
+                    width: '22px',
+                    height: '22px',
+                    margin: '0px 16px',
+                }}/>
             <div>{content}</div>
         </div>
     );

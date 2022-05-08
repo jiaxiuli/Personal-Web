@@ -7632,11 +7632,6 @@
   "resolved" "https://registry.npmmirror.com/react-is/-/react-is-18.1.0.tgz"
   "version" "18.1.0"
 
-"react-on-images-loaded@^2.2.7":
-  "integrity" "sha512-oS7G8TIyAe6aAKu3cKUbf8dq77YIEGNIq1wxw9uDJB97beQ4i0NGqwSrc8ki+kkTT0cd3VtxvqbuY1xS7wDEeQ=="
-  "resolved" "https://registry.npmmirror.com/react-on-images-loaded/-/react-on-images-loaded-2.2.7.tgz"
-  "version" "2.2.7"
-
 "react-redux@^7.2.1 || ^8.0.0-beta", "react-redux@^8.0.1":
   "integrity" "sha512-LMZMsPY4DYdZfLJgd7i79n5Kps5N9XVLCJJeWAaPYTV+Eah2zTuBjTxKtNEbjiyitbq80/eIkm55CYSLqAub3w=="
   "resolved" "https://registry.npmmirror.com/react-redux/-/react-redux-8.0.1.tgz"
@@ -7664,7 +7659,7 @@
     "loose-envify" "^1.4.0"
     "prop-types" "^15.6.2"
 
-"react@*", "react@^16.8 || ^17.0 || ^18.0", "react@^16.8.0 || ^17.0.0 || ^18.0.0", "react@^16.9.0 || ^17.0.0 || ^18", "react@^17.0.0 || ^18.0.0", "react@^18.0.0", "react@^18.1.0", "react@>= 16.8.0", "react@>=16.6.0", "react@>=16.8.0":
+"react@^16.8 || ^17.0 || ^18.0", "react@^16.8.0 || ^17.0.0 || ^18.0.0", "react@^16.9.0 || ^17.0.0 || ^18", "react@^17.0.0 || ^18.0.0", "react@^18.0.0", "react@^18.1.0", "react@>= 16.8.0", "react@>=16.6.0", "react@>=16.8.0":
   "integrity" "sha512-4oL8ivCz5ZEPyclFQXaNksK3adutVS8l2xzZU0cqEFrE9Sb7fC0EFK5uEk74wIreL1DERyjvsU915j1pcT2uEQ=="
   "resolved" "https://registry.npmmirror.com/react/-/react-18.1.0.tgz"
   "version" "18.1.0"

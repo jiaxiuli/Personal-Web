@@ -7,30 +7,31 @@
  */
 import Box from '@mui/material/Box';
 import Home from "./views/Home/Home";
-import OnImagesLoaded from 'react-on-images-loaded';
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import $ from 'jquery';
+import CircularProgress from '@mui/material/CircularProgress';
 
 // 取消浏览器对滚动条位置的记录
 // if (window.history.scrollRestoration) {
 //     window.history.scrollRestoration = 'manual';
 // }
 const App = () => {
-    const [isLoading, setIsLoading] = useState(true);
     const loading = useRef();
 
     const handleImagesLoaded = () => {
-        setIsLoading(false);
-        console.log(loading.current)
-        $(loading.current).fadeOut();
-        console.log('loaded');
+        $(loading.current).fadeOut(800);
     }
+    window.onload = handleImagesLoaded;
     return (
-        <OnImagesLoaded onLoaded={handleImagesLoaded}>
+        <>
             <Box
                 ref={loading}
                 sx={{
                     position: 'fixed',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    flexDirection: 'column',
                     width: '100vw',
                     height: '100vh',
                     top: 0,
@@ -39,9 +40,18 @@ const App = () => {
                     zIndex: 100
                 }}
             >
+                <CircularProgress
+                    size={50}
+                    style={{ color: '#D1D1D1' }}
+                />
+                <div style={{
+                    fontSize: '20px',
+                    padding: '40px 0px',
+                    color: '#D1D1D1'
+                }}>Resources are loading...</div>
             </Box>
             <Home />
-        </OnImagesLoaded>
+        </>
     )
 };
 
