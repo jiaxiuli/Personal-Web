@@ -71,7 +71,7 @@ const About  = () => {
                         flexDirection: 'row',
                         "@media screen and (max-width: 900px)": {
                             flexDirection: 'column',
-                        },
+                        }
                     }}>
                         <StyledCard sx={{ flex: 1 }}>
                             <StyledTextContainer fontWeight={600}>

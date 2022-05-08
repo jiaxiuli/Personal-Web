@@ -28,7 +28,6 @@ const ResumeDownload = () => {
                     background: '#0d47a1',
                     fontWeight: 600
                 }}
-                onClick={handleDownload}
                 variant="contained"
                 startIcon={<CloudDownloadIcon />}
             >

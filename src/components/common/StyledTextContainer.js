@@ -10,6 +10,7 @@ const StyledTextContainer = styled(Box)(({fontWeight=400, fontSize='18px'}) => (
     userSelect: 'none',
     "@media screen and (max-width: 1300px)": {
         fontSize: '14px',
+        lineHeight: '22px',
     },
     "@media screen and (max-width: 1000px)": {
         lineHeight: '22px',

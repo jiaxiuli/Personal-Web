@@ -1,17 +1,18 @@
 import React from 'react';
 
-const IntroItems = ({ iconPath, content }) => {
+const IntroItems = ({ iconPath, content, fromAbout=true }) => {
 
     return (
         <div style={{
             width: 'auto',
             display: 'flex',
             alignItems: 'center',
-            marginLeft: '8px',
-            padding: '4px 0px'
+            marginLeft: fromAbout ? '8px' : '0px',
+            padding: fromAbout ? '4px 0px' : '0px'
         }}>
             <div 
-                style={{ 
+                style={{
+                    display: fromAbout ? 'block' : 'none',
                     minWidth: '8px',
                     minHeight: '8px',
                     maxWidth: '8px',
@@ -25,9 +26,10 @@ const IntroItems = ({ iconPath, content }) => {
                 alt={'icon'} 
                 src={iconPath} 
                 style={{
-                    width: '22px',
-                    height: '22px',
-                    margin: '0px 16px',
+                    width: fromAbout ? '22px' : '16px',
+                    height: fromAbout ? '22px' : '16px',
+                    marginLeft: fromAbout ? '16px' : '0px',
+                    marginRight: fromAbout ? '16px' : '8px',
                 }}/>
             <div>{content}</div>
         </div>

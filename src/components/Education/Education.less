@@ -2,18 +2,36 @@
     width: 100%;
     min-height: calc(100vh - 72px);
     height: 'auto';
+    padding-bottom: 24px;
 
     .text-container {
-        max-width: 60%;
-        padding-bottom: 20px;
-        @media screen and (max-width: 1300px) {
-            max-width: 70%;
-        }
+        width: 100%;
+        padding: 0px 8%;
+        // border: 1px solid red;
         @media screen and (max-width: 1200px) {
-            max-width: 80%;
+            padding: 0px 4%;
         }
-        @media screen and (max-width: 900px) {
-            max-width: 90%;
+
+       .img-undergraduate {
+            border-radius: 12px;
+            width: 311px; 
+            height: 386px;
+
+            @media screen and (max-width: 800px) {
+                width: 185px; 
+                height: 270px;
+            }
+       }
+
+       .img-postgraduate {
+            border-radius: 12px;
+            width: 419px; 
+            height: 314px;
+
+            @media screen and (max-width: 800px) {
+                width: 300px; 
+                height: 225px;
+            }
         }
     }
 }
