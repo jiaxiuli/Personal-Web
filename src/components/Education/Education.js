@@ -85,7 +85,7 @@ const Education  = () => {
                                         schoolInfo={{
                                             name: 'Hunan University of Technology',
                                             location: 'Hunan Province, China',
-                                            major: 'Internet of Things Engineering',
+                                            major: 'Internet of Things',
                                             time: '2015.9 - 2019.6'
                                         }}
                                     />

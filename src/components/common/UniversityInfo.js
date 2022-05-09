@@ -15,7 +15,7 @@ const UniveristyInfo = ({path, schoolInfo}) => {
                 src={path}
             />
             <Box className={style['school-Info']}>
-                <StyledTextContainer fontWeight={500}>
+                <StyledTextContainer fontWeight={600}>
                     {schoolInfo.name}
                 </StyledTextContainer>
                 <StyledTextContainer fontSize={16}>
