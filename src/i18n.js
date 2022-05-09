@@ -52,6 +52,23 @@ i18n.use(initReactI18next)
                         postgraduate_p3: `For 6 months, I completed a full stack web application using Django, which brought me a huge sense 
                         of achievement and is a proof of my strong learning ability.`,
                         postgraduate_p4: `That was the origin of my front-end development career in the future.`,
+                        edu_core_course: 'Core Courses',
+                        edu_story: 'My Story',
+                        edu_c: 'POP Programming(C)',
+                        edu_java: 'OOP Programming(Java)',
+                        edu_dataStructure: 'Data Structure',
+                        edu_network: 'Computer Networks',
+                        edu_OS: 'Principles of Operating System',
+                        edu_database: 'Database Theory',
+                        edu_communication: 'Principle of Communication',
+                        edu_chip: 'Mono-Chip Computers & Interface Technique',
+                        edu_sensor: 'Fundamentals of Sensors & Application',
+                        edu_algorithm: 'Advanced Algorithms',
+                        edu_acc: 'Advanced Computing Concepts',
+                        edu_adt: 'Advanced Database Topics',
+                        edu_software: 'Advanced Software Eng. Topics',
+                        edu_sysPro: 'Advanced Systems Programming',
+                        edu_security: 'Networking and Data Security',
                         // postgraduate_p3: `I think front-end is an interface between the users and the back-end service, the quality of the front-end may directly 
                         // affect the user's impression of the overall software product.`,
                         // postgraduate_p4: `So high quality code writing and perfect interactive 

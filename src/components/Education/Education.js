@@ -15,6 +15,7 @@ import StyledCard from "../common/StyledCard";
 import FlexBox from "../common/FlexBox";
 import UniveristyInfo from "../common/UniversityInfo";
 import LinkIcon from '@mui/icons-material/Link';
+import IntroItems from "../common/IntroItems";
 import { useTranslation } from "react-i18next";
 
 const Paragraph = styled(Box)(({theme}) => ({
@@ -56,6 +57,7 @@ const Education  = () => {
                                 sx={{
                                     display: 'flex',
                                     flexDirection: 'row',
+                                    marginBottom: '8px',
                                     "@media screen and (max-width: 650px)": {
                                         flexDirection: 'column',
                                         alignItems: 'center'
@@ -70,27 +72,105 @@ const Education  = () => {
                                 <Box
                                     sx={{
                                         marginLeft: '48px',
+                                        width: '100%',
                                         "@media screen and (max-width: 1300px)": {
                                             marginLeft: '24px',
                                         },
                                         "@media screen and (max-width: 900px)": {
                                             marginLeft: '16px',
                                         },
-                                        "@media screen and (max-width: 600px)": {
+                                        "@media screen and (max-width: 650px)": {
                                             marginLeft: '0px',
                                         },
                                     }}>
-                                    <UniveristyInfo
-                                        path='./photos/hut.jpg'
-                                        schoolInfo={{
-                                            name: 'Hunan University of Technology',
-                                            location: 'Hunan Province, China',
-                                            major: 'Internet of Things',
-                                            time: '2015.9 - 2019.6'
+                                        <Box
+                                            sx={{
+                                                width: '100%',
+                                                display: 'flex',
+                                                justifyContent: 'flex-start',
+                                                "@media screen and (max-width: 650px)": {
+                                                    justifyContent: 'center',
+                                                },
+                                            }}
+                                        >
+                                            <Box>
+                                                <UniveristyInfo
+                                                    path='./photos/hut.jpg'
+                                                    schoolInfo={{   
+                                                        name: 'Hunan University of Technology',
+                                                        location: 'Hunan Province, China',
+                                                        major: 'Internet of Things',
+                                                        time: '2015.9 - 2019.6'
+                                                    }}
+                                                />
+                                            </Box>
+                                        </Box>
+                                    <Box
+                                        sx={{
+                                            width: '100%',
+                                            height: 'auto',
+                                            padding: '8px 0px'
                                         }}
-                                    />
+                                    >
+                                        <StyledTextContainer
+                                            fontWeight={500}
+                                            style={{
+                                                marginBottom: '8px'
+                                            }}
+                                        >
+                                            {t('description.edu_core_course')}
+                                        </StyledTextContainer>
+                                        <StyledTextContainer fontSize='16px'>
+                                            <Box
+                                                sx={{
+                                                    display: 'flex',
+                                                    flexDirection: 'row',
+                                                    "@media screen and (max-width: 650px)": {
+                                                        flexDirection: 'column',
+                                                    },
+                                                }}    
+                                            >
+                                                <Box>
+                                                    <IntroItems
+                                                        showIcon={false}
+                                                        content={t('description.edu_c')}/>
+                                                    <IntroItems
+                                                        showIcon={false}
+                                                        content={t('description.edu_java')}/>
+                                                    <IntroItems
+                                                        showIcon={false}
+                                                        content={t('description.edu_dataStructure')}/>
+                                                    <IntroItems
+                                                        showIcon={false}
+                                                        content={t('description.edu_network')}/>
+                                                    <IntroItems
+                                                        showIcon={false}
+                                                        content={t('description.edu_OS')}/>
+                                                </Box>
+                                                <Box>
+                                                    <IntroItems
+                                                        showIcon={false}
+                                                        content={t('description.edu_database')}/>
+                                                    <IntroItems
+                                                        showIcon={false}
+                                                        content={t('description.edu_communication')}/>
+                                                    <IntroItems
+                                                        showIcon={false}
+                                                        content={t('description.edu_chip')}/>
+                                                    <IntroItems
+                                                        showIcon={false}
+                                                        content={t('description.edu_sensor')}/>
+                                                </Box>
+                                            </Box>
+                                        </StyledTextContainer>
+                                    </Box>
                                 </Box>
                             </Box>
+                            <StyledTextContainer
+                                fontWeight={500}
+                            >
+                                {t('description.edu_story')}
+                            </StyledTextContainer>
                             <StyledTextContainer>
                                 <Paragraph>
                                     {t('description.undergraduate_p1')}
@@ -106,7 +186,6 @@ const Education  = () => {
                                 </Paragraph>
                             </StyledTextContainer>
                         </StyledCard>
-                                    
                         <StyledCard
                             sx={{
                                 width: '90%',
@@ -128,6 +207,7 @@ const Education  = () => {
                                 sx={{
                                     display: 'flex',
                                     flexDirection: 'row',
+                                    marginBottom: '8px',
                                     "@media screen and (max-width: 650px)": {
                                         flexDirection: 'column',
                                         alignItems: 'center'
@@ -142,28 +222,97 @@ const Education  = () => {
                                 <Box
                                     sx={{
                                         marginLeft: '48px',
+                                        width: '100%',
                                         "@media screen and (max-width: 1300px)": {
                                             marginLeft: '24px',
                                         },
                                         "@media screen and (max-width: 900px)": {
                                             marginLeft: '16px',
                                         },
-                                        "@media screen and (max-width: 600px)": {
+                                        "@media screen and (max-width: 650px)": {
                                             marginLeft: '0px',
                                         },
                                     }}
                                 >
-                                    <UniveristyInfo
-                                        path='./photos/uw.jpg'
-                                        schoolInfo={{
-                                            name: 'University of Windsor',
-                                            location: 'Ontario, Canada',
-                                            major: 'Applied Computing',
-                                            time: '2019.9 - 2021.6'
+                                    <Box
+                                        sx={{
+                                            width: '100%',
+                                            display: 'flex',
+                                            justifyContent: 'flex-start',
+                                            "@media screen and (max-width: 650px)": {
+                                                justifyContent: 'center',
+                                            },
                                         }}
-                                    /> 
+                                    >
+                                        <Box>
+                                            <UniveristyInfo
+                                                path='./photos/uw.jpg'
+                                                schoolInfo={{
+                                                    name: 'University of Windsor',
+                                                    location: 'Ontario, Canada',
+                                                    major: 'Applied Computing',
+                                                    time: '2019.9 - 2021.6'
+                                                }}
+                                            />
+                                        </Box>
+                                    </Box>
+                                    <Box
+                                        sx={{
+                                            width: '100%',
+                                            height: 'auto',
+                                            padding: '12px 0px',
+                                        }}
+                                    >
+                                        <StyledTextContainer
+                                            fontWeight={500}
+                                            style={{
+                                                marginBottom: '8px'
+                                            }}
+                                        >
+                                            {t('description.edu_core_course')}
+                                        </StyledTextContainer>
+                                        <StyledTextContainer fontSize='16px'>
+                                            <Box
+                                                sx={{
+                                                    display: 'flex',
+                                                    flexDirection: 'row',
+                                                    "@media screen and (max-width: 650px)": {
+                                                        flexDirection: 'column',
+                                                    },
+                                                }}    
+                                            >
+                                                <Box>
+                                                    <IntroItems
+                                                        showIcon={false}
+                                                        content={t('description.edu_algorithm')}/>
+                                                    <IntroItems
+                                                        showIcon={false}
+                                                        content={t('description.edu_acc')}/>
+                                                    <IntroItems
+                                                        showIcon={false}
+                                                        content={t('description.edu_adt')}/>
+                                                </Box>
+                                                <Box>
+                                                    <IntroItems
+                                                        showIcon={false}
+                                                        content={t('description.edu_software')}/>
+                                                    <IntroItems
+                                                        showIcon={false}
+                                                        content={t('description.edu_sysPro')}/>
+                                                    <IntroItems
+                                                        showIcon={false}
+                                                        content={t('description.edu_security')}/>
+                                                </Box>
+                                            </Box>
+                                        </StyledTextContainer>
+                                    </Box>
                                 </Box>
                             </Box>
+                            <StyledTextContainer
+                                fontWeight={500}
+                            >
+                                {t('description.edu_story')}
+                            </StyledTextContainer>
                             <StyledTextContainer>
                                 <Paragraph>
                                     {t('description.postgraduate_p1')}

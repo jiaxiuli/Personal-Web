@@ -1,6 +1,6 @@
 import React from 'react';
 
-const IntroItems = ({ iconPath, content, fromAbout=true }) => {
+const IntroItems = ({ iconPath, content, fromAbout=true, showIcon=true }) => {
 
     return (
         <div style={{
@@ -18,7 +18,8 @@ const IntroItems = ({ iconPath, content, fromAbout=true }) => {
                     maxWidth: '8px',
                     maxHeight: '8px',
                     borderRadius: '50%',
-                    backgroundColor: '#1A1380' 
+                    backgroundColor: '#1A1380',
+                    marginRight: showIcon ? '0px' : '12px'
                 }}
             >
             </div>
@@ -30,6 +31,7 @@ const IntroItems = ({ iconPath, content, fromAbout=true }) => {
                     height: fromAbout ? '22px' : '16px',
                     marginLeft: fromAbout ? '16px' : '0px',
                     marginRight: fromAbout ? '16px' : '8px',
+                    display: showIcon ? 'inline' : 'none'
                 }}/>
             <div>{content}</div>
         </div>
