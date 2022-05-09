@@ -14,6 +14,7 @@ import TitleContainer from "../common/TitleContainer";
 import StyledCard from "../common/StyledCard";
 import FlexBox from "../common/FlexBox";
 import UniveristyInfo from "../common/UniversityInfo";
+import LinkIcon from '@mui/icons-material/Link';
 import { useTranslation } from "react-i18next";
 
 const Paragraph = styled(Box)(({theme}) => ({
@@ -35,16 +36,29 @@ const Education  = () => {
                 <Box
                     className={style['text-container']}
                 >
-                        <StyledCard>
-                            <StyledTextContainer fontWeight={600}>
+                        <StyledCard
+                            sx={{
+                                width: '90%',
+                                margin: '4px 0px',
+                                "@media screen and (max-width: 800px)": {
+                                    width: '100%',
+                                },
+                            }}>
+                            <StyledTextContainer
+                                fontWeight={600}
+                                style={{
+                                    marginBottom: '8px'
+                                }}
+                            >
                                 {t('description.edu_undergraduate')}
                             </StyledTextContainer>
                             <Box  
                                 sx={{
                                     display: 'flex',
                                     flexDirection: 'row',
-                                    "@media screen and (max-width: 700px)": {
+                                    "@media screen and (max-width: 650px)": {
                                         flexDirection: 'column',
+                                        alignItems: 'center'
                                     },
                                 }}
                             >
@@ -53,52 +67,130 @@ const Education  = () => {
                                     className={style['img-undergraduate']}
                                     src="./photos/edu_undergraduate.jpg"
                                 />
-                                <Box style={{ padding: '0px 24px' }}>
+                                <Box
+                                    sx={{
+                                        marginLeft: '48px',
+                                        "@media screen and (max-width: 1300px)": {
+                                            marginLeft: '24px',
+                                        },
+                                        "@media screen and (max-width: 900px)": {
+                                            marginLeft: '16px',
+                                        },
+                                        "@media screen and (max-width: 600px)": {
+                                            marginLeft: '0px',
+                                        },
+                                    }}>
                                     <UniveristyInfo
                                         path='./photos/hut.jpg'
                                         schoolInfo={{
                                             name: 'Hunan University of Technology',
                                             location: 'Hunan Province, China',
+                                            major: 'Internet of Things Engineering',
                                             time: '2015.9 - 2019.6'
                                         }}
                                     />
-                                    <StyledTextContainer>
-                                        <Paragraph>
-                                            {t('description.undergraduate_p1')}
-                                        </Paragraph>
-                                        <Paragraph>
-                                            {t('description.undergraduate_p2')}
-                                        </Paragraph>
-                                        <Paragraph>
-                                            {t('description.undergraduate_p3')}
-                                        </Paragraph>
-                                    </StyledTextContainer>
                                 </Box>
                             </Box>
-                        </StyledCard>
-
-                        <StyledCard style={{ marginTop: '12px' }}>
-                            <img
-                                alt="postgraduate"
-                                className={style['img-postgraduate']}
-                                src="./photos/edu_postgraduate.jpg"
-                            />
                             <StyledTextContainer>
-                                <p>
+                                <Paragraph>
+                                    {t('description.undergraduate_p1')}
+                                </Paragraph>
+                                <Paragraph>
+                                    {t('description.undergraduate_p2')}
+                                </Paragraph>
+                                <Paragraph>
+                                    {t('description.undergraduate_p3')}
+                                </Paragraph>
+                                <Paragraph>
+                                    {t('description.undergraduate_p4')}
+                                </Paragraph>
+                            </StyledTextContainer>
+                        </StyledCard>
+                                    
+                        <StyledCard
+                            sx={{
+                                width: '90%',
+                                margin: '4px 0px',
+                                "@media screen and (max-width: 800px)": {
+                                    width: '100%',
+                                },
+                            }}
+                        >
+                            <StyledTextContainer
+                                fontWeight={600}
+                                style={{
+                                    marginBottom: '8px'
+                                }}
+                            >
+                                {t('description.edu_postgraduate')}
+                            </StyledTextContainer>
+                            <Box  
+                                sx={{
+                                    display: 'flex',
+                                    flexDirection: 'row',
+                                    "@media screen and (max-width: 650px)": {
+                                        flexDirection: 'column',
+                                        alignItems: 'center'
+                                    },
+                                }}
+                            >
+                                <img
+                                    alt="postgraduate"
+                                    className={style['img-postgraduate']}
+                                    src="./photos/edu_postgraduate.jpg"
+                                />
+                                <Box
+                                    sx={{
+                                        marginLeft: '48px',
+                                        "@media screen and (max-width: 1300px)": {
+                                            marginLeft: '24px',
+                                        },
+                                        "@media screen and (max-width: 900px)": {
+                                            marginLeft: '16px',
+                                        },
+                                        "@media screen and (max-width: 600px)": {
+                                            marginLeft: '0px',
+                                        },
+                                    }}
+                                >
+                                    <UniveristyInfo
+                                        path='./photos/uw.jpg'
+                                        schoolInfo={{
+                                            name: 'University of Windsor',
+                                            location: 'Ontario, Canada',
+                                            major: 'Applied Computing',
+                                            time: '2019.9 - 2021.6'
+                                        }}
+                                    /> 
+                                </Box>
+                            </Box>
+                            <StyledTextContainer>
+                                <Paragraph>
                                     {t('description.postgraduate_p1')}
-                                </p>
-                                <p>
+                                </Paragraph>
+                                <Paragraph>
                                     {t('description.postgraduate_p2')}
-                                </p>
-                                <p>
+                                </Paragraph>
+                                <Paragraph>
                                     {t('description.postgraduate_p3')}
-                                </p>
-                                <p>
+                                </Paragraph>
+                                <div style={{
+                                    height: '16px',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    fontWeight: '600'
+                                }}>
+                                    <LinkIcon style={{ marginRight: '8px' }}/>
+                                    <a
+                                        href="https://github.com/jiaxiuli/HealthCare-using-Django"
+                                        target="view_frame"
+                                    >
+                                            HealthCare-using-Django
+                                    </a>
+                                </div>
+                                <Paragraph>
                                     {t('description.postgraduate_p4')}
-                                </p>
-                                <p>
-                                    {t('description.postgraduate_p5')}
-                                </p>
+                                </Paragraph>
                             </StyledTextContainer>
                         </StyledCard>
                 </Box>

@@ -20,6 +20,11 @@ const UniveristyInfo = ({path, schoolInfo}) => {
                 </StyledTextContainer>
                 <StyledTextContainer fontSize={16}>
                     <IntroItems
+                        iconPath={'./icons/major.png'}
+                        content={schoolInfo.major}
+                        fromAbout={false}
+                    />
+                    <IntroItems
                         iconPath={'./icons/location.png'}
                         content={schoolInfo.location}
                         fromAbout={false}

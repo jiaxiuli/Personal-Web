@@ -8,7 +8,7 @@ const IntroItems = ({ iconPath, content, fromAbout=true }) => {
             display: 'flex',
             alignItems: 'center',
             marginLeft: fromAbout ? '8px' : '0px',
-            padding: fromAbout ? '4px 0px' : '0px'
+            padding: fromAbout ? '4px 0px' : '2px'
         }}>
             <div 
                 style={{
