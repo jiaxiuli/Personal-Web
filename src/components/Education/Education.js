@@ -1,7 +1,7 @@
 /*
  * @Author: 李佳修
  * @Date: 2022-05-07 13:22:23
- * @LastEditTime: 2022-05-07 17:55:37
+ * @LastEditTime: 2022-05-17 11:11:55
  * @LastEditors: 李佳修
  * @FilePath: /Personal-Web/src/components/Education/Education.js
  */
@@ -16,12 +16,13 @@ import FlexBox from "../common/FlexBox";
 import UniveristyInfo from "../common/UniversityInfo";
 import LinkIcon from '@mui/icons-material/Link';
 import IntroItems from "../common/IntroItems";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/opacity.css';
 import { useTranslation } from "react-i18next";
 
 const Paragraph = styled(Box)(({theme}) => ({
     padding: '8px 0px'
 }));
-
 
 const Education  = () => {
     
@@ -38,6 +39,7 @@ const Education  = () => {
                     className={style['text-container']}
                 >
                         <StyledCard
+                            data-aos="fade-up"
                             sx={{
                                 width: '90%',
                                 margin: '4px 0px',
@@ -64,11 +66,17 @@ const Education  = () => {
                                     },
                                 }}
                             >
-                                <img
+                                {/* <img
                                     alt="undergraduate"
                                     className={style['img-undergraduate']}
                                     src="./photos/edu_undergraduate.jpg"
-                                />
+                                /> */}
+                                <LazyLoadImage
+                                    effect="opacity"
+                                    alt="undergraduate"
+                                    className={style['img-undergraduate']}
+                                    src="./photos/edu_undergraduate.jpg" // use normal <img> attributes as props
+                                    />
                                 <Box
                                     sx={{
                                         marginLeft: '48px',
@@ -187,6 +195,7 @@ const Education  = () => {
                             </StyledTextContainer>
                         </StyledCard>
                         <StyledCard
+                            data-aos="fade-up"
                             sx={{
                                 width: '90%',
                                 margin: '4px 0px',
@@ -214,10 +223,16 @@ const Education  = () => {
                                     },
                                 }}
                             >
-                                <img
+                                {/* <img
                                     alt="postgraduate"
                                     className={style['img-postgraduate']}
                                     src="./photos/edu_postgraduate.jpg"
+                                /> */}
+                                <LazyLoadImage
+                                    effect="opacity"
+                                    alt="postgraduate"
+                                    className={style['img-postgraduate']}
+                                    src="./photos/edu_postgraduate.jpg" // use normal <img> attributes as props
                                 />
                                 <Box
                                     sx={{
