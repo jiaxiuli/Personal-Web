@@ -1,3 +1,10 @@
+/*
+ * @Author: 李佳修
+ * @Date: 2022-05-09 09:25:56
+ * @LastEditTime: 2022-05-29 16:54:27
+ * @LastEditors: 李佳修
+ * @FilePath: /Personal-Web/src/components/common/ResumeDownload.js
+ */
 import React from 'react';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
@@ -30,6 +37,7 @@ const ResumeDownload = () => {
                 }}
                 variant="contained"
                 startIcon={<CloudDownloadIcon />}
+                onClick={handleDownload}
             >
                 Resume
             </Button>
