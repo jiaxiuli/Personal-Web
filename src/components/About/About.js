@@ -1,7 +1,7 @@
 /*
  * @Author: 李佳修
  * @Date: 2022-05-07 13:22:23
- * @LastEditTime: 2022-05-17 11:13:43
+ * @LastEditTime: 2022-05-29 16:51:23
  * @LastEditors: 李佳修
  * @FilePath: /Personal-Web/src/components/About/About.js
  */
@@ -110,7 +110,7 @@ const About  = () => {
                                         <StackItems 
                                             iconPath='./stack_icons/react.png'
                                             title='React.js'
-                                            items={['Redux', 'Router', 'Native']}/>
+                                            items={['Redux', 'Router']}/>
                                         <StackItems 
                                             iconPath='./stack_icons/vue.svg'
                                             title='Vue.js'

@@ -1,3 +1,10 @@
+/*
+ * @Author: 李佳修
+ * @Date: 2022-05-09 09:25:56
+ * @LastEditTime: 2022-05-29 16:51:58
+ * @LastEditors: 李佳修
+ * @FilePath: /Personal-Web/src/components/common/StackItems.js
+ */
 import React from 'react';
 import style from './common.less';
 import StyledTextContainer from './StyledTextContainer';
@@ -12,7 +19,7 @@ const StackItems = ({
         <div style={{
             width: 'auto',
             marginLeft: '8px',
-            padding: '4px 0px'
+            padding: '10px 0px'
         }}>
             <div
                 style={{
@@ -22,6 +29,7 @@ const StackItems = ({
             >
                 <img
                     src={iconPath}
+                    alt={'tech logo'}
                     className={style['img-icon']}
                     style={{
                         // width: 30,

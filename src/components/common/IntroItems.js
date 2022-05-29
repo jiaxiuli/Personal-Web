@@ -1,3 +1,10 @@
+/*
+ * @Author: 李佳修
+ * @Date: 2022-05-10 09:18:42
+ * @LastEditTime: 2022-05-29 16:48:14
+ * @LastEditors: 李佳修
+ * @FilePath: /Personal-Web/src/components/common/IntroItems.js
+ */
 import React from 'react';
 
 const IntroItems = ({ iconPath, content, fromAbout=true, showIcon=true }) => {
@@ -8,7 +15,7 @@ const IntroItems = ({ iconPath, content, fromAbout=true, showIcon=true }) => {
             display: 'flex',
             alignItems: 'center',
             marginLeft: fromAbout ? '8px' : '0px',
-            padding: fromAbout ? '4px 0px' : '2px'
+            padding: fromAbout ? '10px 0px' : '2px'
         }}>
             <div 
                 style={{
