@@ -11,6 +11,8 @@ import style from './WorkExp.less';
 import StyledTextContainer from "../common/StyledTextContainer";
 import TitleContainer from "../common/TitleContainer";
 import FlexBox from "../common/FlexBox";
+import StyledCard from "../common/StyledCard";
+// import ImageList from "../common/ImageList";
 import { useTranslation } from "react-i18next";
 
 const WorkExp  = () => {
@@ -27,9 +29,49 @@ const WorkExp  = () => {
             <TitleContainer title={t('description.work')}/>
             <FlexBox>
                 <Box className={style['text-container']}>
-                    <StyledTextContainer>
-                        {t('description.work_content')}
-                    </StyledTextContainer>
+                    <StyledCard
+                        data-aos="fade-up"
+                        sx={{
+                            width: '90%',
+                            margin: '4px 0px',
+                            "@media screen and (max-width: 800px)": {
+                                width: '100%',
+                            },
+                        }}
+                    >
+                        <StyledTextContainer>
+                            {t('description.work_content')}
+                        </StyledTextContainer>
+                        {/* <ImageList /> */}
+                    </StyledCard>
+                    <StyledCard
+                        data-aos="fade-up"
+                        sx={{
+                            width: '90%',
+                            margin: '4px 0px',
+                            "@media screen and (max-width: 800px)": {
+                                width: '100%',
+                            },
+                        }}
+                    >
+                        <StyledTextContainer>
+                            {t('description.work_content')}
+                        </StyledTextContainer>
+                    </StyledCard>
+                    <StyledCard
+                        data-aos="fade-up"
+                        sx={{
+                            width: '90%',
+                            margin: '4px 0px',
+                            "@media screen and (max-width: 800px)": {
+                                width: '100%',
+                            },
+                        }}
+                    >
+                        <StyledTextContainer>
+                            {t('description.work_content')}
+                        </StyledTextContainer>
+                    </StyledCard>
                 </Box>
             </FlexBox>
         </Box>

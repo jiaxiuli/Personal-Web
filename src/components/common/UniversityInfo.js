@@ -11,6 +11,7 @@ const UniveristyInfo = ({path, schoolInfo}) => {
     return (
         <Box className={style['school']}>
             <img
+                alt='school-icon'
                 className={style['school-icon']}
                 src={path}
             />

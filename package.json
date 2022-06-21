@@ -39,6 +39,7 @@
     "jest-resolve": "^27.4.2",
     "jest-watch-typeahead": "^1.0.0",
     "jquery": "^3.6.0",
+    "lazyload": "^2.0.0-rc.2",
     "less": "^4.1.2",
     "less-loader": "^10.2.0",
     "mini-css-extract-plugin": "^2.4.5",
