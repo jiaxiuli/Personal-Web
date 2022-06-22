@@ -43,7 +43,7 @@ const Education  = () => {
                             sx={{
                                 width: '90%',
                                 margin: '4px 0px',
-                                "@media screen and (max-width: 800px)": {
+                                "@media screen and (max-width: 1500px)": {
                                     width: '100%',
                                 },
                             }}>
@@ -199,7 +199,7 @@ const Education  = () => {
                             sx={{
                                 width: '90%',
                                 margin: '4px 0px',
-                                "@media screen and (max-width: 800px)": {
+                                "@media screen and (max-width: 1500px)": {
                                     width: '100%',
                                 },
                             }}

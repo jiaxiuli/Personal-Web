@@ -79,7 +79,11 @@ i18n.use(initReactI18next)
                         continuously learning development skills. Now, I am trying to develop a complete web application by my own 
                         out of my work, including both front-end and back-end and deploy it on a cloude server.
                         I believe that I will continue to explore technology and get happiness from it in the future, and continue to grow 
-                        into a more mature software engineer.`
+                        into a more mature software engineer.`,
+                        company_name_li_auto: `Li Auto Inc.`,
+                        frontendEng: 'Front end Engineer',
+                        liAutoLoc: 'Beijing, China',
+                        li_auto_intro: 'Li Auto Inc. is a leader in China’s new energy vehicle market. The Company designs, develops, manufactures, and sells premium smart electric vehicles. ',
                     }
                 }
             },
