@@ -243,16 +243,7 @@ const WorkExp  = () => {
                                     </StyledTextContainer>
                                 </Box>
                             </Box>
-                            {/* <StyledCard
-                                sx={{
-                                    p: 0,
-                                    flex: 1,
-                                }}
-                            >
-                                <ImageList direction='vertical'/>
-                            </StyledCard> */}
                         </StyledCard>
-                        {/* <ImageList /> */}
                     </Box>
                     <StyledCard
                         data-aos="fade-up"
