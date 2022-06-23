@@ -114,8 +114,8 @@ const WorkExp  = () => {
                                         t('description.li_auto_work_content_item1'),
                                         t('description.li_auto_work_content_item2'),
                                         t('description.li_auto_work_content_item3') 
-                                    ].map(item => (
-                                        <Box display='flex' alignItems='center' m={2}>
+                                    ].map((item, index) => (
+                                        <Box display='flex' alignItems='center' m={2} key={index}>
                                             <Box 
                                                 sx={{
                                                     minWidth: '8px',
@@ -220,8 +220,8 @@ const WorkExp  = () => {
                                         t('description.yuanfudao_content_item2'),
                                         t('description.yuanfudao_content_item3'),
                                         t('description.yuanfudao_content_item4')
-                                    ].map(item => (
-                                        <Box display='flex' alignItems='center' m={2}>
+                                    ].map((item, index) => (
+                                        <Box display='flex' alignItems='center' m={2} key={index}>
                                             <Box 
                                                 sx={{
                                                     minWidth: '8px',
@@ -329,7 +329,8 @@ const WorkExp  = () => {
                                             userSelect: 'none',
                                             "@media screen and (max-width: 650px)": {
                                                 p: 1,
-                                                ml: 1
+                                                ml: 1,
+                                                fontSize: '12px',
                                              },
                                         }}>
                                             {t('description.li_auto_intro')}
@@ -371,8 +372,8 @@ const WorkExp  = () => {
                                                 t('description.li_auto_work_content_item1'),
                                                 t('description.li_auto_work_content_item2'),
                                                 t('description.li_auto_work_content_item3') 
-                                            ].map(item => (
-                                                <Box display='flex' alignItems='center' m={2}>
+                                            ].map((item, index) => (
+                                                <Box display='flex' alignItems='center' m={2} key={index}>
                                                     <Box 
                                                         sx={{
                                                             minWidth: '8px',
@@ -453,8 +454,8 @@ const WorkExp  = () => {
                                                 t('description.yuanfudao_content_item2'),
                                                 t('description.yuanfudao_content_item3'),
                                                 t('description.yuanfudao_content_item4') 
-                                            ].map(item => (
-                                                <Box display='flex' alignItems='center' m={2}>
+                                            ].map((item, index) => (
+                                                <Box display='flex' alignItems='center' m={2} key={index}>
                                                     <Box 
                                                         sx={{
                                                             minWidth: '8px',
@@ -499,7 +500,8 @@ const WorkExp  = () => {
                                         paddingY: 2,
                                         "@media screen and (max-width: 650px)": {
                                             paddingX: 2,
-                                            paddingY: 1
+                                            paddingY: 1,
+                                            fontSize: '12px',
                                         },
                                     }}>
                                         {t('description.yuanfudao_intro')}
