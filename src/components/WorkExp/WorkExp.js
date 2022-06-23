@@ -213,12 +213,13 @@ const WorkExp  = () => {
                                 </StyledCard>
                             </Box>
                             <StyledTextContainer sx={{ mt: 2 }}>
-                                {t('description.li_auto_work_content')}
+                                {t('description.yuanfudao_work_content')}
                                 {
                                     [
-                                        t('description.li_auto_work_content_item1'),
-                                        t('description.li_auto_work_content_item2'),
-                                        t('description.li_auto_work_content_item3') 
+                                        t('description.yuanfudao_content_item1'),
+                                        t('description.yuanfudao_content_item2'),
+                                        t('description.yuanfudao_content_item3'),
+                                        t('description.yuanfudao_content_item4')
                                     ].map(item => (
                                         <Box display='flex' alignItems='center' m={2}>
                                             <Box 
@@ -327,7 +328,8 @@ const WorkExp  = () => {
                                             fontSize: '16px',
                                             userSelect: 'none',
                                             "@media screen and (max-width: 650px)": {
-                                                p: 2
+                                                p: 1,
+                                                ml: 1
                                              },
                                         }}>
                                             {t('description.li_auto_intro')}
@@ -444,12 +446,13 @@ const WorkExp  = () => {
                                         </StyledCard>
                                     </Box>
                                     <StyledTextContainer sx={{ mt: 2 }}>
-                                        {t('description.li_auto_work_content')}
+                                        {t('description.yuanfudao_work_content')}
                                         {
                                             [
-                                                t('description.li_auto_work_content_item1'),
-                                                t('description.li_auto_work_content_item2'),
-                                                t('description.li_auto_work_content_item3') 
+                                                t('description.yuanfudao_content_item1'),
+                                                t('description.yuanfudao_content_item2'),
+                                                t('description.yuanfudao_content_item3'),
+                                                t('description.yuanfudao_content_item4') 
                                             ].map(item => (
                                                 <Box display='flex' alignItems='center' m={2}>
                                                     <Box 
