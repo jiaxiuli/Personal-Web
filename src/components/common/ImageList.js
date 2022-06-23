@@ -2,6 +2,7 @@ import * as React from 'react';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import Box from '@mui/material/Box';
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 function srcset(image, size, rows = 1, cols = 1) {
   return {
@@ -13,21 +14,36 @@ function srcset(image, size, rows = 1, cols = 1) {
 }
 
 export default function QuiltedImageList({ direction='vertical' }) {
+
+  const matches = useMediaQuery('(max-width: 650px)');
+
   return (
-    <Box width='100%' height='100%'>
+    <Box
+      sx={{
+        width: '100%',
+        height: '100%',
+        borderRadius: '12px'
+      }}
+    >
        <ImageList
-          sx={{ width: '100%', height: '100%', mt: 0, mb: 0 }}
+          sx={{ 
+            width: '100%',
+            height: '100%',
+            borderRadius: '12px',
+            mt: 0,
+            mb: 0,
+        }}
           variant="quilted"
           cols={4}
           rows={4}
-          rowHeight={121}
+          rowHeight={matches ? 130 : 'auto'}
         >
           {
             direction === 'vertical' ?
             itemDataV.map((item) => (
               <ImageListItem key={item.img} cols={item.cols || 1} rows={item.rows || 1}>
                 <img
-                  {...srcset(item.img, 121, item.rows, item.cols)}
+                  {...srcset(item.img, 130, item.rows, item.cols)}
                   alt={item.title}
                   loading="lazy"
                 />
@@ -36,7 +52,7 @@ export default function QuiltedImageList({ direction='vertical' }) {
             itemDataH.map((item) => (
               <ImageListItem key={item.img} cols={item.cols || 1} rows={item.rows || 1}>
                 <img
-                  {...srcset(item.img, 121, item.rows, item.cols)}
+                  {...srcset(item.img, 130, item.rows, item.cols)}
                   alt={item.title}
                   loading="lazy"
                 />
