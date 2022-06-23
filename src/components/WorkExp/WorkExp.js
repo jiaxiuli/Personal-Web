@@ -103,6 +103,7 @@ const WorkExp  = () => {
                             sx={{
                                 p: 0,
                                 flex: 1,
+                                overflow: 'hidden'
                             }}
                         >
                              <ImageList direction='vertical'/>
@@ -250,6 +251,7 @@ const WorkExp  = () => {
                                             sx={{
                                                 p: 0,
                                                 flex: 3,
+                                                overflow: 'hidden'
                                             }}
                                         >
                                             <ImageList direction='horizontal'/>
