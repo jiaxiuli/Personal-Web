@@ -13,9 +13,135 @@ function srcset(image, size, rows = 1, cols = 1) {
   };
 }
 
-export default function QuiltedImageList({ direction='vertical' }) {
+export default function QuiltedImageList({ direction='vertical', work }) {
 
   const matches = useMediaQuery('(max-width: 650px)');
+  const [itemDataV, setItemDataV] = React.useState([
+    {
+      img: './photos/li-auto-work.jpg',
+      title: 'Breakfast',
+      rows: 2,
+      cols: 4,
+    },
+    {
+      img: './photos/li-auto-place.jpg',
+      title: 'Burger',
+      cols: 2,
+      rows: 1,
+    },
+    {
+      img: './photos/li-auto-card.jpg',
+      title: 'Camera',
+      cols: 2,
+      rows: 1,
+    }])
+
+    const [itemDataH, setItemDataH] = React.useState([
+      {
+        img: './photos/li-auto-work.jpg',
+        title: 'Breakfast',
+        rows: 1,
+        cols: 2,
+      },
+      {
+        img: './photos/li-auto-place.jpg',
+        title: 'Burger',
+        cols: 1,
+        rows: 1,
+      },
+      {
+        img: './photos/li-auto-card.jpg',
+        title: 'Camera',
+        cols: 1,
+        rows: 1,
+      }
+    ])
+
+    React.useEffect(() => {
+      if (work === 'liAuto') {
+        setItemDataV([
+          {
+            img: './photos/li-auto-work.jpg',
+            title: 'Breakfast',
+            rows: 2,
+            cols: 4,
+          },
+          {
+            img: './photos/li-auto-place.jpg',
+            title: 'Burger',
+            cols: 2,
+            rows: 1,
+          },
+          {
+            img: './photos/li-auto-card.jpg',
+            title: 'Camera',
+            cols: 2,
+            rows: 1,
+          }]);
+        setItemDataH([
+            {
+              img: './photos/li-auto-work.jpg',
+              title: 'Breakfast',
+              rows: 1,
+              cols: 2,
+            },
+            {
+              img: './photos/li-auto-place.jpg',
+              title: 'Burger',
+              cols: 1,
+              rows: 1,
+            },
+            {
+              img: './photos/li-auto-card.jpg',
+              title: 'Camera',
+              cols: 1,
+              rows: 1,
+            }
+        ])
+      }
+
+      if (work === 'yuanFuDao') {
+        setItemDataV([
+          {
+            img: './photos/yuanfudao_env.jpg',
+            title: 'Breakfast',
+            rows: 2,
+            cols: 4,
+          },
+          {
+            img: './photos/yuanfudao_place.jpg',
+            title: 'Burger',
+            cols: 2,
+            rows: 1,
+          },
+          {
+            img: './photos/yuanfudao_card.jpg',
+            title: 'Camera',
+            cols: 2,
+            rows: 1,
+          }]);
+        setItemDataH([
+            {
+              img: './photos/yuanfudao_env.jpg',
+              title: 'Breakfast',
+              rows: 1,
+              cols: 2,
+            },
+            {
+              img: './photos/yuanfudao_place.jpg',
+              title: 'Burger',
+              cols: 1,
+              rows: 1,
+            },
+            {
+              img: './photos/yuanfudao_card.jpg',
+              title: 'Camera',
+              cols: 1,
+              rows: 1,
+            }
+        ])
+      }
+    }, [work]);
 
   return (
     <Box
@@ -64,88 +190,3 @@ export default function QuiltedImageList({ direction='vertical' }) {
     </Box>
   );
 }
-const itemDataH = [
-  {
-    img: './photos/li-auto-work.jpg',
-    title: 'Breakfast',
-    rows: 1,
-    cols: 2,
-  },
-  {
-    img: './photos/li-auto-place.jpg',
-    title: 'Burger',
-    cols: 1,
-    rows: 1,
-  },
-  {
-    img: './photos/li-auto-card.jpg',
-    title: 'Camera',
-    cols: 1,
-    rows: 1,
-  }
-];
-
-const itemDataV = [
-  {
-    img: './photos/li-auto-work.jpg',
-    title: 'Breakfast',
-    rows: 2,
-    cols: 4,
-  },
-  {
-    img: './photos/li-auto-place.jpg',
-    title: 'Burger',
-    cols: 2,
-    rows: 1,
-  },
-  {
-    img: './photos/li-auto-card.jpg',
-    title: 'Camera',
-    cols: 2,
-    rows: 1,
-  },
-  // {
-  //   img: 'https://images.unsplash.com/photo-1444418776041-9c7e33cc5a9c',
-  //   title: 'Coffee',
-  //   cols: 2,
-  // },
-  // {
-  //   img: 'https://images.unsplash.com/photo-1533827432537-70133748f5c8',
-  //   title: 'Hats',
-  //   cols: 2,
-  // },
-  // {
-  //   img: 'https://images.unsplash.com/photo-1558642452-9d2a7deb7f62',
-  //   title: 'Honey',
-  //   author: '@arwinneil',
-  //   rows: 2,
-  //   cols: 2,
-  // },
-  // {
-  //   img: 'https://images.unsplash.com/photo-1516802273409-68526ee1bdd6',
-  //   title: 'Basketball',
-  // },
-  // {
-  //   img: 'https://images.unsplash.com/photo-1518756131217-31eb79b20e8f',
-  //   title: 'Fern',
-  // },
-  // {
-  //   img: 'https://images.unsplash.com/photo-1597645587822-e99fa5d45d25',
-  //   title: 'Mushrooms',
-  //   rows: 2,
-  //   cols: 2,
-  // },
-  // {
-  //   img: 'https://images.unsplash.com/photo-1567306301408-9b74779a11af',
-  //   title: 'Tomato basil',
-  // },
-  // {
-  //   img: 'https://images.unsplash.com/photo-1471357674240-e1a485acb3e1',
-  //   title: 'Sea star',
-  // },
-  // {
-  //   img: 'https://images.unsplash.com/photo-1589118949245-7d38baf380d6',
-  //   title: 'Bike',
-  //   cols: 2,
-  // },
-];

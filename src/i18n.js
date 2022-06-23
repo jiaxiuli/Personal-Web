@@ -89,7 +89,9 @@ i18n.use(initReactI18next)
                         responsible for the development of all internal management systems.`,
                         li_auto_work_content_item1: `Responsible for the development of internal management systems and debug REST APIs, independently in charge of front-end part of at least two projects that used by all employees (around 12,000) in whole company.`,
                         li_auto_work_content_item2: `Participated in the development of the exclusive UI components library for the department of Front-end Development., which improved development efficiency by 60% in UI building.`,
-                        li_auto_work_content_item3: `Earned an E (exceptional) grade for the OKR evaluation in the 1st quarter of 2022.`
+                        li_auto_work_content_item3: `Earned an E (exceptional) grade for the OKR evaluation in the 1st quarter of 2022.`,
+                        company_name_yuanfudao: 'Beijing YuanLi Future Technology Co., LTD',
+                        yuanfudao_intro: `Yuanfudao is the largest online live courseplatform servicing primary and secondary school students in China, with a paying userbase of over 1 million.`
                     }
                 }
             },
