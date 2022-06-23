@@ -22,7 +22,8 @@ export default function QuiltedImageList({ direction='vertical' }) {
       sx={{
         width: '100%',
         height: '100%',
-        borderRadius: '12px'
+        borderRadius: '12px',
+        overflow: 'hidden'
       }}
     >
        <ImageList
