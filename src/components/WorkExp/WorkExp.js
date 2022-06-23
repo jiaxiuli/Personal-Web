@@ -164,6 +164,9 @@ const WorkExp  = () => {
                             <Box
                                 sx={{
                                     display: 'flex',
+                                    "@media screen and (max-width: 650px)": {
+                                        flexDirection: 'column',
+                                    },
                                 }}
                             >
                                 <StyledCard
@@ -175,7 +178,8 @@ const WorkExp  = () => {
                                         p: 2,
                                         boxSizing: 'content-box',
                                         "@media screen and (max-width: 650px)": {
-                                            display: 'none'
+                                            width: '100%',
+                                            boxSizing: 'border-box',
                                         },
                                     }}
                                 >
@@ -189,26 +193,39 @@ const WorkExp  = () => {
                                         }
                                         alt="li-auto-logo"
                                     />
-                                    <LazyLoadImage
-                                        effect="opacity"
-                                        alt="li-auto-logo"
-                                        src="./photos/li-auto.jpg" // use normal <img> attributes as props
-                                        style={{
-                                            width: '120px',
-                                            height: '140px',
-                                            borderRadius: '12px',
-                                            marginTop: '8px',
-                                            objectFit: 'cover',
-                                            marginBottom: '8px'
+                                    <Box
+                                        sx={{
+                                            display: 'flex',
+                                            flexDirection: 'column',
+                                            "@media screen and (max-width: 650px)": {
+                                               flexDirection: 'row'
+                                            },
                                         }}
-                                    />
-                                    <Box sx={{ 
-                                        fontSize: '14px',
-                                        "@media screen and (max-width: 1000px)": {
-                                            fontSize: '12px'
-                                        },
-                                    }}>
-                                        {t('description.li_auto_intro')}
+                                    >
+                                        <LazyLoadImage
+                                            effect="opacity"
+                                            alt="li-auto-logo"
+                                            src="./photos/li-auto.jpg" // use normal <img> attributes as props
+                                            style={{
+                                                width: '120px',
+                                                height: '140px',
+                                                borderRadius: '12px',
+                                                marginTop: '8px',
+                                                objectFit: 'cover',
+                                                marginBottom: '8px'
+                                            }}
+                                        />
+                                        <Box sx={{ 
+                                            fontSize: '14px',
+                                            "@media screen and (max-width: 1000px)": {
+                                                fontSize: '12px'
+                                            },
+                                            "@media screen and (max-width: 650px)": {
+                                                p: 3
+                                             },
+                                        }}>
+                                            {t('description.li_auto_intro')}
+                                        </Box>
                                     </Box>
                                 </StyledCard>
                                 <Box flex={1} p={2}>
@@ -245,6 +262,8 @@ const WorkExp  = () => {
                             </Box>
                         </StyledCard>
                     </Box>
+
+
                     <StyledCard
                         data-aos="fade-up"
                         sx={{

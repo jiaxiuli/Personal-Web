@@ -1,6 +1,7 @@
 import * as React from 'react';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
+import Box from '@mui/material/Box';
 
 function srcset(image, size, rows = 1, cols = 1) {
   return {
@@ -13,34 +14,36 @@ function srcset(image, size, rows = 1, cols = 1) {
 
 export default function QuiltedImageList({ direction='vertical' }) {
   return (
-    <ImageList
-      sx={{ width: '100%', height: '100%', mt: 0, mb: 0 }}
-      variant="quilted"
-      cols={4}
-      rows={4}
-      // rowHeight={121}
-    >
-      {
-        direction === 'vertical' ?
-        itemDataV.map((item) => (
-          <ImageListItem key={item.img} cols={item.cols || 1} rows={item.rows || 1}>
-            <img
-              {...srcset(item.img, 121, item.rows, item.cols)}
-              alt={item.title}
-              loading="lazy"
-            />
-          </ImageListItem>
-        )) : 
-        itemDataH.map((item) => (
-          <ImageListItem key={item.img} cols={item.cols || 1} rows={item.rows || 1}>
-            <img
-              {...srcset(item.img, 121, item.rows, item.cols)}
-              alt={item.title}
-              loading="lazy"
-            />
-          </ImageListItem>
-        ))}
-    </ImageList>
+    <Box width='100%' height='100%'>
+       <ImageList
+          sx={{ width: '100%', height: '100%', mt: 0, mb: 0 }}
+          variant="quilted"
+          cols={4}
+          rows={4}
+          rowHeight={121}
+        >
+          {
+            direction === 'vertical' ?
+            itemDataV.map((item) => (
+              <ImageListItem key={item.img} cols={item.cols || 1} rows={item.rows || 1}>
+                <img
+                  {...srcset(item.img, 121, item.rows, item.cols)}
+                  alt={item.title}
+                  loading="lazy"
+                />
+              </ImageListItem>
+            )) : 
+            itemDataH.map((item) => (
+              <ImageListItem key={item.img} cols={item.cols || 1} rows={item.rows || 1}>
+                <img
+                  {...srcset(item.img, 121, item.rows, item.cols)}
+                  alt={item.title}
+                  loading="lazy"
+                />
+              </ImageListItem>
+            ))}
+        </ImageList>
+    </Box>
   );
 }
 const itemDataH = [
@@ -54,13 +57,13 @@ const itemDataH = [
     img: './photos/li-auto-place.jpg',
     title: 'Burger',
     cols: 1,
-    rows: 0.5,
+    rows: 1,
   },
   {
     img: './photos/li-auto-card.jpg',
     title: 'Camera',
     cols: 1,
-    rows: 0.5,
+    rows: 1,
   }
 ];
 

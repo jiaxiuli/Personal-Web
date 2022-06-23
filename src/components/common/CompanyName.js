@@ -10,9 +10,14 @@ const CompanyName = ({ name, startTime, endTime, location, position }) => {
     return (
         <Box>
             <StyledTextContainer
-                fontSize={25}
-                fontWeight={600}
                 mb={2}
+                sx={{
+                    fontSize: 25,
+                    fontWeight: 600,
+                    "@media screen and (max-width: 1300px)": {
+                        fontSize: 20,
+                    }
+                }}
             >
                 {name}
             </StyledTextContainer>
@@ -27,7 +32,14 @@ const CompanyName = ({ name, startTime, endTime, location, position }) => {
                             }
                         }}
                     />
-                    <StyledTextContainer fontSize={20}>
+                    <StyledTextContainer
+                        sx={{
+                            fontSize: 16,
+                            "@media screen and (max-width: 1300px)": {
+                                fontSize: 16,
+                            }
+                        }}
+                    >
                         {position}
                     </StyledTextContainer>
                 </Box>
@@ -42,7 +54,14 @@ const CompanyName = ({ name, startTime, endTime, location, position }) => {
                             }
                         }}
                     />
-                    <StyledTextContainer fontSize={20}>
+                    <StyledTextContainer
+                        sx={{
+                            fontSize: 16,
+                            "@media screen and (max-width: 1300px)": {
+                                fontSize: 16,
+                            }
+                        }}
+                    >
                         { `${startTime} - ${endTime}` }
                     </StyledTextContainer>
                 </Box>
@@ -57,7 +76,14 @@ const CompanyName = ({ name, startTime, endTime, location, position }) => {
                             }
                         }}
                     />
-                    <StyledTextContainer fontSize={20}>
+                    <StyledTextContainer
+                        sx={{
+                            fontSize: 16,
+                            "@media screen and (max-width: 1300px)": {
+                                fontSize: 16,
+                            }
+                        }}
+                    >
                         {location}
                     </StyledTextContainer>
                 </Box>
