@@ -99,7 +99,7 @@ const WorkExp  = () => {
                                             }}
                                         />
                                         <Box
-                                            sx={{userSelect: 'none', paddingX: 3, paddingY: 1}}
+                                            sx={{userSelect: 'none', paddingX: 3, paddingY: 1, fontSize: '14px'}}
                                         >
                                             {t('description.li_auto_intro')}
                                         </Box>
@@ -204,7 +204,7 @@ const WorkExp  = () => {
                                         />
                                         <Box display='flex'>
                                         <Box
-                                            sx={{userSelect: 'none', paddingX: 2}}
+                                            sx={{userSelect: 'none', paddingX: 2, fontSize: '14px'}}
                                         >
                                             {t('description.yuanfudao_intro')}
                                         </Box>
@@ -287,6 +287,7 @@ const WorkExp  = () => {
                                         "@media screen and (max-width: 650px)": {
                                             width: '100%',
                                             boxSizing: 'border-box',
+                                            pb: 0
                                         },
                                     }}
                                 >
@@ -305,7 +306,7 @@ const WorkExp  = () => {
                                             display: 'flex',
                                             flexDirection: 'column',
                                             "@media screen and (max-width: 650px)": {
-                                               flexDirection: 'row'
+                                               flexDirection: 'row',
                                             },
                                         }}
                                     >
@@ -323,13 +324,10 @@ const WorkExp  = () => {
                                             }}
                                         />
                                         <Box sx={{ 
-                                            fontSize: '14px',
+                                            fontSize: '16px',
                                             userSelect: 'none',
-                                            "@media screen and (max-width: 1000px)": {
-                                                fontSize: '12px'
-                                            },
                                             "@media screen and (max-width: 650px)": {
-                                                p: 3
+                                                p: 2
                                              },
                                         }}>
                                             {t('description.li_auto_intro')}
@@ -493,11 +491,12 @@ const WorkExp  = () => {
                                         alt="yuanfudao-logo"
                                     />
                                     <Box sx={{ 
-                                        fontSize: '14px',
+                                        fontSize: '16px',
                                         userSelect: 'none',
                                         paddingY: 2,
                                         "@media screen and (max-width: 650px)": {
-                                            p: 3
+                                            paddingX: 2,
+                                            paddingY: 1
                                         },
                                     }}>
                                         {t('description.yuanfudao_intro')}
