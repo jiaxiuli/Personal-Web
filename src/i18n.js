@@ -84,6 +84,12 @@ i18n.use(initReactI18next)
                         frontendEng: 'Front end Engineer',
                         liAutoLoc: 'Beijing, China',
                         li_auto_intro: 'Li Auto Inc. is a leader in China’s new energy vehicle market. The Company designs, develops, manufactures, and sells premium smart electric vehicles. ',
+                        li_auto_work_content: `In Li Auto, I worked in the department called "Energy Efficiency Engineering",
+                        which aims to improve the efficiency of all software development departments in the company through technical means, as well as
+                        responsible for the development of all internal management systems.`,
+                        li_auto_work_content_item1: `Responsible for the development of internal management systems and debug REST APIs, independently in charge of front-end part of at least two projects that used by all employees (around 12,000) in whole company.`,
+                        li_auto_work_content_item2: `Participated in the development of the exclusive UI components library for the department of Front-end Development., which improved development efficiency by 60% in UI building.`,
+                        li_auto_work_content_item3: `Earned an E (exceptional) grade for the OKR evaluation in the 1st quarter of 2022.`
                     }
                 }
             },

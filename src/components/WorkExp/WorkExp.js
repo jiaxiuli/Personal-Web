@@ -51,65 +51,101 @@ const WorkExp  = () => {
                             },
                         }}
                     >
+                      
                         <StyledCard
-                            sx={{
-                                width: '200px',
-                                display: 'flex',
-                                flexDirection: 'column',
-                                alignItems: 'center',
-                                p: 2,
-                                boxSizing: 'content-box',
-                            }}
+                            sx={{ flex: 3, p: 3, m: 0 }}
                         >
-                            <img
-                                width={ lang.currentLanguage === 'en_us' ? '160px' : '126px'}
-                                height='30px'
-                                src={
-                                    lang.currentLanguage === 'en_us' ?
-                                    './photos/li_auto_logo.png' :
-                                    './photos/li-logo-ch.jpg'
-                                }
-                                alt="li-auto-logo"
-                            />
-                            <LazyLoadImage
-                                effect="opacity"
-                                alt="li-auto-logo"
-                                src="./photos/li-auto.jpg" // use normal <img> attributes as props
-                                style={{
-                                    width: '200px',
-                                    height: '232px',
-                                    borderRadius: '12px',
-                                    marginTop: '8px',
-                                    marginBottom: '8px'
-                                }}
-                            />
-                            {t('description.li_auto_intro')}
-                        </StyledCard>
-                        <StyledCard
-                            sx={{ flex: 2, p: 3 }}
-                        >
-                            <CompanyName
-                                name={t('description.company_name_li_auto')}
-                                startTime='2021.11'
-                                endTime='2022.06'
-                                location={t('description.liAutoLoc')}
-                                position={t('description.frontendEng')}
-                            />
+                            <Box display='flex' justifyContent='space-between'>
+                                <CompanyName
+                                    name={t('description.company_name_li_auto')}
+                                    startTime='2021.11'
+                                    endTime='2022.06'
+                                    location={t('description.liAutoLoc')}
+                                    position={t('description.frontendEng')}
+                                />
+                                  <StyledCard
+                                        sx={{
+                                            width: '40%',
+                                            // flex: 1,
+                                            pb: 0,
+                                            display: 'flex',
+                                            flexDirection: 'column',
+                                            alignItems: 'center',
+                                            boxSizing: 'content-box',
+                                        }}
+                                    >
+                                        <img
+                                            width={ lang.currentLanguage === 'en_us' ? '120px' : '96px'}
+                                            height='24px'
+                                            src={
+                                                lang.currentLanguage === 'en_us' ?
+                                                './photos/li_auto_logo.png' :
+                                                './photos/li-logo-ch.jpg'
+                                            }
+                                            alt="li-auto-logo"
+                                        />
+                                        <Box display='flex'>
+                                        <LazyLoadImage
+                                            effect="opacity"
+                                            alt="li-auto-logo"
+                                            src="./photos/li-auto.jpg" // use normal <img> attributes as props
+                                            style={{
+                                                width: '90px',
+                                                height: '120px',
+                                                borderRadius: '12px',
+                                                marginTop: '8px',
+                                                marginBottom: '8px'
+                                            }}
+                                        />
+                                        <Box
+                                            sx={{userSelect: 'none', paddingX: 3, paddingY: 1}}
+                                        >
+                                            {t('description.li_auto_intro')}
+                                        </Box>
+                                    </Box>
+                                
+                                </StyledCard>
+                            </Box>
                             <StyledTextContainer sx={{ mt: 2 }}>
-                                {t('description.work_content')}
+                                {t('description.li_auto_work_content')}
+                                {
+                                    [
+                                        t('description.li_auto_work_content_item1'),
+                                        t('description.li_auto_work_content_item2'),
+                                        t('description.li_auto_work_content_item3') 
+                                    ].map(item => (
+                                        <Box display='flex' alignItems='center' m={2}>
+                                            <Box 
+                                                sx={{
+                                                    minWidth: '8px',
+                                                    minHeight: '8px',
+                                                    maxWidth: '8px',
+                                                    maxHeight: '8px',
+                                                    borderRadius: '50%',
+                                                    backgroundColor: '#1A1380',
+                                                    marginRight: 4
+                                                }}>
+                                            </Box>
+                                            {item}
+                                        </Box>
+                                    ))
+                                }
                             </StyledTextContainer>
                         </StyledCard>
                         <StyledCard
                             sx={{
                                 p: 0,
                                 flex: 1,
+                                mr: 0,
                                 overflow: 'hidden'
                             }}
                         >
                              <ImageList direction='vertical'/>
                         </StyledCard>
-                        {/* <ImageList /> */}
                     </Box>
+
+
+
                     <StyledCard
                         data-aos="fade-up"
                         sx={{
@@ -157,10 +193,13 @@ const WorkExp  = () => {
                             display: 'flex',
                             width: '100%',
                             margin: '4px 0px',
+                            "@media screen and (max-width: 800px)": {
+                                width: '100%'
+                            },
                         }}
                     >
                         <StyledCard
-                            sx={{ flex: 2, p: 1 }}
+                            sx={{ flex: 2, p: 1, m: 0 }}
                         >
                             <Box
                                 sx={{
@@ -177,6 +216,7 @@ const WorkExp  = () => {
                                         flexDirection: 'column',
                                         alignItems: 'center',
                                         p: 2,
+                                        mr: 0,
                                         boxSizing: 'content-box',
                                         "@media screen and (max-width: 650px)": {
                                             width: '100%',
@@ -218,6 +258,7 @@ const WorkExp  = () => {
                                         />
                                         <Box sx={{ 
                                             fontSize: '14px',
+                                            userSelect: 'none',
                                             "@media screen and (max-width: 1000px)": {
                                                 fontSize: '12px'
                                             },
@@ -258,7 +299,29 @@ const WorkExp  = () => {
                                         </StyledCard>
                                     </Box>
                                     <StyledTextContainer sx={{ mt: 2 }}>
-                                        {t('description.work_content')}
+                                        {t('description.li_auto_work_content')}
+                                        {
+                                            [
+                                                t('description.li_auto_work_content_item1'),
+                                                t('description.li_auto_work_content_item2'),
+                                                t('description.li_auto_work_content_item3') 
+                                            ].map(item => (
+                                                <Box display='flex' alignItems='center' m={2}>
+                                                    <Box 
+                                                        sx={{
+                                                            minWidth: '8px',
+                                                            minHeight: '8px',
+                                                            maxWidth: '8px',
+                                                            maxHeight: '8px',
+                                                            borderRadius: '50%',
+                                                            backgroundColor: '#1A1380',
+                                                            marginRight: 4
+                                                        }}>
+                                                    </Box>
+                                                    {item}
+                                                </Box>
+                                            ))
+                                        }
                                     </StyledTextContainer>
                                 </Box>
                             </Box>

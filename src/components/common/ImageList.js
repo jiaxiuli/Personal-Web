@@ -33,7 +33,8 @@ export default function QuiltedImageList({ direction='vertical' }) {
             borderRadius: '12px',
             mt: 0,
             mb: 0,
-        }}
+            overflow: 'hidden'
+          }}
           variant="quilted"
           cols={4}
           rows={4}
