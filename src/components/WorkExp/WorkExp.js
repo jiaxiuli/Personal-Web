@@ -17,6 +17,7 @@ import { useTranslation } from "react-i18next";
 import { useSelector } from 'react-redux';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import CompanyName from "../common/CompanyName";
+import WorkDetailInfo from "../common/WorkDetailInfo";
 
 const WorkExp  = () => {
     const lang = useSelector(state => state.general.language);
@@ -59,6 +60,7 @@ const WorkExp  = () => {
                             <Box display='flex' justifyContent='space-between'>
                                 <CompanyName
                                     name={t('description.company_name_li_auto')}
+                                    type={t('description.fullTime')}
                                     startTime='2021.11'
                                     endTime='2022.06'
                                     location={t('description.liAutoLoc')}
@@ -157,7 +159,7 @@ const WorkExp  = () => {
                             display: 'flex',
                             width: '90%',
                             margin: '4px 0px',
-                            mt: '8px',
+                            mt: 2,
                             "@media screen and (max-width: 800px)": {
                                 width: '100%',
                             },
@@ -180,6 +182,7 @@ const WorkExp  = () => {
                             <Box display='flex' justifyContent='space-between'>
                                 <CompanyName
                                     name={t('description.company_name_yuanfudao')}
+                                    type={t('description.fullTime')}
                                     startTime='2021.06'
                                     endTime='2021.10'
                                     location={t('description.liAutoLoc')}
@@ -220,6 +223,118 @@ const WorkExp  = () => {
                                         t('description.yuanfudao_content_item2'),
                                         t('description.yuanfudao_content_item3'),
                                         t('description.yuanfudao_content_item4')
+                                    ].map((item, index) => (
+                                        <Box display='flex' alignItems='center' m={2} key={index}>
+                                            <Box 
+                                                sx={{
+                                                    minWidth: '8px',
+                                                    minHeight: '8px',
+                                                    maxWidth: '8px',
+                                                    maxHeight: '8px',
+                                                    borderRadius: '50%',
+                                                    backgroundColor: '#1A1380',
+                                                    marginRight: 4
+                                                }}>
+                                            </Box>
+                                            {item}
+                                        </Box>
+                                    ))
+                                }
+                            </StyledTextContainer>
+                        </StyledCard>
+                    </Box>
+
+
+
+                    {/* maple data strategy */}
+                    <Box
+                        data-aos="fade-up"
+                        sx={{
+                            display: 'flex',
+                            width: '90%',
+                            margin: '4px 0px',
+                            mt: 2,
+                            "@media screen and (max-width: 800px)": {
+                                width: '100%',
+                            },
+                        }}
+                    >
+                      
+                        <StyledCard
+                            sx={{ flex: 3, p: 3, m: 0 }}
+                        >
+                            <Box display='flex' justifyContent='space-between'>
+                                {/* <CompanyName
+                                    name={t('description.company_name_maple_data')}
+                                    type={t('description.intern')}
+                                    startTime='2020.09'
+                                    endTime='2021.05'
+                                    location={t('description.maple_data_loc')}
+                                    position={t('description.frontendEng')}
+                                /> */}
+                                <Box>
+                                    <StyledTextContainer
+                                        mb={2}
+                                        sx={{
+                                            fontSize: 25,
+                                            fontWeight: 600,
+                                            "@media screen and (max-width: 1300px)": {
+                                                fontSize: 20,
+                                            }
+                                        }}
+                                    >
+                                        {t('description.company_name_maple_data')}
+                                    </StyledTextContainer>
+                                    <Box display='flex'>
+                                        <StyledCard sx={{m: 0, paddingX: 3}}>
+                                            <WorkDetailInfo 
+                                                 type={t('description.intern')}
+                                                 startTime='2020.09'
+                                                 endTime='2021.06'
+                                                 location={t('description.maple_data_loc')}
+                                                 position={t('description.frontendEng')}
+                                            />
+                                        </StyledCard>
+                                        <StyledCard sx={{ml: 2, paddingX: 3}}>
+                                            <WorkDetailInfo 
+                                                 type={t('description.partTime')}
+                                                 startTime='2021.06'
+                                                 endTime={t('description.atPresent')}
+                                                 location={t('description.maple_data_loc')}
+                                                 position={t('description.frontendEng')}
+                                            />
+                                        </StyledCard>
+                                    </Box>
+                                </Box>
+                                  <StyledCard
+                                        sx={{
+                                            width: '30%',
+                                            // flex: 1,
+                                            pb: 0,
+                                            display: 'flex',
+                                            flexDirection: 'column',
+                                            alignItems: 'center',
+                                            boxSizing: 'content-box',
+                                        }}
+                                    >
+                                    <Box fontSize={18} fontWeight={600} p={1}>{t('description.company_name_maple_data')}</Box>  
+                                    <Box
+                                        sx={{userSelect: 'none', paddingX: 3, paddingY: 1, fontSize: '14px'}}
+                                    >
+                                        {t('description.maple_data_intro')}
+                                    </Box>
+                                
+                                </StyledCard>
+                            </Box>
+                            <StyledTextContainer sx={{ mt: 2 }}>
+                                {t('description.maple_data_work_content_p1')}
+                                <Box mt={1}>{t('description.maple_data_work_content_p2')}</Box>
+                                {
+                                    [
+                                        t('description.maple_data_content_item1'),
+                                        t('description.maple_data_content_item2'),
+                                        t('description.maple_data_content_item3'),
+                                        t('description.maple_data_content_item4')
                                     ].map((item, index) => (
                                         <Box display='flex' alignItems='center' m={2} key={index}>
                                             <Box 
@@ -349,6 +464,7 @@ const WorkExp  = () => {
                                         <Box flex={2}>
                                             <CompanyName
                                                 name={t('description.company_name_li_auto')}
+                                                type={t('description.fullTime')}
                                                 startTime='2021.11'
                                                 endTime='2022.06'
                                                 location={t('description.liAutoLoc')}
@@ -430,6 +546,7 @@ const WorkExp  = () => {
                                         <Box flex={2}>
                                             <CompanyName
                                                 name={t('description.company_name_yuanfudao')}
+                                                type={t('description.fullTime')}
                                                 startTime='2021.06'
                                                 endTime='2021.10'
                                                 location={t('description.liAutoLoc')}
@@ -508,6 +625,152 @@ const WorkExp  = () => {
                                     </Box>
                                 </StyledCard>
                             </Box>
+                        </StyledCard>
+                    </Box>
+
+
+
+                    {/* maple data strategy */}
+                    <Box
+                        data-aos="fade-up"
+                        sx={{
+                            display: 'flex',
+                            width: '100%',
+                            margin: '4px 0px',
+                            "@media screen and (max-width: 800px)": {
+                                width: '100%'
+                            },
+                        }}
+                    >
+                      
+                        <StyledCard
+                            sx={{ flex: 3, p: 3, m: 0 }}
+                        >
+                            <Box
+                                display='flex'
+                                justifyContent='space-between'
+                                sx={{
+                                    "@media screen and (max-width: 920px)": {
+                                        flexDirection: 'column-reverse'
+                                    },
+                                }}
+                            >
+                                <Box>
+                                    <StyledTextContainer
+                                        mb={2}
+                                        sx={{
+                                            fontSize: 25,
+                                            fontWeight: 600,
+                                            "@media screen and (max-width: 1300px)": {
+                                                fontSize: 20,
+                                            },
+                                            "@media screen and (max-width: 920px)": {
+                                               mt: 1
+                                            },
+                                        }}
+                                    >
+                                        {t('description.company_name_maple_data')}
+                                    </StyledTextContainer>
+                                    <Box
+                                        display='flex'
+                                        sx={{
+                                            "@media screen and (max-width: 650px)": {
+                                                flexDirection: 'column'
+                                            },
+                                        }}
+                                    >
+                                        <StyledCard sx={{m: 0, paddingX: 3}}>
+                                            <WorkDetailInfo 
+                                                 type={t('description.intern')}
+                                                 startTime='2020.09'
+                                                 endTime='2021.06'
+                                                 location={t('description.maple_data_loc')}
+                                                 position={t('description.frontendEng')}
+                                            />
+                                        </StyledCard>
+                                        <StyledCard sx={{ml: 2, paddingX: 3}}>
+                                            <WorkDetailInfo 
+                                                 type={t('description.partTime')}
+                                                 startTime='2021.06'
+                                                 endTime={t('description.atPresent')}
+                                                 location={t('description.maple_data_loc')}
+                                                 position={t('description.frontendEng')}
+                                            />
+                                        </StyledCard>
+                                    </Box>
+                                </Box>
+                                  <StyledCard
+                                        sx={{
+                                            width: '30%',
+                                            // flex: 1,
+                                            pb: 0,
+                                            display: 'flex',
+                                            flexDirection: 'column',
+                                            alignItems: 'center',
+                                            boxSizing: 'content-box',
+                                            "@media screen and (max-width: 920px)": {
+                                                width: '100%',
+                                                boxSizing: 'border-box',
+                                            },
+                                        }}
+                                    >
+                                    <Box
+                                        fontSize={18}
+                                        fontWeight={600}
+                                        p={1}
+                                        sx={{
+                                            "@media screen and (max-width: 920px)": {
+                                               p: 0
+                                            },
+                                        }}
+                                    >{t('description.company_name_maple_data')}</Box>  
+                                    <Box
+                                        sx={{
+                                            userSelect: 'none',
+                                            paddingX: 3,
+                                            paddingY: 1, 
+                                            fontSize: '14px',
+                                            "@media screen and (max-width: 920px)": {
+                                                paddingX: 2,
+                                                paddingY: 1,
+                                                pb: 2,
+                                                fontSize: '12px',
+                                            },
+                                           
+                                        }}
+                                    >
+                                        {t('description.maple_data_intro')}
+                                    </Box>
+                                
+                                </StyledCard>
+                            </Box>
+                            <StyledTextContainer sx={{ mt: 2 }}>
+                                {t('description.maple_data_work_content_p1')}
+                                <Box mt={1}>{t('description.maple_data_work_content_p2')}</Box>
+                                {
+                                    [
+                                        t('description.maple_data_content_item1'),
+                                        t('description.maple_data_content_item2'),
+                                        t('description.maple_data_content_item3'),
+                                        t('description.maple_data_content_item4')
+                                    ].map((item, index) => (
+                                        <Box display='flex' alignItems='center' m={2} key={index}>
+                                            <Box 
+                                                sx={{
+                                                    minWidth: '8px',
+                                                    minHeight: '8px',
+                                                    maxWidth: '8px',
+                                                    maxHeight: '8px',
+                                                    borderRadius: '50%',
+                                                    backgroundColor: '#1A1380',
+                                                    marginRight: 4
+                                                }}>
+                                            </Box>
+                                            {item}
+                                        </Box>
+                                    ))
+                                }
+                            </StyledTextContainer>
                         </StyledCard>
                     </Box>
 
