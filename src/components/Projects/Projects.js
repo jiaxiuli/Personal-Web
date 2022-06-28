@@ -8,10 +8,16 @@
 import React from "react";
 import Box from '@mui/material/Box';
 import style from './Projects.less';
-import StyledTextContainer from "../common/StyledTextContainer";
+// import StyledTextContainer from "../common/StyledTextContainer";
 import TitleContainer from "../common/TitleContainer";
 import FlexBox from "../common/FlexBox";
 import { useTranslation } from "react-i18next";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { EffectCards } from "swiper";
+import UWCSSA from "./components/UWCSSA";
+import './index.css';
+import "swiper/css";
+import "swiper/css/effect-cards";
 
 const Projects  = () => {
     
@@ -26,10 +32,31 @@ const Projects  = () => {
         >
             <TitleContainer title={t('description.project')}/>
             <FlexBox>
-                <Box className={style['text-container']}>
-                    <StyledTextContainer>
-                        {/* {t('description.about_content')} */}
-                    </StyledTextContainer>
+                <Box
+                    sx={{
+                        width: '80%',
+                        '@media screen and (max-width: 1000px)': {
+                             width:'85%'
+                        },
+                    }}
+                >
+                    <Swiper
+                        effect={"cards"}
+                        cardsEffect={{
+                            slideShadows: false
+                        }}
+                        grabCursor={true}
+                        modules={[EffectCards]}
+                    >
+                        <SwiperSlide><UWCSSA /></SwiperSlide>
+                        <SwiperSlide><UWCSSA /></SwiperSlide>
+                        <SwiperSlide><UWCSSA /></SwiperSlide>
+                        <SwiperSlide><UWCSSA /></SwiperSlide>
+                        <SwiperSlide><UWCSSA /></SwiperSlide>
+                        <SwiperSlide><UWCSSA /></SwiperSlide>
+                        <SwiperSlide><UWCSSA /></SwiperSlide>
+                        <SwiperSlide><UWCSSA /></SwiperSlide>
+                    </Swiper>
                 </Box>
             </FlexBox>
         </Box>
