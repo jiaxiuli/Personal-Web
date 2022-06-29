@@ -47,6 +47,7 @@ const ProjectSwitch = ({ currentIndex, handleSelectProject }) => {
                 paddingX: 3,
                 borderRadius: '21px',
                 transition: 'all 0.5s',
+                maxWidth: '80vw',
                 '&:hover': {
                     boxShadow: 'rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px'
                 }
@@ -57,10 +58,13 @@ const ProjectSwitch = ({ currentIndex, handleSelectProject }) => {
         >
             <StyledTextContainer
                 sx={{
-                    fontSize: 25,
+                    fontSize: 20,
                     fontWeight: 600,
                     "@media screen and (max-width: 1300px)": {
-                        fontSize: 20,
+                        fontSize: 16,
+                    },
+                    "@media screen and (max-width: 900px)": {
+                        fontSize: 14,
                     }
                 }}
             >
@@ -72,6 +76,9 @@ const ProjectSwitch = ({ currentIndex, handleSelectProject }) => {
                     display: 'flex',
                     alignItems: 'center',
                     ml: 2,
+                    "@media screen and (max-width: 800px)": {
+                        ml: 1,
+                    }
                 }}
             >
                 <ArrowDropDownIcon />

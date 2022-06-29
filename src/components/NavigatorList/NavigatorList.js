@@ -76,7 +76,7 @@ const NavigatorList = (props) => {
                 anchorEl={anchorEl}
                 placement={'bottom'}
                 transition 
-                sx={{ zIndex: 10 }}
+                sx={{ zIndex: 1000 }}
             >
                 {({ TransitionProps }) => (
                 <Fade {...TransitionProps} timeout={350}>

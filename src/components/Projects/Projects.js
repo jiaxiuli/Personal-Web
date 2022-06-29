@@ -25,35 +25,35 @@ import "swiper/css/effect-cards";
 
 export const projectList = [{
     index: 0,
-    title: 'UWCSSA',
+    title: 'University of Windsor Chinese Students & Scholars Association (UWCSSA)',
     component: <UWCSSA />,
 },{
     index: 1,
-    title: 'UWCSSA1 UWCSSA1 UWCSSA1',
+    title: 'Bowell online auction web app',
     component: <UWCSSA />,
 },{
     index: 2,
-    title: 'UWCSSA22 UWCSSA1 UWCSSA1 UWCSSA1 UWCSSA1',
+    title: 'Web app of social media using React and NodeJS',
     component: <UWCSSA />,
 },{
     index: 3,
-    title: 'UWCSSA333',
+    title: '"NFT Digital Collection" lucky draw for Li Auto the 7th anniversary',
     component: <UWCSSA />,
 },{
     index: 4,
-    title: 'UWCSSA444',
+    title: 'Icon font management platform',
     component: <UWCSSA />,
 },{
     index: 5,
-    title: 'UWCSSA555',
+    title: 'Health care web application using Django',
     component: <UWCSSA />,
 },{
     index: 6,
-    title: 'UWCSSA666',
+    title: 'Face recognition and processing',
     component: <UWCSSA />,
 },{
     index: 7,
-    title: 'UWCSSA77',
+    title: 'Online Tetris Game',
     component: <UWCSSA />,
 }]
 
@@ -91,14 +91,17 @@ const Projects  = () => {
                         justifyContent: 'space-between',
                         alignItems: 'center',
                         width: '80%',
-                        '@media screen and (max-width: 1000px)': {
-                            width:'85%'
+                        '@media screen and (max-width: 800px)': {
+                            width:'90%'
                         },
                     }}
                 >
                     <Button
                         sx={{
-                            width: '100px'
+                            width: '100px',
+                            '@media screen and (max-width: 800px)': {
+                                width: '60px',
+                            },
                         }}
                         onClick={() => setCurrentIndex((prev) => {
                             if (prev - 1 <= -1) {
@@ -110,20 +113,44 @@ const Projects  = () => {
                     >
                         <ArrowBackIcon />
                     </Button>
-                   
-                    <ProjectSwitch
-                        currentIndex={currentIndex}
-                        handleSelectProject={handleSelectProject}
-                    />
+                    <Box
+                        sx={{
+                            display: 'block',
+                            '@media screen and (max-width: 800px)': {
+                                display: 'none'
+                            }
+                        }}
+                    >
+                        <ProjectSwitch
+                            currentIndex={currentIndex}
+                            handleSelectProject={handleSelectProject}
+                        />
+                    </Box>
                     <Button
                         sx={{
-                            width: '100px'
+                            width: '100px',
+                            '@media screen and (max-width: 800px)': {
+                                width: '60px',
+                            },
                         }}
                         onClick={() =>
                             setCurrentIndex((prev) => (prev + 1) % projectList.length)}
                     >
                         <ArrowForwardIcon />
                     </Button>
+                </Box>
+                <Box
+                    sx={{
+                        display: 'none',
+                        '@media screen and (max-width: 800px)': {
+                            display: 'block'
+                        }
+                    }}
+                >
+                    <ProjectSwitch
+                        currentIndex={currentIndex}
+                        handleSelectProject={handleSelectProject}
+                    />
                 </Box>
                 <Box
                     sx={{
