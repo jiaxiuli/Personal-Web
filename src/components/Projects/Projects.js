@@ -20,7 +20,6 @@ import { useSwiper } from 'swiper/react';
 import ProjectSwitch from "../projectSwitch/ProjectSwitch";
 import UWCSSA from "./components/UWCSSA";
 import FaceRecognition from './components/FaceRecognition';
-// import TetrisGame from "./components/TetrisGame";
 import './index.css';
 import "swiper/css";
 import "swiper/css/effect-cards";

@@ -1,4 +1,5 @@
 import React from 'react';
+import Box from '@mui/material/Box';
 import StyledCard from "../../common/StyledCard";
 import StyledTextContainer from "../../common/StyledTextContainer";
 import { useTranslation } from "react-i18next";
@@ -18,6 +19,9 @@ const UWCSSA = () => {
                     width: '100%',
                 },
             }}>
+            <Box>
+                
+            </Box>
             <StyledTextContainer>
                 {t('description.work_content')}
             </StyledTextContainer>
