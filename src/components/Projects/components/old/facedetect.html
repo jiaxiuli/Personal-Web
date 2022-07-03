@@ -27,7 +27,7 @@
     }
 
     .div-a {
-      position: absolute;
+      /* position: absolute; */
       z-index: 1;
       left: unset !important;
       background-size: 400px 400px;
@@ -35,12 +35,13 @@
 
     .div-b {
       position: absolute;
-      background-size: 400px 400px;
+      /* background-size: 400px 400px; */
       background-color: rgba(1, 1, 1, 0.7);
       display: flex;
       align-items: center;
       justify-content: center;
       z-index: 2;
+      top: 20px;
       left: unset !important;
       visibility: hidden;
     }
@@ -55,7 +56,7 @@
     }
 
     .div-d {
-      position: relative;
+      position: absolute;
       width: 200px;
       height: 140px;
       background-color: rgba(0, 0, 0, 0.8);
@@ -67,12 +68,50 @@
       display: flex;
     }
 
+    #canvas-container {
+      width: 400px;
+      height: 400px;
+      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+      border-radius: 12px;
+      display: flex;
+      justify-content: center;
+    }
+
     @media screen and (max-width: 1300px) {
       #page-content-wrapper {
         display: flex !important;
         flex-direction: column !important;
       }
-}
+    }
+
+    .pic-button {
+      width: 100px;
+      height: 100px;
+      flex-shrink: 0;
+      background-size: contain;
+    }
+
+    #inputurl {
+      width: 300px;
+    }
+
+    @media screen and (max-width: 650px) {
+      #canvas-container {
+        width: 200px;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+      }
+
+      .pic-button {
+        width: 80px;
+        height: 80px;
+      }
+
+      #inputurl {
+        width: 100px;
+      }
+    }
   </style>
 
 </head>
@@ -90,14 +129,12 @@
           style="
             position: relative;
             flex: 1;
-            background-color:gold;
-            border: 3px dashed orange;
             display: flex;
             flex-direction: column;
             align-items: center;
             "
            >
-          <a style="display:block; height: 400px; width: 400px; margin-top: 20px;">
+          <div id="canvas-container" style="display:flex; margin-top: 20px; justify-content: center;">
             <canvas id="photo" width="400" height="400" class="div-a"></canvas>
             <div id="mask" width="400" height="400" class="div-b">
               <div id="load" class="div-c">
@@ -212,35 +249,35 @@
               </div>
             </div>
             <div id="fail" class="div-d"></div>
-          </a>
+          </div>
 
 
-          <div style="display:flex; height: 100px; margin-top: 30px; overflow-x: auto; max-width: 100%;">
-            <div id="pic1"
-              style="width:100px; height:100px; flex-shrink: 0; background-image: url('https://cdn.faceplusplus.com.cn/mc-official/scripts/demoScript/images/demo-pic1.jpg');background-size:100px 100px; margin-left: 0px; "
+          <div style="display:flex; height: auto; margin-top: 30px; overflow-x: auto; max-width: 100%;">
+            <div class="pic-button"
+              style="background-image: url('https://cdn.faceplusplus.com.cn/mc-official/scripts/demoScript/images/demo-pic1.jpg');margin-left: 0px; "
               onclick="go('https://cdn.faceplusplus.com.cn/mc-official/scripts/demoScript/images/demo-pic1.jpg')"></div>
 
-            <div
-              style="width:100px; height:100px; flex-shrink: 0; background-image: url('https://cdn.faceplusplus.com.cn/mc-official/scripts/demoScript/images/demo-pic6.jpg');background-size:100px 100px; margin-left: 20px;"
+            <div class="pic-button"
+              style="background-image: url('https://cdn.faceplusplus.com.cn/mc-official/scripts/demoScript/images/demo-pic6.jpg');margin-left: 20px;"
               onclick="go('https://cdn.faceplusplus.com.cn/mc-official/scripts/demoScript/images/demo-pic6.jpg')"></div>
 
-            <div
-              style="width:100px; height:100px; flex-shrink: 0; background-image: url('https://www.faceplusplus.com.cn/scripts/demoScript/images/demo-pic10.jpg');background-size:100px 100px; margin-left: 20px; "
+            <div class="pic-button"
+              style="background-image: url('https://www.faceplusplus.com.cn/scripts/demoScript/images/demo-pic10.jpg');margin-left: 20px; "
               onclick="go('https://www.faceplusplus.com.cn/scripts/demoScript/images/demo-pic10.jpg')"></div>
 
-            <div
-              style="width:100px; height:100px; flex-shrink: 0; background-image: url('https://www.faceplusplus.com.cn/scripts/demoScript/images/demo-pic8.jpg');background-size:100px 100px; margin-left: 20px; "
+            <div class="pic-button"
+              style="background-image: url('https://www.faceplusplus.com.cn/scripts/demoScript/images/demo-pic8.jpg');margin-left: 20px; "
               onclick="go('https://www.faceplusplus.com.cn/scripts/demoScript/images/demo-pic8.jpg')"></div>
           </div>
 
 
 
 
-          <a style="display:block; height: 20px; margin-left: 72px; margin-top: 10px;" align="center">
+          <div style="display:flex; justify-content: center; height: 40px; max-width: 100%; overflow: hidden; margin-top: 10px;">
 
             <input id="image_upload" style="float: left" type="file" accept="image/*" name="file" id="file" />
 
-          </a>
+          </div>
 
 
           <script>
@@ -275,28 +312,45 @@
 
           </script>
 
-          <a style="display:block; height: 70px; " align="center">
+          <a style="display:block; height: 50px; ">
             <input placeholder="Input the URL of a photo"
-              style="width:300px; height:40px; 
-                        margin-top: 10px; z-index: 999!important; margin-left: 0px; font-size: large; font-family: times" value="" id="inputurl" />
+              style="height:40px; 
+                        z-index: 999!important; margin-left: 0px; font-size: large; font-family: times" value="" id="inputurl" />
 
             <button style="width:100px; height:30px; 
-                       margin-top: 30px;z-index: 999!important; margin-left: 0px"
+                       margin-top: 10px;z-index: 999!important; margin-left: 0px"
               onclick="getInputUrl()">Detect</button>
           </a>
         </div>
 
-        <div style="background-color:gold;border: 3px dashed blue; flex: 1;">
-          <div id="dataarea" style="background-color:gold; overflow-y:auto; padding: 16px;"></div>
+        <div style="flex: 1;box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; border-radius: 12px;">
+          <div id="dataarea" style="overflow-y:auto; padding: 16px;"></div>
         </div>
 
 
 
         <script>
          window.onload = () => {
-          const photoAreaHeight = document.querySelector('#photoarea').offsetHeight;
-          const dataarea = document.querySelector('#dataarea');
-          dataarea.style.height = photoAreaHeight + 'px';
+          if (window.outerWidth >= 650) {
+            const photoAreaHeight = document.querySelector('#photoarea').offsetHeight;
+            const dataarea = document.querySelector('#dataarea');
+            dataarea.style.height = photoAreaHeight + 'px';
+          }
+         }
+
+         window.canvasWidth = 400;
+         getCanvasLength();
+
+         window.onresize = () => {
+          getCanvasLength();
+         }
+
+         function getCanvasLength() {
+            if (window.outerWidth < 650) {
+              window.canvasWidth = 200;
+            } else {
+              window.canvasWidth = 400;
+            }
          }
 
           go('https://cdn.faceplusplus.com.cn/mc-official/scripts/demoScript/images/demo-pic1.jpg');
@@ -317,35 +371,37 @@
 
               var rate = originalWidth / originalHeight;
               if (bigImg.width > bigImg.height) {
-                bigImg.width = "400";
-                bigImg.height = 400 / rate;
+                bigImg.width = canvasWidth;
+                bigImg.height = canvasWidth / rate;
               } else if (bigImg.width < bigImg.height) {
-                bigImg.height = "400";
-                bigImg.width = 400 * rate;
+                bigImg.height = canvasWidth;
+                bigImg.width = canvasWidth * rate;
               } else {
-                bigImg.width = "400";  //320个像素 不用加px	
-                bigImg.height = "400";
+                bigImg.width = canvasWidth;  //320个像素 不用加px	
+                bigImg.height = canvasWidth;
               }
 
-              //    context.drawImage(bigImg, 0 ,0, bigImg.width, bigImg.height);   
+              //    context.drawImage(bigImg, 0 ,0, bigImg.width, bigImg.height);
+              console.log(bigImg.width, originalWidth, bigImg.height, originalHeight)
 
-              rate_row = bigImg.width / originalWidth;
-              rate_colum = bigImg.height / originalHeight;
+              rate_row = 400 / originalWidth;
+              rate_colum = 400 / originalHeight;
 
               canvasDom.style.width = bigImg.width + "px";
               canvasDom.style.height = bigImg.height + "px";
-              canvasDom.style.left = (550 - bigImg.width) / 2 + "px";
+              // canvasDom.style.left = (550 - bigImg.width) / 2 + "px";
 
               var mask = document.getElementById("mask");
               mask.style.width = bigImg.width + "px";
               mask.style.height = bigImg.height + "px";
-              mask.style.left = (550 - bigImg.width) / 2 + "px";
+              // mask.style.left = (550 - bigImg.width) / 2 + "px";
               canvasDom.style.backgroundSize = bigImg.width + "px " + bigImg.height + "px";
 
               var different;
               if (bigImg.width > bigImg.height) {
-                different = 400 / bigImg.height;
-                var a = document.createElement("a");
+                console.log(data, rate_row, rate_colum, 77)
+                different = canvasWidth / bigImg.height;
+                // var a = document.createElement("a");
                 for (i = 0; i < data.faces.length; i++) {
                   context.strokeRect(data.faces[i].face_rectangle.left * rate_row,
                     data.faces[i].face_rectangle.top * rate_colum * different,
@@ -353,7 +409,8 @@
                     data.faces[i].face_rectangle.height * rate_colum * different);
                 }
               } else if (bigImg.width < bigImg.height) {
-                different = 400 / bigImg.width;
+                console.log(data, rate_row, rate_colum, 88)
+                different = canvasWidth / bigImg.width;
                 for (i = 0; i < data.faces.length; i++) {
                   context.strokeRect(data.faces[i].face_rectangle.left * rate_row * different,
                     data.faces[i].face_rectangle.top * rate_colum,
@@ -361,6 +418,7 @@
                     data.faces[i].face_rectangle.height * rate_colum);
                 }
               } else {
+                console.log(data, rate_row, rate_colum, 99)
                 for (i = 0; i < data.faces.length; i++) {
                   context.strokeRect(data.faces[i].face_rectangle.left * rate_row,
                     data.faces[i].face_rectangle.top * rate_colum,
@@ -445,7 +503,6 @@
               data: postData,
               success: function (response) {
                 select(response, image_url);
-                console.log(response, image_url);
                 getjson(response, image_url);
                 finishProcess();
               },

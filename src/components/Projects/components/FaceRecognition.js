@@ -5,7 +5,6 @@ import StyledTextContainer from "../../common/StyledTextContainer";
 import { useTranslation } from "react-i18next";
 
 const FaceRecognition = () => {
-    console.log(FaceHTML, 888);
 
     const { t }  = useTranslation();
 
@@ -25,9 +24,10 @@ const FaceRecognition = () => {
                 {t('description.work_content')}
             </StyledTextContainer> */}
             <iframe
-                srcdoc={FaceHTML}
+                srcDoc={FaceHTML}
                 width="100%"
                 height="100%"
+                style={{ border: 'none' }}
                 title="faceDetect">
             </iframe>
         </StyledCard>
