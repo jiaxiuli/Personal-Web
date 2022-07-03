@@ -19,6 +19,7 @@ import { EffectCards } from "swiper";
 import { useSwiper } from 'swiper/react';
 import ProjectSwitch from "../projectSwitch/ProjectSwitch";
 import UWCSSA from "./components/UWCSSA";
+import FaceRecognition from './components/FaceRecognition';
 import './index.css';
 import "swiper/css";
 import "swiper/css/effect-cards";
@@ -50,7 +51,7 @@ export const projectList = [{
 },{
     index: 6,
     title: 'Face recognition and processing',
-    component: <UWCSSA />,
+    component: <FaceRecognition />,
 },{
     index: 7,
     title: 'Online Tetris Game',
@@ -84,7 +85,7 @@ const Projects  = () => {
             }}
         >
             <TitleContainer title={t('description.project')}/>
-            <FlexBox flexDirection='column'>
+            <FlexBox data-aos="fade-up" flexDirection='column' >
                 <Box
                     sx={{
                         display: 'flex',
