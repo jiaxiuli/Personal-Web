@@ -20,6 +20,7 @@ import { useSwiper } from 'swiper/react';
 import ProjectSwitch from "../projectSwitch/ProjectSwitch";
 import UWCSSA from "./components/UWCSSA";
 import FaceRecognition from './components/FaceRecognition';
+// import TetrisGame from "./components/TetrisGame";
 import './index.css';
 import "swiper/css";
 import "swiper/css/effect-cards";
@@ -52,10 +53,6 @@ export const projectList = [{
     index: 6,
     title: 'Face recognition and processing',
     component: <FaceRecognition />,
-},{
-    index: 7,
-    title: 'Online Tetris Game',
-    component: <UWCSSA />,
 }]
 
 const SwipeCommiter = ({ currentIndex }) => {
