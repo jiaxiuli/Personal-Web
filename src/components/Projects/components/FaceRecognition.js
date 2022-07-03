@@ -1,12 +1,10 @@
 import React from 'react';
 import FaceHTML from './old/facedetect.html';
 import StyledCard from "../../common/StyledCard";
-import StyledTextContainer from "../../common/StyledTextContainer";
-import { useTranslation } from "react-i18next";
+// import { useTranslation } from "react-i18next";
 
 const FaceRecognition = () => {
 
-    const { t }  = useTranslation();
 
     return (
         <StyledCard

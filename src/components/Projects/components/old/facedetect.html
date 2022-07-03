@@ -41,7 +41,7 @@
       align-items: center;
       justify-content: center;
       z-index: 2;
-      top: 20px;
+      /* top: 20px; */
       left: unset !important;
       visibility: hidden;
     }
@@ -75,6 +75,7 @@
       border-radius: 12px;
       display: flex;
       justify-content: center;
+      align-items: center;
     }
 
     @media screen and (max-width: 1300px) {
@@ -134,7 +135,7 @@
             align-items: center;
             "
            >
-          <div id="canvas-container" style="display:flex; margin-top: 20px; justify-content: center;">
+          <div id="canvas-container" style="display:flex; margin-top: 20px; justify-content: center; align-items: center;">
             <canvas id="photo" width="400" height="400" class="div-a"></canvas>
             <div id="mask" width="400" height="400" class="div-b">
               <div id="load" class="div-c">
@@ -396,36 +397,42 @@
               mask.style.height = bigImg.height + "px";
               // mask.style.left = (550 - bigImg.width) / 2 + "px";
               canvasDom.style.backgroundSize = bigImg.width + "px " + bigImg.height + "px";
-
-              var different;
-              if (bigImg.width > bigImg.height) {
-                console.log(data, rate_row, rate_colum, 77)
-                different = canvasWidth / bigImg.height;
-                // var a = document.createElement("a");
-                for (i = 0; i < data.faces.length; i++) {
-                  context.strokeRect(data.faces[i].face_rectangle.left * rate_row,
-                    data.faces[i].face_rectangle.top * rate_colum * different,
-                    data.faces[i].face_rectangle.width * rate_row,
-                    data.faces[i].face_rectangle.height * rate_colum * different);
-                }
-              } else if (bigImg.width < bigImg.height) {
-                console.log(data, rate_row, rate_colum, 88)
-                different = canvasWidth / bigImg.width;
-                for (i = 0; i < data.faces.length; i++) {
-                  context.strokeRect(data.faces[i].face_rectangle.left * rate_row * different,
-                    data.faces[i].face_rectangle.top * rate_colum,
-                    data.faces[i].face_rectangle.width * rate_row * different,
-                    data.faces[i].face_rectangle.height * rate_colum);
-                }
-              } else {
-                console.log(data, rate_row, rate_colum, 99)
-                for (i = 0; i < data.faces.length; i++) {
+              for (i = 0; i < data.faces.length; i++) {
                   context.strokeRect(data.faces[i].face_rectangle.left * rate_row,
                     data.faces[i].face_rectangle.top * rate_colum,
                     data.faces[i].face_rectangle.width * rate_row,
                     data.faces[i].face_rectangle.height * rate_colum);
-                }
               }
+
+              // var different;
+              // if (bigImg.width > bigImg.height) {
+              //   console.log(data, rate_row, rate_colum, 77)
+              //   different = canvasWidth / bigImg.height;
+              //   // var a = document.createElement("a");
+              //   for (i = 0; i < data.faces.length; i++) {
+              //     context.strokeRect(data.faces[i].face_rectangle.left * rate_row,
+              //       data.faces[i].face_rectangle.top * rate_colum * different,
+              //       data.faces[i].face_rectangle.width * rate_row,
+              //       data.faces[i].face_rectangle.height * rate_colum * different);
+              //   }
+              // } else if (bigImg.width < bigImg.height) {
+              //   console.log(data, rate_row, rate_colum, 88)
+              //   different = canvasWidth / bigImg.width;
+              //   for (i = 0; i < data.faces.length; i++) {
+              //     context.strokeRect(data.faces[i].face_rectangle.left * rate_row ,
+              //       data.faces[i].face_rectangle.top * rate_colum,
+              //       data.faces[i].face_rectangle.width * rate_row,
+              //       data.faces[i].face_rectangle.height * rate_colum);
+              //   }
+              // } else {
+              //   console.log(data, rate_row, rate_colum, 99)
+              //   for (i = 0; i < data.faces.length; i++) {
+              //     context.strokeRect(data.faces[i].face_rectangle.left * rate_row,
+              //       data.faces[i].face_rectangle.top * rate_colum,
+              //       data.faces[i].face_rectangle.width * rate_row,
+              //       data.faces[i].face_rectangle.height * rate_colum);
+              //   }
+              // }
               //                 for( i = 0 ; i < data.faces.length ; i++ ){ 
               //                var clipCanvas = document.createElement('canvas')
               //                clipCanvas.width =  data.faces[i].face_rectangle.width*rate_row;
