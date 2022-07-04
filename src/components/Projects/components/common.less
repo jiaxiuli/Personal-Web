@@ -1,0 +1,23 @@
+@imgWidth: 40%;
+@imgHeight: @imgWidth / 2.02;
+
+@imgWidthBig: 100%;
+@imgHeightBig: @imgWidth / 2.02;
+
+.img-container {
+    width: @imgWidth; 
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+     @media screen and (max-width: 1000px) {
+        width: @imgWidthBig; 
+        height: @imgHeightBig;
+    }
+    .img-UWCSSA {
+        border-radius: 12px;
+        height: @imgHeight;
+        width: 100%; 
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    }
+}

@@ -113,7 +113,15 @@ i18n.use(initReactI18next)
                         maple_data_content_item1: 'Participated in the development of commercial projects.',
                         maple_data_content_item2: 'Responsible for the development of a variety of charts for data visualization using e-charts.',
                         maple_data_content_item3: 'Leader of the charts-dev group of interns, responsible for allocating development tasks and code merging. ',
-                        maple_data_content_item4: 'Learnt React.js and Vue.js at internship stage.'
+                        maple_data_content_item4: 'Learnt React.js and Vue.js at internship stage.',
+                        frontend_leader: 'Front end Leader',
+
+                        UWCSSA_desc1: `This is a website for the community of Chinese students and scholars in University of Windsor.`,
+                        UWCSSA_desc2: 'The website is still iterating and is currently in version 1.0.',
+                        UWCSSA_desc3:`Currently, news can be redacted by a rich text editor and released, activities with a dynamic enrolment form
+                         can be created and allow users to join the activity by filling out the form.`,
+                        UWCSSA_desc4:`More features are being developed, e.g. second-hand trading, house renting, etc.`,
+                        UWCSSA_item1: '',
                     }
                 }
             },
