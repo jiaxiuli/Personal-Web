@@ -11,7 +11,7 @@ const FaceRecognition = () => {
             // data-aos="fade-up"
             sx={{
                 // width: '90%',
-                height: '74vh',
+                height: '80vh',
                 p :2,
                 m: 0,
                 "@media screen and (max-width: 1500px)": {

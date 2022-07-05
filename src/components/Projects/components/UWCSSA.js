@@ -30,7 +30,7 @@ const UWCSSA = () => {
             sx={{
                 // width: '90%',
                 overflow: 'auto',
-                height: '74vh',
+                height: '80vh',
                 m: 0,
                 "@media screen and (max-width: 1500px)": {
                     width: '100%',
@@ -45,23 +45,41 @@ const UWCSSA = () => {
                         }
                     }}
                 >
-                    <Box className={style['img-container']}>
-                        <LazyLoadImage
-                            effect="opacity"
-                            alt="UWCSSA"
-                            className={style['img-UWCSSA']}
-                            src="./photos/UWCSSA.png" // use normal <img> attributes as props
-                        />
+                    <Box
+                        sx={{
+                            display: 'flex',
+                            width: '40%',
+                            height: '100%',
+                            flexDirection: 'column',
+                            '@media screen and (max-width: 1000px)': {
+                                width: '100%',
+                            }
+                        }}
+                    >
+                        <Box className={style['img-container']}>
+                            <LazyLoadImage
+                                effect="opacity"
+                                alt="UWCSSA"
+                                className={style['img-UWCSSA']}
+                                src="./photos/UWCSSA.png" // use normal <img> attributes as props
+                            />
+                        </Box>
                         <StyledCard sx={{m: 0, mt: 1, flex: 1}}>
                             <StyledTextContainer
                                 sx={{
                                     fontSize: '16px'
                                 }}
                             >
-                                <Box mb={1}>{t('description.UWCSSA_desc1')}</Box>
-                                <Box mb={1}>{t('description.UWCSSA_desc2')}</Box>
-                                <Box mb={1}>{t('description.UWCSSA_desc3')}</Box>
-                                <Box mb={1}>{t('description.UWCSSA_desc4')}</Box>
+                                <StyledTextContainer
+                                    sx={{ fontSize: '16px', mb: 1 }}
+                                    fontWeight={600}
+                                >
+                                    {t('description.introduction')}
+                                </StyledTextContainer>
+                                <Box mb={2}>{t('description.UWCSSA_desc1')}</Box>
+                                <Box mb={2}>{t('description.UWCSSA_desc2')}</Box>
+                                <Box mb={2}>{t('description.UWCSSA_desc3')}</Box>
+                                <Box mb={2}>{t('description.UWCSSA_desc4')}</Box>
                                 
                             </StyledTextContainer>
                         </StyledCard>
@@ -122,6 +140,40 @@ const UWCSSA = () => {
                                     link='https://production.uwcssa.ca/'
                                 />
                             </StyledCard>
+                        </Box>
+                        <Box sx={{paddingX: 2}}>
+                            <StyledTextContainer>
+                                <StyledTextContainer
+                                    sx={{ mb: 2 }}
+                                    fontWeight={600}
+                                >
+                                    {t('description.highlights')}
+                                </StyledTextContainer>
+                                {
+                                    [
+                                        t('description.UWCSSA_highlight1'),
+                                        t('description.UWCSSA_highlight2'),
+                                        t('description.UWCSSA_highlight3'),
+                                        t('description.UWCSSA_highlight4'),
+                                        t('description.UWCSSA_highlight5') 
+                                    ].map((item, index) => (
+                                        <Box display='flex' alignItems='center' m={2.5} key={index}>
+                                            <Box 
+                                                sx={{
+                                                    minWidth: '8px',
+                                                    minHeight: '8px',
+                                                    maxWidth: '8px',
+                                                    maxHeight: '8px',
+                                                    borderRadius: '50%',
+                                                    backgroundColor: '#1A1380',
+                                                    marginRight: 4
+                                                }}>
+                                            </Box>
+                                            {item}
+                                        </Box>
+                                    ))
+                                }
+                            </StyledTextContainer>
                         </Box>
                     
                     </Box>
@@ -190,22 +242,70 @@ const UWCSSA = () => {
                             className={style['img-UWCSSA']}
                             src="./photos/UWCSSA.png" // use normal <img> attributes as props
                         />
-                        <StyledCard sx={{m: 0, mt: 1, flex: 1}}>
-                            <StyledTextContainer
-                                sx={{
-                                    fontSize: '16px'
-                                }}
-                            >
-                                <Box mb={1}>{t('description.UWCSSA_desc1')}</Box>
-                                <Box mb={1}>{t('description.UWCSSA_desc2')}</Box>
-                                <Box mb={1}>{t('description.UWCSSA_desc3')}</Box>
-                                <Box mb={1}>{t('description.UWCSSA_desc4')}</Box>
-                                
-                            </StyledTextContainer>
-                        </StyledCard>
                     </Box>
-                     
-                    
+                    <StyledCard sx={{m: 0, mt: 1}}>
+                        <StyledTextContainer
+                            sx={{
+                                fontSize: '16px'
+                            }}
+                        >
+                            <StyledTextContainer
+                                sx={{ fontSize: '16px', mb: 1 }}
+                                fontWeight={600}
+                            >
+                                {t('description.introduction')}
+                            </StyledTextContainer>
+                            <Box mb={2}>{t('description.UWCSSA_desc1')}</Box>
+                            <Box mb={2}>{t('description.UWCSSA_desc2')}</Box>
+                            <Box mb={2}>{t('description.UWCSSA_desc3')}</Box>
+                            <Box mb={2}>{t('description.UWCSSA_desc4')}</Box>
+                            
+                        </StyledTextContainer>
+                        <StyledTextContainer
+                            sx={{
+                                fontSize: '16px'
+                            }}
+                        >
+                            <Box mb={1}>{t('description.UWCSSA_desc1')}</Box>
+                            <Box mb={1}>{t('description.UWCSSA_desc2')}</Box>
+                            <Box mb={1}>{t('description.UWCSSA_desc3')}</Box>
+                            <Box mb={1}>{t('description.UWCSSA_desc4')}</Box>
+                        </StyledTextContainer>
+                    </StyledCard>
+                    <StyledCard sx={{m: 0, mt: 1}}>
+                        <StyledTextContainer>
+                            <StyledTextContainer
+                                sx={{ mb: 1 }}
+                                fontWeight={600}
+                            >
+                                {t('description.highlights')}
+                            </StyledTextContainer>
+                            {
+                                [
+                                    t('description.UWCSSA_highlight1'),
+                                    t('description.UWCSSA_highlight2'),
+                                    t('description.UWCSSA_highlight3'),
+                                    t('description.UWCSSA_highlight4'),
+                                    t('description.UWCSSA_highlight5') 
+                                ].map((item, index) => (
+                                    <Box display='flex' alignItems='center' m={2} key={index}>
+                                        <Box 
+                                            sx={{
+                                                minWidth: '8px',
+                                                minHeight: '8px',
+                                                maxWidth: '8px',
+                                                maxHeight: '8px',
+                                                borderRadius: '50%',
+                                                backgroundColor: '#1A1380',
+                                                marginRight: 4
+                                            }}>
+                                        </Box>
+                                        {item}
+                                    </Box>
+                                ))
+                            }
+                        </StyledTextContainer>
+                    </StyledCard>
                 </Box>
         </StyledCard>
     )

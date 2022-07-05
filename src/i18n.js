@@ -114,14 +114,24 @@ i18n.use(initReactI18next)
                         maple_data_content_item2: 'Responsible for the development of a variety of charts for data visualization using e-charts.',
                         maple_data_content_item3: 'Leader of the charts-dev group of interns, responsible for allocating development tasks and code merging. ',
                         maple_data_content_item4: 'Learnt React.js and Vue.js at internship stage.',
+                        introduction: 'Introduction',
+                        highlights: 'Highlights',
                         frontend_leader: 'Front end Leader',
+
 
                         UWCSSA_desc1: `This is a website for the community of Chinese students and scholars in University of Windsor.`,
                         UWCSSA_desc2: 'The website is still iterating and is currently in version 1.0.',
                         UWCSSA_desc3:`Currently, news can be redacted by a rich text editor and released, activities with a dynamic enrolment form
                          can be created and allow users to join the activity by filling out the form.`,
                         UWCSSA_desc4:`More features are being developed, e.g. second-hand trading, house renting, etc.`,
-                        UWCSSA_item1: '',
+                        UWCSSA_highlight1: `I am in charge of the whole front end part of this project, lead a group of students in Unversity of Windsor to work together and help them to
+                        resolve practical problems in front end.`,
+                        UWCSSA_highlight2: 'A rich text editor is implemented using CK-edtior5, which allows users to customize the format and style of text and pictures.',
+                        UWCSSA_highlight3: `The feature of dynamic form makes it possible for users to customize the form, including the questions, 
+                        the options of the select-type questions, the validation rules of the questions.`,
+                        UWCSSA_highlight4: `Smart use of Redux and custom hooks defines global components and methods to improve development efficiency and the style uniformity of the whole project.`,
+                        UWCSSA_highlight5: `Rational logic abstraction and a good use of HOC builds efficient reusable components, which reduces code coupling and enhance system stability, 
+                        as well as enable the system scalable and sustainable.`,
                     }
                 }
             },

@@ -20,6 +20,7 @@ import { useSwiper } from 'swiper/react';
 import ProjectSwitch from "../projectSwitch/ProjectSwitch";
 import UWCSSA from "./components/UWCSSA";
 import FaceRecognition from './components/FaceRecognition';
+// import useMediaQuery from '@mui/material/useMediaQuery';
 import './index.css';
 import "swiper/css";
 import "swiper/css/effect-cards";
@@ -69,6 +70,7 @@ const Projects  = () => {
     const { t }  = useTranslation();
     const [currentIndex, setCurrentIndex] = useState(0);
 
+    // const matches = useMediaQuery('(max-width: 1000px)');
     const handleSelectProject = (index) => {
         setCurrentIndex(index);
     }
@@ -151,9 +153,14 @@ const Projects  = () => {
                 </Box>
                 <Box
                     sx={{
-                        width: '80%',
-                        '@media screen and (max-width: 1000px)': {
-                             width:'85%'
+                        width: '100%',
+                        paddingX: '11%',
+                        boxSizing: 'border-box',
+                        '@media screen and (max-width: 1500px)': {
+                            paddingX: 'calc(8% - 12px)',
+                        },
+                        '@media screen and (max-width: 1200px)': {
+                            paddingX: 'calc(4% - 12px)',
                         },
                     }}
                 >
