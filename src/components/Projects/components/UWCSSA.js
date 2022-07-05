@@ -30,10 +30,13 @@ const UWCSSA = () => {
             sx={{
                 // width: '90%',
                 overflow: 'auto',
-                height: '80vh',
+                height: '74vh',
                 m: 0,
                 "@media screen and (max-width: 1500px)": {
                     width: '100%',
+                },
+                "@media screen and (max-width: 1000px)": {
+                    height: '80vh',
                 },
             }}>
                 <Box
@@ -141,7 +144,7 @@ const UWCSSA = () => {
                                 />
                             </StyledCard>
                         </Box>
-                        <Box sx={{paddingX: 2}}>
+                        <Box sx={{paddingX: 2, mt: 2}}>
                             <StyledTextContainer>
                                 <StyledTextContainer
                                     sx={{ mb: 2 }}

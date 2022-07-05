@@ -11,11 +11,14 @@ const FaceRecognition = () => {
             // data-aos="fade-up"
             sx={{
                 // width: '90%',
-                height: '80vh',
+                height: '74vh',
                 p :2,
                 m: 0,
                 "@media screen and (max-width: 1500px)": {
                     width: '100%',
+                },
+                "@media screen and (max-width: 1000px)": {
+                    height: '80vh',
                 },
             }}>
             {/* <StyledTextContainer>
