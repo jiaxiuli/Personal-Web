@@ -30,7 +30,7 @@ const UWCSSA = () => {
             sx={{
                 // width: '90%',
                 overflow: 'auto',
-                height: '74vh',
+                minHeight: '74vh',
                 m: 0,
                 "@media screen and (max-width: 1500px)": {
                     width: '100%',
