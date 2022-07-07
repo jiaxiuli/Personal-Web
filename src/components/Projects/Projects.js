@@ -19,6 +19,7 @@ import { EffectCards } from "swiper";
 import { useSwiper } from 'swiper/react';
 import ProjectSwitch from "../projectSwitch/ProjectSwitch";
 import UWCSSA from "./components/UWCSSA";
+import Bhpm from "./components/Bhpm";
 import FaceRecognition from './components/FaceRecognition';
 // import useMediaQuery from '@mui/material/useMediaQuery';
 import './index.css';
@@ -32,7 +33,7 @@ export const projectList = [{
 },{
     index: 1,
     title: 'Bowell online auction web app',
-    component: <UWCSSA />,
+    component: <Bhpm />,
 },{
     index: 2,
     title: 'Web app of social media using React and NodeJS',

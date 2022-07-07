@@ -132,6 +132,12 @@ i18n.use(initReactI18next)
                         UWCSSA_highlight4: `Smart use of Redux and custom hooks defines global components and methods to improve development efficiency and the style uniformity of the whole project.`,
                         UWCSSA_highlight5: `Rational logic abstraction and a good use of HOC builds efficient reusable components, which reduces code coupling and enhance system stability, 
                         as well as enable the system scalable and sustainable.`,
+
+                        bhpm_desc1: 'This is an online auction system for Bowell Gemology Inc., which is an auction house in Richmond Hill, Canada.',
+                        bhpm_highlight1: 'Amazon Cognito user pool is used to manage users and the authentication and authorization of the users.',
+                        bhpm_highlight2: `Website internationalization is implemented using the npm package called "react-i18next". The website allows switching between English and Chinese.`,
+                        bhpm_highlight3: `Website internationalization is implemented using the npm package called "react-i18next". The website allows switching between English and Chinese.`,
+
                     }
                 }
             },
