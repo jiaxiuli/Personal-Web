@@ -141,6 +141,15 @@ i18n.use(initReactI18next)
                         bhpm_highlight2: `Website internationalization is implemented using the npm package called "react-i18next". The website allows switching between English and Chinese.`,
                         bhpm_highlight3: `Website internationalization is implemented using the npm package called "react-i18next". The website allows switching between English and Chinese.`,
 
+                        NTF_desc1: 'This project is an activity for all employees in Li Auto company to draw a digital collection as gifts, in order to celebrate the company\'s 7th anniversary.',
+                        // NTF_desc2: 'The rule of the activity was that users need to answer a couple of questions, after which they can draw their NTF collections.',
+                        NTF_desc2: `I was responsible for the front end development of the main flow of the NTF collections drawing. Including answering questions,
+                        filpping the card to draw the materials and finally compounding the NTF collections using the materials.`,
+                        NTF_desc3: 'There were a few api calls needed and most of the work were interactive animations and the improvement of user experience.',
+                        NTF_highlight1: `Interactive animation and user experience are the key points of my part of work.`,
+                        NTF_highlight2: 'I designed and used serveral different types of animation libs to achieve natural transitions. As shown in the video.',
+                        NTF_highlight3: 'The complex animation of the parts of drawing and compositing is implemented with a well-designed and creative solution.'
+
                     }
                 }
             },

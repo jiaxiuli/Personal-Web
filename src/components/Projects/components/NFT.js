@@ -18,7 +18,7 @@ const ListItem = styled(Box)(({ theme }) => ({
   marginBottom: theme.spacing(),
 }));
 
-const chips = ['React.js', 'JavaScript', 'MUI', 'GraphQL', 'AWS', 'Serverless']
+const chips = ['Vue.js', 'JavaScript', 'Vant', 'GraphQL', 'animation']
 
 const NTF = () => {
 
@@ -51,27 +51,32 @@ const NTF = () => {
                 >
                     <Box
                         sx={{
-                            display: 'flex',
-                            width: '40%',
-                            // height: '100%',
-                            flexDirection: 'column',
+                            height: '100%',
+                            paddingX: 4,
                             '@media screen and (max-width: 1000px)': {
                                 width: '100%',
                             }
                         }}
                     >
-                        <ImageList />
-                    </Box>
-                    <Box flex={1} pl={2}>
-                        <Box
-                            pl={2}
-                            sx={{
-                                flex: 1,
-                                display: 'flex',
-                                justifyContent: 'space-between'
+                        {/* <ImageList /> */}
+                        <video
+                            controls
+                            height="100%"
+                            style={{
+                                borderRadius: '14px',
+                                boxShadow: 'rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px',
                             }}
                         >
-                            <Box>
+                            <source src="./videos/NTF.mp4"
+                                    type="video/mp4" />
+                            Sorry, your browser doesn't support embedded videos.
+                        </video>
+                    </Box>
+                    <Box flex={1} pl={2} height='auto'>
+                        <Box
+                            pl={2}
+                            sx={{flex: 1}}
+                        >
                                 <Box display='flex' flexWrap='wrap'>
                                     {
                                         chips.map((item) => (
@@ -91,33 +96,10 @@ const NTF = () => {
                                 <Box paddingY={1}>
                                     <ProjectInfo
                                         role={t('description.frontendDev')}
-                                        startTime='2022.04'
+                                        startTime='2022.06'
                                         endTime='2022.06'
                                     />
                                 </Box>
-                            </Box>
-
-                            <StyledCard
-                                sx={{
-                                    flexShrink: 0,
-                                    display: 'flex',
-                                    width: 'fit-content',
-                                    height: 'fit-content',
-                                    paddingY: 0.5,
-                                    m: 0
-                                }}
-                            >
-                                <ProjectLink
-                                    img={'./stack_icons/github.png'}
-                                    desc='GitHub'
-                                    link='https://github.com/jiaxiuli/bhpmJS/tree/main'
-                                />
-                                <ProjectLink
-                                    img={'./stack_icons/bhpm_logo.png'}
-                                    desc='Website'
-                                    link='https://bhpm.ca/'
-                                />
-                            </StyledCard>
                         </Box>
                         <Box sx={{paddingX: 2, mt: 1}}>
                             <StyledCard sx={{m: 0, mt: 1, flex: 1}}>
@@ -132,13 +114,13 @@ const NTF = () => {
                                     >
                                         {t('description.introduction')}
                                     </StyledTextContainer>
-                                    <Box mb={2}>{t('description.bhpm_desc1')}</Box>
-                                    <Box mb={2}>{t('description.bhpm_desc2')}</Box>
-                                    <Box mb={2}>{t('description.bhpm_desc3')}</Box>
+                                    <Box mb={2}>{t('description.NTF_desc1')}</Box>
+                                    <Box mb={2}>{t('description.NTF_desc2')}</Box>
+                                    <Box mb={2}>{t('description.NTF_desc3')}</Box>
                                     
                                 </StyledTextContainer>
                             </StyledCard>
-                            <StyledTextContainer sx={{ mt: 3 }}>
+                            <StyledTextContainer sx={{ paddingY: 1 }}>
                                 <StyledTextContainer
                                     fontWeight={600}
                                 >
@@ -146,11 +128,11 @@ const NTF = () => {
                                 </StyledTextContainer>
                                 {
                                     [
-                                        t('description.bhpm_highlight1'),
-                                        t('description.bhpm_highlight2'),
-                                        t('description.bhpm_highlight3'),
+                                        t('description.NTF_highlight1'),
+                                        t('description.NTF_highlight2'),
+                                        t('description.NTF_highlight3'),
                                     ].map((item, index) => (
-                                        <Box display='flex' alignItems='center' m={2} key={index}>
+                                        <Box display='flex' alignItems='center' m={1} key={index}>
                                             <Box 
                                                 sx={{
                                                     minWidth: '8px',
@@ -175,6 +157,7 @@ const NTF = () => {
                 {/* 屏幕宽度小于1000 */}
                 <Box
                     sx={{
+                        width: '100%',
                         display: 'none',
                         "@media screen and (max-width: 1000px)": {
                             display: 'block'
@@ -182,79 +165,105 @@ const NTF = () => {
                     }}
                 >
                    
-                    <Box>
-                        <StyledCard
-                            sx={{
-                                flexShrink: 0,
-                                display: 'flex',
-                                width: 'fit-content',
-                                height: 'fit-content',
-                                paddingY: 0.5,
-                                m: 0
-                            }}
-                        >
-                            <ProjectLink
-                                img={'./stack_icons/github.png'}
-                                desc='GitHub'
-                                link='https://github.com/jiaxiuli/bhpmJS/tree/main'
-                            />
-                            <ProjectLink
-                                img={'./stack_icons/bhpm_logo.png'}
-                                desc='Website'
-                                link='https://bhpm.ca/'
-                            />
-                        </StyledCard>
-                        <Box display='flex' flexWrap='wrap' mt={2}>
-                            {
-                                chips.map((item) => (
-                                    <ListItem key={item}>
-                                        <Chip
-                                            sx={{
-                                                boxShadow: 'rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px',
-                                            }}
-                                            color="primary"
-                                            label={item}
-                                            size={matches ? 'small' : 'medium'}
-                                        />
-                                    </ListItem>
-                                ))
-                            }
-                        </Box>
-                        <Box paddingY={1}>
-                            <ProjectInfo
-                                role={t('description.frontendDev')}
-                                startTime='2022.04'
-                                endTime='2022.06'
-                            />
-                        </Box>
+                    <Box display='flex' flexWrap='wrap'>
+                        {
+                            chips.map((item) => (
+                                <ListItem key={item}>
+                                    <Chip
+                                        sx={{
+                                            boxShadow: 'rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px',
+                                        }}
+                                        color="primary"
+                                        label={item}
+                                        size={matches ? 'small' : 'medium'}
+                                    />
+                                </ListItem>
+                            ))
+                        }
                     </Box>
-                    <Box className={style['img-container-bhpm']}>
-                        <LazyLoadImage
-                            effect="opacity"
-                            alt="bhpm"
-                            className={style['img-UWCSSA']}
-                            src="./photos/bhpm.png" // use normal <img> attributes as props
+                    <Box paddingY={1}>
+                        <ProjectInfo
+                            role={t('description.frontendDev')}
+                            startTime='2022.04'
+                            endTime='2022.06'
                         />
                     </Box>
-                    <StyledCard sx={{m: 0, mt: 1}}>
-                        <StyledTextContainer
+                    <Box
+                        sx={{
+                            display: 'flex',
+                            "@media screen and (max-width: 550px)": {
+                                flexDirection: 'column',
+                                alignItems: 'center'
+                            }
+                        }}
+                    >
+                        <Box
                             sx={{
-                                fontSize: '16px'
+                                width: '20%',
+                                display: 'flex',
+                                alignItems: 'center',
+                                mr: 1,
+                                "@media screen and (max-width: 740px)": {
+                                    width: '30%'
+                                },
+                                "@media screen and (max-width: 600px)": {
+                                    width: '35%'
+                                },
+                                "@media screen and (max-width: 550px)": {
+                                    width: '60%',
+                                    mb: 1,
+                                    mr: 0
+                                },
+                                "@media screen and (max-width: 500px)": {
+                                    width: '70%',
+                                    mb: 1,
+                                    mr: 0
+                                },
+                                "@media screen and (max-width: 450px)": {
+                                    width: '80%',
+                                    mb: 1,
+                                    mr: 0
+                                },
+                                "@media screen and (max-width: 400px)": {
+                                    width: '90%',
+                                    mb: 1,
+                                    mr: 0
+                                }
                             }}
                         >
-                            <StyledTextContainer
-                                sx={{ fontSize: '16px', mb: 1 }}
-                                fontWeight={600}
+                            {/* <ImageList /> */}
+                            <video
+                                controls
+                                width="100%"
+                                style={{
+                                    borderRadius: '14px',
+                                    boxShadow: 'rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px',
+                                }}
                             >
-                                {t('description.introduction')}
+                                <source src="./videos/NTF.mp4"
+                                        type="video/mp4" />
+                                Sorry, your browser doesn't support embedded videos.
+                            </video>
+                        </Box>
+                        <StyledCard sx={{flex: 1}}>
+                            <StyledTextContainer
+                                sx={{
+                                    fontSize: '16px'
+                                }}
+                            >
+                                <StyledTextContainer
+                                    sx={{ fontSize: '16px', mb: 1 }}
+                                    fontWeight={600}
+                                >
+                                    {t('description.introduction')}
+                                </StyledTextContainer>
+                                <Box mb={2}>{t('description.NTF_desc1')}</Box>
+                                <Box mb={2}>{t('description.NTF_desc2')}</Box>
+                                <Box mb={2}>{t('description.NTF_desc3')}</Box>
+                                
                             </StyledTextContainer>
-                            <Box mb={2}>{t('description.bhpm_desc1')}</Box>
-                            <Box mb={2}>{t('description.bhpm_desc2')}</Box>
-                            <Box mb={2}>{t('description.bhpm_desc3')}</Box>
-                            <Box mb={2}>{t('description.bhpm_desc4')}</Box>
-                            
-                        </StyledTextContainer>
-                    </StyledCard>
+                        </StyledCard>
+                    </Box>
                     <StyledCard sx={{m: 0, mt: 1}}>
                         <StyledTextContainer>
                             <StyledTextContainer
@@ -265,11 +274,9 @@ const NTF = () => {
                             </StyledTextContainer>
                             {
                                 [
-                                    t('description.UWCSSA_highlight1'),
-                                    t('description.UWCSSA_highlight2'),
-                                    t('description.UWCSSA_highlight3'),
-                                    t('description.UWCSSA_highlight4'),
-                                    t('description.UWCSSA_highlight5') 
+                                    t('description.NTF_highlight1'),
+                                    t('description.NTF_highlight2'),
+                                    t('description.NTF_highlight3'),
                                 ].map((item, index) => (
                                     <Box display='flex' alignItems='center' m={2} key={index}>
                                         <Box 

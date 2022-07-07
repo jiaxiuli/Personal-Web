@@ -11,7 +11,7 @@ import style from './common.less';
 import ProjectInfo from '../../common/ProjectInfo';
 import { styled } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
-import ImageList from './ImageListBhpm';
+// import ImageList from './ImageListBhpm';
 
 const ListItem = styled(Box)(({ theme }) => ({
   marginRight: theme.spacing(),
@@ -53,6 +53,7 @@ const Bhpm = () => {
                         sx={{
                             display: 'flex',
                             width: '45%',
+                            height: 'auto',
                             flexDirection: 'column',
                             '@media screen and (max-width: 1000px)': {
                                 width: '100%',
