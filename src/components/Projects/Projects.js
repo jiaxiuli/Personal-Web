@@ -20,6 +20,7 @@ import { useSwiper } from 'swiper/react';
 import ProjectSwitch from "../projectSwitch/ProjectSwitch";
 import UWCSSA from "./components/UWCSSA";
 import Bhpm from "./components/Bhpm";
+import NTF from './components/NFT';
 import FaceRecognition from './components/FaceRecognition';
 // import useMediaQuery from '@mui/material/useMediaQuery';
 import './index.css';
@@ -41,7 +42,7 @@ export const projectList = [{
 },{
     index: 3,
     title: '"NFT Digital Collection" lucky draw for Li Auto the 7th anniversary',
-    component: <UWCSSA />,
+    component: <NTF />,
 },{
     index: 4,
     title: 'Icon font management platform',

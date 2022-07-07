@@ -20,7 +20,7 @@ const ListItem = styled(Box)(({ theme }) => ({
 
 const chips = ['React.js', 'JavaScript', 'MUI', 'GraphQL', 'AWS', 'Serverless']
 
-const Bhpm = () => {
+const NTF = () => {
 
     const { t }  = useTranslation();
     const matches = useMediaQuery('(max-width: 1150px)');
@@ -36,10 +36,13 @@ const Bhpm = () => {
                 "@media screen and (max-width: 1500px)": {
                     width: '100%',
                 },
+                "@media screen and (max-width: 1000px)": {
+                    height: '80vh',
+                },
             }}>
                 <Box
                     sx={{
-                        height: 'auto',
+                        height: '100%',
                         display: 'flex',
                         "@media screen and (max-width: 1000px)": {
                             display: 'none'
@@ -49,39 +52,15 @@ const Bhpm = () => {
                     <Box
                         sx={{
                             display: 'flex',
-                            width: '45%',
+                            width: '40%',
+                            // height: '100%',
                             flexDirection: 'column',
                             '@media screen and (max-width: 1000px)': {
                                 width: '100%',
                             }
                         }}
                     >
-                        {/* <ImageList /> */}
-                        <Box className={style['img-container-bhpm']}>
-                            <LazyLoadImage
-                                effect="opacity"
-                                alt="bhpm"
-                                className={style['img-UWCSSA']}
-                                src="./photos/bhpm.png" // use normal <img> attributes as props
-                            />
-                        </Box>
-                        <StyledCard sx={{m: 0, mt: 1, flex: 1}}>
-                            <StyledTextContainer
-                                sx={{
-                                    fontSize: '16px'
-                                }}
-                            >
-                                <StyledTextContainer
-                                    sx={{ fontSize: '16px', mb: 1 }}
-                                    fontWeight={600}
-                                >
-                                    {t('description.introduction')}
-                                </StyledTextContainer>
-                                <Box mb={2}>{t('description.bhpm_desc1')}</Box>
-                                <Box mb={2}>{t('description.bhpm_desc2')}</Box>
-                                <Box mb={2}>{t('description.bhpm_desc3')}</Box>
-                            </StyledTextContainer>
-                        </StyledCard>
+                        <ImageList />
                     </Box>
                     <Box flex={1} pl={2}>
                         <Box
@@ -141,7 +120,7 @@ const Bhpm = () => {
                             </StyledCard>
                         </Box>
                         <Box sx={{paddingX: 2, mt: 1}}>
-                            {/* <StyledCard sx={{m: 0, mt: 1, flex: 1}}>
+                            <StyledCard sx={{m: 0, mt: 1, flex: 1}}>
                                 <StyledTextContainer
                                     sx={{
                                         fontSize: '16px'
@@ -158,8 +137,8 @@ const Bhpm = () => {
                                     <Box mb={2}>{t('description.bhpm_desc3')}</Box>
                                     
                                 </StyledTextContainer>
-                            </StyledCard> */}
-                            <StyledTextContainer sx={{ mt: 0 }}>
+                            </StyledCard>
+                            <StyledTextContainer sx={{ mt: 3 }}>
                                 <StyledTextContainer
                                     fontWeight={600}
                                 >
@@ -169,8 +148,6 @@ const Bhpm = () => {
                                     [
                                         t('description.bhpm_highlight1'),
                                         t('description.bhpm_highlight2'),
-                                        t('description.bhpm_highlight3'),
-                                        t('description.bhpm_highlight3'),
                                         t('description.bhpm_highlight3'),
                                     ].map((item, index) => (
                                         <Box display='flex' alignItems='center' m={2} key={index}>
@@ -274,6 +251,8 @@ const Bhpm = () => {
                             <Box mb={2}>{t('description.bhpm_desc1')}</Box>
                             <Box mb={2}>{t('description.bhpm_desc2')}</Box>
                             <Box mb={2}>{t('description.bhpm_desc3')}</Box>
+                            <Box mb={2}>{t('description.bhpm_desc4')}</Box>
+                            
                         </StyledTextContainer>
                     </StyledCard>
                     <StyledCard sx={{m: 0, mt: 1}}>
@@ -315,4 +294,4 @@ const Bhpm = () => {
     )
 }
 
-export default Bhpm;
+export default NTF;

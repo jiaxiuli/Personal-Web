@@ -30,7 +30,7 @@ const UWCSSA = () => {
             sx={{
                 // width: '90%',
                 overflow: 'auto',
-                minHeight: '74vh',
+                height: '74vh',
                 m: 0,
                 "@media screen and (max-width: 1500px)": {
                     width: '100%',
@@ -41,7 +41,7 @@ const UWCSSA = () => {
             }}>
                 <Box
                     sx={{
-                        height: '100%',
+                        height: 'auto',
                         display: 'flex',
                         "@media screen and (max-width: 1000px)": {
                             display: 'none'
@@ -52,7 +52,7 @@ const UWCSSA = () => {
                         sx={{
                             display: 'flex',
                             width: '40%',
-                            height: '100%',
+                            height: 'auto',
                             flexDirection: 'column',
                             '@media screen and (max-width: 1000px)': {
                                 width: '100%',
@@ -144,10 +144,9 @@ const UWCSSA = () => {
                                 />
                             </StyledCard>
                         </Box>
-                        <Box sx={{paddingX: 2, mt: 2}}>
+                        <Box sx={{paddingX: 2, mt: 1}}>
                             <StyledTextContainer>
                                 <StyledTextContainer
-                                    sx={{ mb: 2 }}
                                     fontWeight={600}
                                 >
                                     {t('description.highlights')}

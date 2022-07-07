@@ -134,6 +134,9 @@ i18n.use(initReactI18next)
                         as well as enable the system scalable and sustainable.`,
 
                         bhpm_desc1: 'This is an online auction system for Bowell Gemology Inc., which is an auction house in Richmond Hill, Canada.',
+                        bhpm_desc2: `In this project, I played a role of front end developer. I was responsible for creating the web page and handling front-end and back-end data interaction with GraphQL and rendering.
+                        All of the network requests and responses were managed by redux (redux toolkit).`,
+                        bhpm_desc3:`I worked with the development team efficiently, including debugging the interfaces with back-end developers and other front end developer to design reusable components.`,
                         bhpm_highlight1: 'Amazon Cognito user pool is used to manage users and the authentication and authorization of the users.',
                         bhpm_highlight2: `Website internationalization is implemented using the npm package called "react-i18next". The website allows switching between English and Chinese.`,
                         bhpm_highlight3: `Website internationalization is implemented using the npm package called "react-i18next". The website allows switching between English and Chinese.`,
