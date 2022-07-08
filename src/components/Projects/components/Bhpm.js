@@ -76,14 +76,14 @@ const Bhpm = () => {
                                 }}
                             >
                                 <StyledTextContainer
-                                    sx={{ fontSize: '16px', mb: 1 }}
+                                    sx={{ fontSize: '16px', mb: 2 }}
                                     fontWeight={600}
                                 >
                                     {t('description.introduction')}
                                 </StyledTextContainer>
-                                <Box mb={2}>{t('description.bhpm_desc1')}</Box>
-                                <Box mb={2}>{t('description.bhpm_desc2')}</Box>
-                                <Box mb={2}>{t('description.bhpm_desc3')}</Box>
+                                <Box mb={2.5}>{t('description.bhpm_desc1')}</Box>
+                                <Box mb={2.5}>{t('description.bhpm_desc2')}</Box>
+                                <Box mb={2.5}>{t('description.bhpm_desc3')}</Box>
                             </StyledTextContainer>
                         </StyledCard>
                     </Box>
@@ -144,25 +144,7 @@ const Bhpm = () => {
                                 />
                             </StyledCard>
                         </Box>
-                        <Box sx={{paddingX: 2, mt: 1}}>
-                            {/* <StyledCard sx={{m: 0, mt: 1, flex: 1}}>
-                                <StyledTextContainer
-                                    sx={{
-                                        fontSize: '16px'
-                                    }}
-                                >
-                                    <StyledTextContainer
-                                        sx={{ fontSize: '16px', mb: 1 }}
-                                        fontWeight={600}
-                                    >
-                                        {t('description.introduction')}
-                                    </StyledTextContainer>
-                                    <Box mb={2}>{t('description.bhpm_desc1')}</Box>
-                                    <Box mb={2}>{t('description.bhpm_desc2')}</Box>
-                                    <Box mb={2}>{t('description.bhpm_desc3')}</Box>
-                                    
-                                </StyledTextContainer>
-                            </StyledCard> */}
+                        <Box sx={{paddingX: 2, mt: 2}}>
                             <StyledTextContainer sx={{ mt: 0 }}>
                                 <StyledTextContainer
                                     fontWeight={600}
@@ -174,10 +156,9 @@ const Bhpm = () => {
                                         t('description.bhpm_highlight1'),
                                         t('description.bhpm_highlight2'),
                                         t('description.bhpm_highlight3'),
-                                        t('description.bhpm_highlight3'),
-                                        t('description.bhpm_highlight3'),
+                                        t('description.bhpm_highlight4'),
                                     ].map((item, index) => (
-                                        <Box display='flex' alignItems='center' m={2} key={index}>
+                                        <Box display='flex' alignItems='center' m={3} key={index}>
                                             <Box 
                                                 sx={{
                                                     minWidth: '8px',
@@ -290,11 +271,10 @@ const Bhpm = () => {
                             </StyledTextContainer>
                             {
                                 [
-                                    t('description.UWCSSA_highlight1'),
-                                    t('description.UWCSSA_highlight2'),
-                                    t('description.UWCSSA_highlight3'),
-                                    t('description.UWCSSA_highlight4'),
-                                    t('description.UWCSSA_highlight5') 
+                                    t('description.bhpm_highlight1'),
+                                    t('description.bhpm_highlight2'),
+                                    t('description.bhpm_highlight3'),
+                                    t('description.bhpm_highlight4'),
                                 ].map((item, index) => (
                                     <Box display='flex' alignItems='center' m={2} key={index}>
                                         <Box 

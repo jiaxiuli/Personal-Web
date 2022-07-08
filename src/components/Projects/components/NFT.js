@@ -2,16 +2,12 @@ import React from 'react';
 import Box from '@mui/material/Box';
 import StyledCard from "../../common/StyledCard";
 import StyledTextContainer from "../../common/StyledTextContainer";
-import ProjectLink from '../../common/ProjectLink';
 import { useTranslation } from "react-i18next";
-import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/opacity.css';
 import { Chip } from '@mui/material';
-import style from './common.less';
 import ProjectInfo from '../../common/ProjectInfo';
 import { styled } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
-import ImageList from './ImageListBhpm';
 
 const ListItem = styled(Box)(({ theme }) => ({
   marginRight: theme.spacing(),
