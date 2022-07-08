@@ -4,22 +4,21 @@ import StyledCard from "../../common/StyledCard";
 import StyledTextContainer from "../../common/StyledTextContainer";
 import ProjectLink from '../../common/ProjectLink';
 import { useTranslation } from "react-i18next";
-import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/opacity.css';
 import { Chip } from '@mui/material';
-import style from './common.less';
 import ProjectInfo from '../../common/ProjectInfo';
 import { styled } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
+import QuiltedImageList from './ImageListLifeLink';
 
 const ListItem = styled(Box)(({ theme }) => ({
   marginRight: theme.spacing(),
   marginBottom: theme.spacing(),
 }));
 
-const chips = ['React.js', 'JavaScript', 'MUI', 'GraphQL', 'AWS', 'Serverless']
+const chips = ['React.js', 'JavaScript', 'Ant Design', 'REST apis', 'Node.js', 'express.js', '1-person team']
 
-const Bhpm = () => {
+const LifeLink = () => {
 
     const { t }  = useTranslation();
     const matches = useMediaQuery('(max-width: 1150px)');
@@ -52,7 +51,7 @@ const Bhpm = () => {
                     <Box
                         sx={{
                             display: 'flex',
-                            width: '45%',
+                            width: '40%',
                             height: 'auto',
                             flexDirection: 'column',
                             '@media screen and (max-width: 1000px)': {
@@ -60,34 +59,10 @@ const Bhpm = () => {
                             }
                         }}
                     >
-                        {/* <ImageList /> */}
-                        <Box className={style['img-container-bhpm']}>
-                            <LazyLoadImage
-                                effect="opacity"
-                                alt="bhpm"
-                                className={style['img-UWCSSA']}
-                                src="./photos/bhpm.png" // use normal <img> attributes as props
-                            />
-                        </Box>
-                        <StyledCard sx={{m: 0, mt: 1, flex: 1}}>
-                            <StyledTextContainer
-                                sx={{
-                                    fontSize: '16px'
-                                }}
-                            >
-                                <StyledTextContainer
-                                    sx={{ fontSize: '16px', mb: 2 }}
-                                    fontWeight={600}
-                                >
-                                    {t('description.introduction')}
-                                </StyledTextContainer>
-                                <Box mb={2.5}>{t('description.bhpm_desc1')}</Box>
-                                <Box mb={2.5}>{t('description.bhpm_desc2')}</Box>
-                                <Box mb={2.5}>{t('description.bhpm_desc3')}</Box>
-                            </StyledTextContainer>
-                        </StyledCard>
+                        <QuiltedImageList />
+                     
                     </Box>
-                    <Box flex={1} pl={2}>
+                    <Box flex={1} ml={2}>
                         <Box
                             pl={2}
                             sx={{
@@ -115,9 +90,9 @@ const Bhpm = () => {
                                 </Box>
                                 <Box paddingY={1}>
                                     <ProjectInfo
-                                        role={t('description.frontendDev')}
-                                        startTime='2022.04'
-                                        endTime='2022.06'
+                                        role={t('description.fullStackdDev')}
+                                        startTime='2021.12'
+                                        endTime={t('description.suspend')}
                                     />
                                 </Box>
                             </Box>
@@ -134,18 +109,35 @@ const Bhpm = () => {
                             >
                                 <ProjectLink
                                     img={'./stack_icons/github.png'}
-                                    desc='GitHub'
-                                    link='https://github.com/jiaxiuli/bhpmJS/tree/main'
+                                    desc='front-end'
+                                    link='https://github.com/jiaxiuli/LifeLink-social-media-react'
                                 />
                                 <ProjectLink
-                                    img={'./stack_icons/bhpm_logo.png'}
-                                    desc='Website'
-                                    link='https://bhpm.ca/'
+                                    img={'./stack_icons/github.png'}
+                                    desc='server'
+                                    link='https://github.com/jiaxiuli/LifeLink-socal-media-app-nodeJS-server'
                                 />
                             </StyledCard>
                         </Box>
-                        <Box sx={{paddingX: 2, mt: 2}}>
-                            <StyledTextContainer sx={{ mt: 0 }}>
+                        <Box sx={{paddingX: 2, mt: 1}}>
+                            <StyledCard sx={{m: 0, mt: 1, flex: 1}}>
+                                <StyledTextContainer
+                                    sx={{
+                                        fontSize: '16px'
+                                    }}
+                                >
+                                    <StyledTextContainer
+                                        sx={{ fontSize: '16px', mb: 1 }}
+                                        fontWeight={600}
+                                    >
+                                        {t('description.introduction')}
+                                    </StyledTextContainer>
+                                    <Box mb={2}>{t('description.lifeLink_desc1')}</Box>
+                                    <Box mb={2}>{t('description.lifeLink_desc2')}</Box>
+                                    <Box mb={2}>{t('description.lifeLink_desc3')}</Box>
+                                </StyledTextContainer>
+                            </StyledCard>
+                            <StyledTextContainer sx={{mt: 3}}>
                                 <StyledTextContainer
                                     fontWeight={600}
                                 >
@@ -153,12 +145,10 @@ const Bhpm = () => {
                                 </StyledTextContainer>
                                 {
                                     [
-                                        t('description.bhpm_highlight1'),
-                                        t('description.bhpm_highlight2'),
-                                        t('description.bhpm_highlight3'),
-                                        t('description.bhpm_highlight4'),
+                                        t('description.lifeLink_highlight1'),
+                                        t('description.lifeLink_highlight2'),
                                     ].map((item, index) => (
-                                        <Box display='flex' alignItems='center' m={3} key={index}>
+                                        <Box display='flex' alignItems='center' m={2} key={index}>
                                             <Box 
                                                 sx={{
                                                     minWidth: '8px',
@@ -176,7 +166,6 @@ const Bhpm = () => {
                                 }
                             </StyledTextContainer>
                         </Box>
-                    
                     </Box>
                 </Box>
 
@@ -202,14 +191,14 @@ const Bhpm = () => {
                             }}
                         >
                             <ProjectLink
-                                img={'./stack_icons/github.png'}
-                                desc='GitHub'
-                                link='https://github.com/jiaxiuli/bhpmJS/tree/main'
+                                    img={'./stack_icons/github.png'}
+                                    desc='front-end'
+                                    link='https://github.com/jiaxiuli/LifeLink-social-media-react'
                             />
                             <ProjectLink
-                                img={'./stack_icons/bhpm_logo.png'}
-                                desc='Website'
-                                link='https://bhpm.ca/'
+                                img={'./stack_icons/github.png'}
+                                desc='server'
+                                link='https://github.com/jiaxiuli/LifeLink-socal-media-app-nodeJS-server'
                             />
                         </StyledCard>
                         <Box display='flex' flexWrap='wrap' mt={2}>
@@ -230,20 +219,21 @@ const Bhpm = () => {
                         </Box>
                         <Box paddingY={1}>
                             <ProjectInfo
-                                role={t('description.frontendDev')}
-                                startTime='2022.04'
-                                endTime='2022.06'
+                                role={t('description.fullStackdDev')}
+                                startTime='2021.12'
+                                endTime={t('description.suspend')}
                             />
                         </Box>
                     </Box>
-                    <Box className={style['img-container-bhpm']}>
+                    {/* <Box className={style['img-container']}>
                         <LazyLoadImage
                             effect="opacity"
-                            alt="bhpm"
+                            alt="UWCSSA"
                             className={style['img-UWCSSA']}
-                            src="./photos/bhpm.png" // use normal <img> attributes as props
+                            src="./photos/UWCSSA.png" // use normal <img> attributes as props
                         />
-                    </Box>
+                    </Box> */}
+                    <QuiltedImageList />
                     <StyledCard sx={{m: 0, mt: 1}}>
                         <StyledTextContainer
                             sx={{
@@ -256,9 +246,9 @@ const Bhpm = () => {
                             >
                                 {t('description.introduction')}
                             </StyledTextContainer>
-                            <Box mb={2}>{t('description.bhpm_desc1')}</Box>
-                            <Box mb={2}>{t('description.bhpm_desc2')}</Box>
-                            <Box mb={2}>{t('description.bhpm_desc3')}</Box>
+                            <Box mb={2}>{t('description.lifeLink_desc1')}</Box>
+                            <Box mb={2}>{t('description.lifeLink_desc2')}</Box>
+                            <Box mb={2}>{t('description.lifeLink_desc3')}</Box>
                         </StyledTextContainer>
                     </StyledCard>
                     <StyledCard sx={{m: 0, mt: 1}}>
@@ -271,10 +261,8 @@ const Bhpm = () => {
                             </StyledTextContainer>
                             {
                                 [
-                                    t('description.bhpm_highlight1'),
-                                    t('description.bhpm_highlight2'),
-                                    t('description.bhpm_highlight3'),
-                                    t('description.bhpm_highlight4'),
+                                    t('description.lifeLink_highlight1'),
+                                    t('description.lifeLink_highlight2'),
                                 ].map((item, index) => (
                                     <Box display='flex' alignItems='center' m={2} key={index}>
                                         <Box 
@@ -299,4 +287,4 @@ const Bhpm = () => {
     )
 }
 
-export default Bhpm;
+export default LifeLink;

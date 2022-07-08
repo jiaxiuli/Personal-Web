@@ -79,6 +79,7 @@ i18n.use(initReactI18next)
                         intern: 'Internship',
                         partTime: 'Part-time (remote)',
                         atPresent: 'at present',
+                        suspend: 'suspended',
                         work_content: `After I graduated from University of Windsor and got my Master's degree, I worked as a front-end engineer and I have been 
                         continuously learning development skills. Now, I am trying to develop a complete web application by my own 
                         out of my work, including both front-end and back-end and deploy it on a cloude server.
@@ -87,6 +88,7 @@ i18n.use(initReactI18next)
                         company_name_li_auto: `Li Auto Inc.`,
                         frontendEng: 'Front end Engineer',
                         frontendDev: 'Front end Developer',
+                        fullStackdDev: 'Full Stack Developer',
                         liAutoLoc: 'Beijing, China',
                         li_auto_intro: 'Li Auto Inc. is a leader in China’s new energy vehicle market. The Company designs, develops, manufactures, and sells premium smart electric vehicles. ',
                         li_auto_work_content: `In Li Auto, I worked in the department called "Energy Efficiency Engineering",
@@ -149,7 +151,15 @@ i18n.use(initReactI18next)
                         NTF_desc3: 'There were a few api calls needed and most of the work were interactive animations and the improvement of user experience.',
                         NTF_highlight1: `Interactive animation and user experience are the key points of my part of work.`,
                         NTF_highlight2: 'I designed and used serveral different types of animation libs to achieve natural transitions. As shown in the video.',
-                        NTF_highlight3: 'The complex animation of the parts of drawing and compositing is implemented with a well-designed and creative solution.'
+                        NTF_highlight3: 'The complex animation of the parts of drawing and compositing is implemented with a well-designed and creative solution.',
+
+                        lifeLink_desc1: `I did this project for myself to learn and practice system design abilities and some back end skills. This is a social media application for people to 
+                        post articles and pictures to share their life, and interact with their friends.`,
+                        lifeLink_desc2: 'However, after starting the project for a period of time, the project had to be discontinued due to work and other projects.',
+                        lifeLink_desc3: `Currently, I have completed some modules, including user authentication and profile, post articles and pictures, browse posts from friends and "like" or "collect" the posts.`,
+                        lifeLink_highlight1: `Build the whole APP from 0, including the front end, back end and database, as well as product functions and UI design.`,
+                        lifeLink_highlight2: 'Able to think independently and solved technical and logical-designed problems independently.'
+
 
                     }
                 }

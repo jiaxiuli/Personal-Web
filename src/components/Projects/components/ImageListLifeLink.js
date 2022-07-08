@@ -14,7 +14,12 @@ function srcset(image, size, rows = 1, cols = 1) {
 
 export default function QuiltedImageList() {
   return (
-    <Box sx={{ width: '100%', height: '100%' }}>
+    <Box sx={{ 
+      width: '100%',
+      height: '100%' , 
+      borderRadius: '12px',
+      boxShadow: 'rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px'
+    }}>
         <ImageList
             sx={{
                 width: '100%',
@@ -32,6 +37,9 @@ export default function QuiltedImageList() {
                 <ImageListItem key={item.img} cols={item.cols || 1} rows={item.rows || 1}>
                 <img
                     {...srcset(item.img, 121, item.rows, item.cols)}
+                    style={{
+                      objectPosition: 'left top'
+                    }}
                     alt={item.title}
                     loading="lazy"
                 />
@@ -45,8 +53,8 @@ export default function QuiltedImageList() {
 
 const itemData = [
   {
-    img: './photos/bhpm.png',
-    title: 'Breakfast',
+    img: './photos/lifelink1.png',
+    title: 'lifelink1',
     rows: 2,
     cols: 4,
   },
@@ -63,8 +71,8 @@ const itemData = [
   //   cols: 2,
   // },
   {
-    img: './photos/bhpm3.png',
-    title: 'Coffee',
+    img: './photos/lifelink2.png',
+    title: 'lifelink2',
     cols: 4,
     rows: 1,
   },

@@ -263,16 +263,6 @@ const UWCSSA = () => {
                             <Box mb={2}>{t('description.UWCSSA_desc4')}</Box>
                             
                         </StyledTextContainer>
-                        <StyledTextContainer
-                            sx={{
-                                fontSize: '16px'
-                            }}
-                        >
-                            <Box mb={1}>{t('description.UWCSSA_desc1')}</Box>
-                            <Box mb={1}>{t('description.UWCSSA_desc2')}</Box>
-                            <Box mb={1}>{t('description.UWCSSA_desc3')}</Box>
-                            <Box mb={1}>{t('description.UWCSSA_desc4')}</Box>
-                        </StyledTextContainer>
                     </StyledCard>
                     <StyledCard sx={{m: 0, mt: 1}}>
                         <StyledTextContainer>

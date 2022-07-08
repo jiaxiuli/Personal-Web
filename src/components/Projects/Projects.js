@@ -21,6 +21,7 @@ import ProjectSwitch from "../projectSwitch/ProjectSwitch";
 import UWCSSA from "./components/UWCSSA";
 import Bhpm from "./components/Bhpm";
 import NTF from './components/NFT';
+import LifeLink from "./components/LifeLink";
 import FaceRecognition from './components/FaceRecognition';
 // import useMediaQuery from '@mui/material/useMediaQuery';
 import './index.css';
@@ -38,7 +39,7 @@ export const projectList = [{
 },{
     index: 2,
     title: 'Web app of social media using React and NodeJS',
-    component: <UWCSSA />,
+    component: <LifeLink />,
 },{
     index: 3,
     title: '"NFT Digital Collection" lucky draw for Li Auto the 7th anniversary',
