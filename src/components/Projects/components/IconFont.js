@@ -3,12 +3,9 @@ import React from 'react';
 import Box from '@mui/material/Box';
 import StyledCard from "../../common/StyledCard";
 import StyledTextContainer from "../../common/StyledTextContainer";
-import ProjectLink from '../../common/ProjectLink';
 import { useTranslation } from "react-i18next";
-import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/opacity.css';
 import { Chip } from '@mui/material';
-import style from './common.less';
 import ProjectInfo from '../../common/ProjectInfo';
 import { styled } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
@@ -18,7 +15,7 @@ const ListItem = styled(Box)(({ theme }) => ({
   marginBottom: theme.spacing(),
 }));
 
-const chips = ['React.js', 'TypeScript', 'MUI', 'GraphQL', 'AWS', 'Serverless', 'Google map api']
+const chips = ['React.js', 'TypeScript', 'axios', 'REST apis', 'Node.js']
 
 const IconFont = () => {
 
