@@ -158,8 +158,13 @@ i18n.use(initReactI18next)
                         lifeLink_desc2: 'However, after starting the project for a period of time, the project had to be discontinued due to work and other projects.',
                         lifeLink_desc3: `Currently, I have completed some modules, including user authentication and profile, post articles and pictures, browse posts from friends and "like" or "collect" the posts.`,
                         lifeLink_highlight1: `Build the whole APP from 0, including the front end, back end and database, as well as product functions and UI design.`,
-                        lifeLink_highlight2: 'Able to think independently and solved technical and logical-designed problems independently.'
+                        lifeLink_highlight2: 'Able to think independently and solved technical and logical-designed problems independently.',
 
+                        iconFont_desc1: `This project is a platform that designed to improve collaboration among front end developers, UI designers, and product managers.`,
+                        iconFont_desc2: `This platform was developed for Beijing YuanLi Future Technology Co., LTD, used by all research and development staffs in the company, around 20,000+.`,
+                        iconFont_desc3: `Its main function is to support the creation of atlas and projects, while users can add an atlas or a project collaborator as an administrator, users can also browse all atlas and favorites ICONS from them.`,
+                        iconFont_desc4: `I was a front end developer in this project and responsible for the development of the front end parts of atlas and projects.`,
+                        iconFont_desc5: 'I implemented a reusable animation effect of "favorite" that only needed to pass different parameters on different pages in the project.',
 
                     }
                 }

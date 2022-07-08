@@ -41,6 +41,7 @@ const UWCSSA = () => {
             }}>
                 <Box
                     sx={{
+                        minHeight: '100%',
                         height: 'auto',
                         display: 'flex',
                         "@media screen and (max-width: 1000px)": {
@@ -87,6 +88,7 @@ const UWCSSA = () => {
                             </StyledTextContainer>
                         </StyledCard>
                     </Box>
+                    
                     <Box flex={1}>
                         <Box
                             pl={2}
