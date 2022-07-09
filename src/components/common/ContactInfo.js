@@ -20,6 +20,10 @@ const StyledBox = styled(Box)(({theme}) => ({
     '&:hover': {
         backgroundColor: '#eee'
     },
+    "@media screen and (max-width: 1200px)": {
+        width: '20px',
+        height: '20px',
+    },
     "@media screen and (max-width: 900px)": {
         width: '15px',
         height: '15px',
