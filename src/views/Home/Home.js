@@ -92,7 +92,9 @@ const Home = () => {
 
     const checkContactInfoOpen = () => {
         const scrollTop = $('html, body').scrollTop();
-        setContactOpen(scrollTop === 0);
+        const scrollHeight = $(document).height();
+        const windowHeight = $(window).height();
+        setContactOpen(scrollTop === 0 || (scrollTop + windowHeight === scrollHeight));
     }
 
     return (

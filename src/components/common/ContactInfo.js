@@ -87,6 +87,7 @@ const ContactInfo = ({ open, setOpen, style }) => {
             </StyledBox>
             <Tooltip
                 enterTouchDelay={0}
+                leaveTouchDelay={false}
                 title={
                     <Box width='200px' height='auto' display='flex' flexDirection='column' alignItems='center'>
                         <img src='./photos/QRCode.jpg' width='100%' alt='wechat'/>
@@ -102,6 +103,7 @@ const ContactInfo = ({ open, setOpen, style }) => {
 
             <Tooltip
                 enterTouchDelay={0}
+                leaveTouchDelay={false}
                 title={
                     <Box width='290px' paddingX={1} paddingY={2}>
                         <Box
@@ -142,6 +144,7 @@ const ContactInfo = ({ open, setOpen, style }) => {
 
             <Tooltip
                 enterTouchDelay={0}
+                leaveTouchDelay={false}
                 title={
                     <Box width='290px' paddingX={1} paddingY={2}>
                          {/* <Box
