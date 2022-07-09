@@ -86,6 +86,7 @@ const ContactInfo = ({ open, setOpen, style }) => {
                 <img src='./contact_icon/linkedin.svg' alt='linkedin'/>
             </StyledBox>
             <Tooltip
+                enterTouchDelay={0}
                 title={
                     <Box width='200px' height='auto' display='flex' flexDirection='column' alignItems='center'>
                         <img src='./photos/QRCode.jpg' width='100%' alt='wechat'/>
@@ -100,6 +101,7 @@ const ContactInfo = ({ open, setOpen, style }) => {
             </Tooltip>
 
             <Tooltip
+                enterTouchDelay={0}
                 title={
                     <Box width='290px' paddingX={1} paddingY={2}>
                         <Box
@@ -139,6 +141,7 @@ const ContactInfo = ({ open, setOpen, style }) => {
 
 
             <Tooltip
+                enterTouchDelay={0}
                 title={
                     <Box width='290px' paddingX={1} paddingY={2}>
                          {/* <Box
