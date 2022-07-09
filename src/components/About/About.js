@@ -16,6 +16,7 @@ import Avatar from '@mui/material/Avatar';
 import ResumeDownload from '../common/ResumeDownload';
 import IntroItems from "../common/IntroItems";
 import StackItems from '../common/StackItems';
+import ContactInfo from "../common/ContactInfo";
 import { useTranslation } from "react-i18next";
 
 const About  = () => {
@@ -66,6 +67,28 @@ const About  = () => {
                     </FlexBox>
                     <FlexBox>
                        <ResumeDownload />
+                    </FlexBox>
+                    <FlexBox
+                        sx={{
+                            display: 'none',
+                            "@media screen and (max-width: 900px)": {
+                              display: 'flex'
+                            },
+                        }}
+                    >
+                       <ContactInfo
+                        open={true}
+                        style={{
+                            position: 'relative',
+                            top: '0px',
+                            right: 0,
+                            width: '250px !important',
+                            height: '40px',
+                            paddingX: 0,
+                            mt: 2,
+                            borderRadius: '20px'
+                        }}
+                    />
                     </FlexBox>
                     <Box sx={{
                         display: 'flex',

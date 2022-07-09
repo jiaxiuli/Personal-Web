@@ -16,9 +16,9 @@ const ListItem = styled(Box)(({ theme }) => ({
   marginBottom: theme.spacing(),
 }));
 
-const chips = ['React.js', 'JavaScript', 'Ant Design', 'REST apis', 'Node.js', 'express.js', '1-person team']
+const chips = ['Django', 'Python', 'JavaScript', 'jQuery', 'REST apis', 'AJAX', '1-person team']
 
-const LifeLink = () => {
+const HealthCare = () => {
 
     const { t }  = useTranslation();
     const matches = useMediaQuery('(max-width: 1150px)');
@@ -59,8 +59,7 @@ const LifeLink = () => {
                             }
                         }}
                     >
-                        <QuiltedImageList pics={['./photos/lifelink1.png', './photos/lifelink2.png']}/>
-                     
+                        <QuiltedImageList pics={['./photos/healthCare1.png', './photos/healthCare2.png']} objectPosition=''/>
                     </Box>
                     <Box flex={1} ml={2}>
                         <Box
@@ -91,8 +90,8 @@ const LifeLink = () => {
                                 <Box paddingY={1}>
                                     <ProjectInfo
                                         role={t('description.fullStackdDev')}
-                                        startTime='2021.12'
-                                        endTime={t('description.suspend')}
+                                        startTime='2020.09'
+                                        endTime='2020.11'
                                     />
                                 </Box>
                             </Box>
@@ -109,13 +108,8 @@ const LifeLink = () => {
                             >
                                 <ProjectLink
                                     img={'./stack_icons/github.png'}
-                                    desc='front-end'
-                                    link='https://github.com/jiaxiuli/LifeLink-social-media-react'
-                                />
-                                <ProjectLink
-                                    img={'./stack_icons/github.png'}
-                                    desc='server'
-                                    link='https://github.com/jiaxiuli/LifeLink-socal-media-app-nodeJS-server'
+                                    desc='GitHub'
+                                    link='https://github.com/jiaxiuli/HealthCare-using-Django'
                                 />
                             </StyledCard>
                         </Box>
@@ -132,9 +126,9 @@ const LifeLink = () => {
                                     >
                                         {t('description.introduction')}
                                     </StyledTextContainer>
-                                    <Box mb={2}>{t('description.lifeLink_desc1')}</Box>
-                                    <Box mb={2}>{t('description.lifeLink_desc2')}</Box>
-                                    <Box mb={2}>{t('description.lifeLink_desc3')}</Box>
+                                    <Box mb={2}>{t('description.healthCare_desc1')}</Box>
+                                    <Box mb={2}>{t('description.healthCare_desc2')}</Box>
+                                    <Box mb={2}>{t('description.healthCare_desc3')}</Box>
                                 </StyledTextContainer>
                             </StyledCard>
                             <StyledTextContainer sx={{mt: 3}}>
@@ -145,8 +139,8 @@ const LifeLink = () => {
                                 </StyledTextContainer>
                                 {
                                     [
-                                        t('description.lifeLink_highlight1'),
-                                        t('description.lifeLink_highlight2'),
+                                        t('description.healthCare_highlight1'),
+                                        t('description.healthCare_highlight2'),
                                     ].map((item, index) => (
                                         <Box display='flex' alignItems='center' m={2} key={index}>
                                             <Box 
@@ -191,14 +185,9 @@ const LifeLink = () => {
                             }}
                         >
                             <ProjectLink
-                                    img={'./stack_icons/github.png'}
-                                    desc='front-end'
-                                    link='https://github.com/jiaxiuli/LifeLink-social-media-react'
-                            />
-                            <ProjectLink
                                 img={'./stack_icons/github.png'}
-                                desc='server'
-                                link='https://github.com/jiaxiuli/LifeLink-socal-media-app-nodeJS-server'
+                                desc='GitHub'
+                                link='https://github.com/jiaxiuli/HealthCare-using-Django'
                             />
                         </StyledCard>
                         <Box display='flex' flexWrap='wrap' mt={2}>
@@ -220,8 +209,8 @@ const LifeLink = () => {
                         <Box paddingY={1}>
                             <ProjectInfo
                                 role={t('description.fullStackdDev')}
-                                startTime='2021.12'
-                                endTime={t('description.suspend')}
+                                startTime='2020.09'
+                                endTime='2020.11'
                             />
                         </Box>
                     </Box>
@@ -233,7 +222,7 @@ const LifeLink = () => {
                             src="./photos/UWCSSA.png" // use normal <img> attributes as props
                         />
                     </Box> */}
-                    <QuiltedImageList pics={['./photos/lifelink1.png', './photos/lifelink2.png']}/>
+                    <QuiltedImageList pics={['./photos/healthCare1.png', './photos/healthCare2.png']} objectPosition=''/>
                     <StyledCard sx={{m: 0, mt: 1}}>
                         <StyledTextContainer
                             sx={{
@@ -246,9 +235,9 @@ const LifeLink = () => {
                             >
                                 {t('description.introduction')}
                             </StyledTextContainer>
-                            <Box mb={2}>{t('description.lifeLink_desc1')}</Box>
-                            <Box mb={2}>{t('description.lifeLink_desc2')}</Box>
-                            <Box mb={2}>{t('description.lifeLink_desc3')}</Box>
+                            <Box mb={2}>{t('description.healthCare_desc1')}</Box>
+                            <Box mb={2}>{t('description.healthCare_desc2')}</Box>
+                            <Box mb={2}>{t('description.healthCare_desc3')}</Box>
                         </StyledTextContainer>
                     </StyledCard>
                     <StyledCard sx={{m: 0, mt: 1}}>
@@ -261,8 +250,8 @@ const LifeLink = () => {
                             </StyledTextContainer>
                             {
                                 [
-                                    t('description.lifeLink_highlight1'),
-                                    t('description.lifeLink_highlight2'),
+                                    t('description.healthCare_highlight1'),
+                                    t('description.healthCare_highlight2'),
                                 ].map((item, index) => (
                                     <Box display='flex' alignItems='center' m={2} key={index}>
                                         <Box 
@@ -287,4 +276,4 @@ const LifeLink = () => {
     )
 }
 
-export default LifeLink;
+export default HealthCare;

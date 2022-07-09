@@ -12,7 +12,25 @@ function srcset(image, size, rows = 1, cols = 1) {
   };
 }
 
-export default function QuiltedImageList() {
+export default function QuiltedImageList({ pics, objectPosition='left top' }) {
+
+  const itemData = [
+    {
+      // img: './photos/lifelink1.png',
+      img: pics[0],
+      title: 'lifelink1',
+      rows: 2,
+      cols: 4,
+    },
+    {
+      // img: './photos/lifelink2.png',
+      img: pics[1],
+      title: 'lifelink2',
+      cols: 4,
+      rows: 1,
+    },
+  ];
+
   return (
     <Box sx={{ 
       width: '100%',
@@ -38,7 +56,7 @@ export default function QuiltedImageList() {
                 <img
                     {...srcset(item.img, 121, item.rows, item.cols)}
                     style={{
-                      objectPosition: 'left top'
+                      objectPosition: objectPosition
                     }}
                     alt={item.title}
                     loading="lazy"
@@ -50,51 +68,3 @@ export default function QuiltedImageList() {
   
   );
 }
-
-const itemData = [
-  {
-    img: './photos/lifelink1.png',
-    title: 'lifelink1',
-    rows: 2,
-    cols: 4,
-  },
-  // {
-  //   img: './photos/bhpm2.png',
-  //   title: 'Camera',
-  //   rows: 1,
-  //   cols: 2,
-  // },
-  // {
-  //   img: './stack_icons/bhpm_logo.png',
-  //   title: 'Burger',
-  //   rows: 1,
-  //   cols: 2,
-  // },
-  {
-    img: './photos/lifelink2.png',
-    title: 'lifelink2',
-    cols: 4,
-    rows: 1,
-  },
-//   {
-//     img: 'https://images.unsplash.com/photo-1533827432537-70133748f5c8',
-//     title: 'Hats',
-//     cols: 2,
-//   },
-//   {
-//     img: 'https://images.unsplash.com/photo-1558642452-9d2a7deb7f62',
-//     title: 'Honey',
-//     author: '@arwinneil',
-//     rows: 2,
-//     cols: 2,
-//   },
-//   {
-//     img: 'https://images.unsplash.com/photo-1516802273409-68526ee1bdd6',
-//     title: 'Basketball',
-//   },
-//   {
-//     img: 'https://images.unsplash.com/photo-1518756131217-31eb79b20e8f',
-//     title: 'Fern',
-//   },
-
-];

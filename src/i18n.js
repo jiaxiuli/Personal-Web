@@ -166,6 +166,18 @@ i18n.use(initReactI18next)
                         iconFont_desc4: `I was a front end developer in this project and responsible for the development of the front end parts of atlas and projects.`,
                         iconFont_desc5: 'I implemented a reusable animation effect of "favorite" that only needed to pass different parameters on different pages in the project.',
 
+                        healthCare_desc1: 'This is a platform that provides online medical service, a full stack project finished by my own in my studenthood!',
+                        healthCare_desc2: 'There are two kinds of account, patients and doctors, which is determined when registration by the user. ',
+                        healthCare_desc3: `Patients are able to edit their personal profile, add a symptom record and send to a doctor while doctors can reply to the patients. As well as make an 
+                        offline appointment and online chat for all registered users.`,
+                        healthCare_highlight1: `This project was the starting point of my front end learning. I finished this project in 3 months with few front end knowledge originally, 
+                        which is an embodiment of my learning abilities and problem-solving abilities.`,
+                        healthCare_highlight2: 'Designed and implemented the function of online chat by polling.',
+
+                        weChatNo: 'WeChat No: LJX1023704808',
+                        china: 'China: ',
+                        canada: 'Canada: '
+
                     }
                 }
             },

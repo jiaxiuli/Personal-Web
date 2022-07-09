@@ -23,6 +23,7 @@ import Bhpm from "./components/Bhpm";
 import NTF from './components/NFT';
 import LifeLink from "./components/LifeLink";
 import IconFont from './components/IconFont';
+import HealthCare from "./components/HealthCare";
 import FaceRecognition from './components/FaceRecognition';
 // import useMediaQuery from '@mui/material/useMediaQuery';
 import './index.css';
@@ -52,7 +53,7 @@ export const projectList = [{
 },{
     index: 5,
     title: 'Health care web application using Django',
-    component: <UWCSSA />,
+    component: <HealthCare />,
 },{
     index: 6,
     title: 'Face recognition and processing',

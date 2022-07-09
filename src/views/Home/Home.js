@@ -9,6 +9,7 @@ import Box from '@mui/material/Box';
 import TopBar from "../../components/TopBar/TopBar";
 import style from './Home.less';
 import { useEffect, useRef, useState } from "react";
+import ContactInfo from '../../components/common/ContactInfo';
 import $ from 'jquery';
 
 $.extend($.easing,  
@@ -32,6 +33,7 @@ const Home = () => {
     const cardContainer = useRef();
     const [tabValue, setTabValue] = useState(0);
     const [offsetTopList, setOffsetTopList] = useState([]);
+    const [contactOpen, setContactOpen] = useState(true);
 
     window.onresize = () => {
         getOffsetTopList();
@@ -55,7 +57,7 @@ const Home = () => {
         const cardList = cardContainer.current.childNodes;
         setTabValue(newValue);
         if (cardList) {
-            window.onscroll = null;
+            window.onscroll = checkContactInfoOpen;
             $('html, body').stop().animate(
                 {
                     scrollTop: !newValue ? 0 : $(cardList[newValue]).offset().top - 72
@@ -69,6 +71,7 @@ const Home = () => {
 
     const setTabsWhenScroll = () => {
         const scrollTop = $('html, body').scrollTop();
+        checkContactInfoOpen();
         offsetTopList.reduce((current, next, index) => {
             if (scrollTop >= current && scrollTop < next) {
                 setTabValue(index);
@@ -87,12 +90,27 @@ const Home = () => {
         setOffsetTopList(offsetTops);
     }
 
+    const checkContactInfoOpen = () => {
+        const scrollTop = $('html, body').scrollTop();
+        setContactOpen(scrollTop === 0);
+    }
+
     return (
         <div className={style.main}>
             <TopBar
                 handleTabChange={handleTabChange}
                 tabValue={tabValue}
             />
+            <Box
+                sx={{
+                    "@media screen and (max-width: 900px)": {
+                        display: 'none'
+                    }
+                }}
+            >
+                <ContactInfo open={contactOpen} setOpen={setContactOpen}/>
+            </Box>
+            
             <CardContainer ref={cardContainer}>
                 <About />
                 <Education />
