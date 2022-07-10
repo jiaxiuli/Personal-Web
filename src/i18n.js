@@ -12,7 +12,7 @@ i18n.use(initReactI18next)
             en_us: {
                 translation: {
                     description: {
-                        name: 'Jiaxiu Li',
+                        name: 'Jiaxiu Li ( Leo )',
                         intro: 'Software Engineer & Music Lover',
                         about: 'About',
                         edu: 'Education',
@@ -176,7 +176,10 @@ i18n.use(initReactI18next)
 
                         weChatNo: 'WeChat No: LJX1023704808',
                         china: 'China: ',
-                        canada: 'Canada: '
+                        canada: 'Canada: ',
+
+                        welcomeToVisit: 'Welcome to visit: ',
+                        torontoCanada: 'Toronto, Ontario, Canada'
 
                     }
                 }
