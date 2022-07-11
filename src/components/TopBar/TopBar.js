@@ -3,7 +3,6 @@ import { styled } from '@mui/material/styles';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
-import Avatar from '@mui/material/Avatar';
 import LanguageSwitch from '../LanguageSwitch/LanguageSwitch';
 import NavigatorList from '../NavigatorList/NavigatorList';
 import { useTranslation } from 'react-i18next';
@@ -105,22 +104,28 @@ const TopBar = (props) => {
         <Box className={style.main}>
             <TabsContainer>
                 <Box sx={{display: 'flex', alignItems: 'center'}}>
-                    <Avatar
-                        variant="circular"
+                    <Box
                         sx={{
-                            width: 56,
-                            height: 56,
+                            width: 40,
+                            height: 50,
                             boxShadow: 'rgba(100, 100, 111, 0.2) 0px 7px 29px 0px',
                             "@media screen and (max-width: 450px)": {
-                                width: 45,
-                                height: 45,
+                                width: 30,
+                                height: 37,
+                                ml: 1
                             },
                             "@media screen and (max-width: 400px)": {
+                                width: 26,
+                                height: 32,
+                                ml: 1
+                            },
+                            "@media screen and (max-width: 380px)": {
                                 display: 'none'
                             },
                         }}
-                        src="./photo.png"
-                    />
+                    >
+                        <img width='100%' src="./logo_leo.png" alt='logo'/>
+                    </Box>
                     <Box className={style.topBarText}>
                         <div className={style.name}>{t("description.name")}</div>
                         <div className={style.intro}>{t("description.intro")}</div>
