@@ -44,7 +44,7 @@ const Other  = () => {
                 <Box
                     sx={{
                         width: '100%',
-                        height: '100px',
+                        height: '80px',
                         paddingY: 2,
                         paddingX: 4,
                         backgroundColor: '#1D2640',
@@ -75,10 +75,10 @@ const Other  = () => {
                         
                         <Box
                             sx={{
-                                width: '40px',
+                                width: '25px',
                                 mr: 2,
                                 "@media screen and (max-width: 1000px)": {
-                                    width: '30px',
+                                    width: '20px',
                                 },
                             }}>
                             <img width='100%' src='./logo_leo.png' alt='logo'/>
