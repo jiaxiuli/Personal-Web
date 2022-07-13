@@ -158,9 +158,11 @@ const IconFont = () => {
                                     boxShadow: 'rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px',
                                 }}
                             >
-                                <source src="./videos/iconFont.mp4"
-                                        type="video/mp4" />
-                                Sorry, your browser doesn't support embedded videos.
+                                <source
+                                    src="./videos/iconFont.mp4"
+                                    type="video/mp4"
+                                />
+                                    Sorry, your browser doesn't support embedded videos.
                             </video>
                         </Box>
                     </Box>
