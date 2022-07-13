@@ -78,6 +78,7 @@ const IconFont = () => {
                             <Box mr={2}>
                                 <video
                                     controls
+                                    poster='./videos/iconFont_cover.png'
                                     width="100%"
                                     style={{
                                         borderRadius: '14px',
@@ -151,6 +152,7 @@ const IconFont = () => {
                             <video
                                 controls
                                 width="100%"
+                                poster='./videos/iconFont_cover.png'
                                 style={{
                                     borderRadius: '14px',
                                     boxShadow: 'rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px',

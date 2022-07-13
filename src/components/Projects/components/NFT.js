@@ -58,6 +58,7 @@ const NTF = () => {
                         <video
                             controls
                             height="100%"
+                            poster='./videos/ntf_cover.png'
                             style={{
                                 borderRadius: '14px',
                                 boxShadow: 'rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px',
@@ -230,6 +231,7 @@ const NTF = () => {
                             {/* <ImageList /> */}
                             <video
                                 controls
+                                poster='./videos/ntf_cover.png'
                                 width="100%"
                                 style={{
                                     borderRadius: '14px',

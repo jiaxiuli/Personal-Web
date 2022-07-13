@@ -197,7 +197,8 @@ const Other  = () => {
                                 width: '40px',
                                 mr: 2,
                                 "@media screen and (max-width: 1000px)": {
-                                    width: '20px',
+                                    width: '16px',
+                                    mr: 1,
                                 },
                             }}>
                             <img width='100%' src='./logo_leo.png' alt='logo'/>
