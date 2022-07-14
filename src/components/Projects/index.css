@@ -2,3 +2,7 @@
     padding: 12px;
     box-sizing: border-box;
 }
+
+.swiper-pagination {
+    position: relative;
+}

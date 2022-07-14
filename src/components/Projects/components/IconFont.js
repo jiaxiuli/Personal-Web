@@ -32,7 +32,7 @@ const IconFont = () => {
                 "@media screen and (max-width: 1500px)": {
                     width: '100%',
                 },
-                "@media screen and (max-width: 1000px)": {
+              "@media screen and (max-width: 1000px)": {
                     height: '80vh',
                 },
             }}>

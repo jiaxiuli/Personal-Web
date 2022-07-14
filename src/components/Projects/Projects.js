@@ -26,6 +26,8 @@ import IconFont from './components/IconFont';
 import HealthCare from "./components/HealthCare";
 import FaceRecognition from './components/FaceRecognition';
 // import useMediaQuery from '@mui/material/useMediaQuery';
+import { Pagination } from "swiper";
+import "swiper/css/pagination";
 import './index.css';
 import "swiper/css";
 import "swiper/css/effect-cards";
@@ -167,6 +169,9 @@ const Projects  = () => {
                         '@media screen and (max-width: 1200px)': {
                             paddingX: 'calc(4% - 12px)',
                         },
+                        '@media screen and (max-width: 1000px)': {
+                            display: 'none'
+                        },
                     }}
                 >
                     <Swiper
@@ -183,6 +188,48 @@ const Projects  = () => {
                             projectList.map((item) => 
                                 <SwiperSlide key={item.title}>{item.component}</SwiperSlide>)
                         }
+                    </Swiper>
+                </Box>
+
+                <Box
+                    sx={{
+                        width: '100%',
+                        boxSizing: 'border-box',
+                        display: 'none',
+                        mb: 2,
+                        '@media screen and (max-width: 1000px)': {
+                            display: 'block'
+                        },
+                    }}
+                >
+                    <Swiper
+                        effect={"cards"}
+                        cardsEffect={{
+                            slideShadows: false
+                        }}
+                        grabCursor={true}
+                        modules={[EffectCards]}
+                        
+                    >
+                        
+                    </Swiper>
+
+                    <Swiper
+                        slidesPerView={1}
+                        centeredSlides={true}
+                        spaceBetween={0}
+                        grabCursor={true}
+                        pagination={{
+                            clickable: true,
+                        }}
+                        modules={[Pagination]}
+                        onSlideChange={(e) => setCurrentIndex(e.activeIndex)}
+                    >
+                    <SwipeCommiter currentIndex={currentIndex}/>
+                            {
+                                projectList.map((item) => 
+                                    <SwiperSlide key={item.title}>{item.component}</SwiperSlide>)
+                            }
                     </Swiper>
                 </Box>
             </FlexBox>
