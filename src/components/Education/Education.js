@@ -105,9 +105,9 @@ const Education  = () => {
                                                 <UniveristyInfo
                                                     path='./photos/hut.jpg'
                                                     schoolInfo={{   
-                                                        name: 'Hunan University of Technology',
-                                                        location: 'Hunan Province, China',
-                                                        major: 'Internet of Things',
+                                                        name: t('description.hut_name'),
+                                                        location: t('description.hut_loc'),
+                                                        major: t('description.hut_major'),
                                                         time: '2015.9 - 2019.6'
                                                     }}
                                                 />

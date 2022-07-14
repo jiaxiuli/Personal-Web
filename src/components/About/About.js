@@ -140,25 +140,25 @@ const About  = () => {
                                             items={['Vuex', 'Router']}/>
                                         <StackItems 
                                             iconPath='./stack_icons/css.png'
-                                            title='CSS Pre-processor'
+                                            title={t('description.CSSpre')}
                                             items={['Sass', 'Less']}/>
                                         <StackItems 
                                             iconPath='./stack_icons/api.png'
                                             title='APIs'
                                             items={['Ajax', 'Axios', 'REST', 'GraphQL']}/>
-                                        <StackItems 
+                                        {/* <StackItems 
                                             iconPath='./stack_icons/database.png'
-                                            title='Database'
-                                            items={['MySQL', 'MongoDB']}/>
+                                            title={t('description.database')}
+                                            items={['MySQL', 'MongoDB']}/> */}
                                     </Box>
                                     <Box style={{flex: 1}}>
                                         <StackItems 
                                             iconPath='./stack_icons/tool.png'
-                                            title='Other Tools & Libs'
-                                            items={['jQuery', 'Bootstrap', 'Express', 'Git']}/>
+                                            title={t('description.other_lib')}
+                                            items={['jQuery', 'MUI', 'Express', 'Git']}/>
                                         <StackItems 
                                             iconPath='./stack_icons/programming-language.png'
-                                            title='Programming Languages'
+                                            title={t('description.program_lang')}
                                             languages={[{
                                                 name: 'HTML',
                                                 path: './stack_icons/html.png'
@@ -180,7 +180,7 @@ const About  = () => {
                                             }]}/>
                                         <StackItems 
                                             iconPath='./stack_icons/platform.png'
-                                            title='Platforms & Editors'
+                                            title={t('description.plat_editor')}
                                             languages={[{
                                                 name: 'Visual Studio Code',
                                                 path: './stack_icons/vscode.svg'

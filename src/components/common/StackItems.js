@@ -19,7 +19,7 @@ const StackItems = ({
         <div style={{
             width: 'auto',
             marginLeft: '8px',
-            padding: '10px 0px'
+            padding: '16px 0px'
         }}>
             <div
                 style={{
