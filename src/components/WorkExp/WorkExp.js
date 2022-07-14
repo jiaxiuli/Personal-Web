@@ -292,7 +292,7 @@ const WorkExp  = () => {
                                                  startTime='2020.09'
                                                  endTime='2021.06'
                                                  location={t('description.maple_data_loc')}
-                                                 position={t('description.frontendEng')}
+                                                 position={t('description.frontendDev')}
                                             />
                                         </StyledCard>
                                         <StyledCard sx={{ml: 2, paddingX: 3}}>
@@ -301,7 +301,7 @@ const WorkExp  = () => {
                                                  startTime='2021.06'
                                                  endTime={t('description.atPresent')}
                                                  location={t('description.maple_data_loc')}
-                                                 position={t('description.frontendEng')}
+                                                 position={t('description.frontendDev')}
                                             />
                                         </StyledCard>
                                     </Box>
@@ -685,7 +685,7 @@ const WorkExp  = () => {
                                                  startTime='2020.09'
                                                  endTime='2021.06'
                                                  location={t('description.maple_data_loc')}
-                                                 position={t('description.frontendEng')}
+                                                 position={t('description.frontendDev')}
                                             />
                                         </StyledCard>
                                         <StyledCard sx={{ml: 2, paddingX: 3}}>
@@ -694,7 +694,7 @@ const WorkExp  = () => {
                                                  startTime='2021.06'
                                                  endTime={t('description.atPresent')}
                                                  location={t('description.maple_data_loc')}
-                                                 position={t('description.frontendEng')}
+                                                 position={t('description.frontendDev')}
                                             />
                                         </StyledCard>
                                     </Box>

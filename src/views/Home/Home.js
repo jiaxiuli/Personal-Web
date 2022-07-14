@@ -11,6 +11,7 @@ import style from './Home.less';
 import { useEffect, useRef, useState } from "react";
 import ContactInfo from '../../components/common/ContactInfo';
 import $ from 'jquery';
+import i18n from 'i18next';
 
 $.extend($.easing,  
     {  
@@ -40,6 +41,9 @@ const Home = () => {
     };
     useEffect(() => {
         getOffsetTopList();
+        i18n.on('languageChanged', () => {
+            getOffsetTopList();
+        })
         return () => {
             window.onscroll = null;
             window.onresize = null;

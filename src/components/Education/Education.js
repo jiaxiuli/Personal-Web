@@ -263,9 +263,9 @@ const Education  = () => {
                                             <UniveristyInfo
                                                 path='./photos/uw.jpg'
                                                 schoolInfo={{
-                                                    name: 'University of Windsor',
-                                                    location: 'Ontario, Canada',
-                                                    major: 'Applied Computing',
+                                                    name: t('description.uw_name'),
+                                                    location: t('description.uw_loc'),
+                                                    major: t('description.uw_major'),
                                                     time: '2019.9 - 2021.6'
                                                 }}
                                             />

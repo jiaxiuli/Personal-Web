@@ -42,6 +42,9 @@ i18n.use(initReactI18next)
                         hut_name: 'Hunan University of Technology',
                         hut_loc: 'Hunan Province, China',
                         hut_major : 'Internet of Things',
+                        uw_name: 'University of Windsor',
+                        uw_loc: 'Ontario, Canada',
+                        uw_major : 'Applied Computing',
                         edu_undergraduate: 'Undergraduate',
                         edu_postgraduate: 'Postgraduate',
                         undergraduate_p1: `During my undergraduate years, I majored in IoT(Internet of Things) Engineering, which is a combination of 
@@ -57,7 +60,7 @@ i18n.use(initReactI18next)
                         postgraduate_p2: `I did a 
                         lot of projects with my group in Univeristy of Windsor, my work was mainly about front-end part in these projects, I 
                         started to become interested in front-end and to learn front-end knowledge.`,
-                        postgraduate_p3: `For 6 months, I completed a full stack web application using Django, which brought me a huge sense 
+                        postgraduate_p3: `For 3 months, I completed a full stack web application using Django, which brought me a huge sense 
                         of achievement and is a proof of my strong learning ability.`,
                         postgraduate_p4: `That was the origin of my front-end development career in the future.`,
                         edu_core_course: 'Core Courses',
@@ -224,21 +227,20 @@ i18n.use(initReactI18next)
                         // and love in what I do as a job.`,
                         edu_undergraduate: '大学本科',
                         hut_name: '湖南工业大学',
-                        hut_loc: '湖南省，中国',
+                        hut_loc: '中国，湖南省',
                         hut_major : '物联网工程',
+                        uw_name: '温莎大学（University of Windsor）',
+                        uw_loc: '安大略省（Ontario），加拿大（Canada）',
+                        uw_major : '应用计算（Applied Computing）',
                         edu_postgraduate: '硕士研究生',
                         undergraduate_p1: `大学本科期间，我的专业是物联网工程（Internet of Things），这是一个软件和硬件相结合的专业，所以我们不仅要学习编程知识，也要学习硬件，通信相关的知识。`,
                         undergraduate_p2: `我在大学的实验室中接触到了许多有趣的实验，使用各种传感器采集数据，再编程对不同数据做出不同的响应。比如使用光照传感器探测光照强度，控制窗帘自动开关，这样简单有趣的实验，让我对智能化有了新的认识。`,
                         undergraduate_p3: `在不断的学习过程中，我发现我对软件更感兴趣。随着学习深度的增加，我逐渐领略到了数据结构与算法的魅力。`,
                         undergraduate_p4: `所以，我决定在本科毕业后继续去加拿大进一步学习软件开发。`,
-                        postgraduate_p1: `My major in Univeristy of Windsor was Applied Computing, which focuses on practical development 
-                        techniques.`,
-                        postgraduate_p2: `I did a 
-                        lot of projects with my group in Univeristy of Windsor, my work was mainly about front-end part in these projects, I 
-                        started to become interested in front-end and to learn front-end knowledge.`,
-                        postgraduate_p3: `For 6 months, I completed a full stack web application using Django, which brought me a huge sense 
-                        of achievement and is a proof of my strong learning ability.`,
-                        postgraduate_p4: `That was the origin of my front-end development career in the future.`,
+                        postgraduate_p1: `在温莎大学，我的专业是Applied Computing，这个专业主要是对本科阶段软件工程的进一步学习，并更加看重学生的实践能力。`,
+                        postgraduate_p2: `在这段时间里，我完成了许多的实践项目，这也是在本科学习阶段所缺少的东西。在实践中，我对前端开发产生了很大的兴趣，精致的交互与流畅的体验，在我学习前端初期给我带来了很大的兴趣与目标。`,
+                        postgraduate_p3: `从前端0基础到第一次使用Django和jQuery完成了一个全栈项目，我用了3个月。这也是一个让我入门前端，对自己的学习能力感到自信，并给我带来了很大成就感的项目。`,
+                        postgraduate_p4: `我想，这就是我前端开发之路的起点。`,
                         edu_core_course: '核心课程',
                         edu_story: '我的故事',
                         edu_c: '面向过程编程（C语言）',
@@ -250,33 +252,33 @@ i18n.use(initReactI18next)
                         edu_communication: '通信原理',
                         edu_chip: '单片机及接口技术',
                         edu_sensor: '传感器原理及应用',
-                        edu_algorithm: 'Advanced Algorithms',
-                        edu_acc: 'Advanced Computing Concepts',
-                        edu_adt: 'Advanced Database Topics',
-                        edu_software: 'Advanced Software Eng. Topics',
-                        edu_sysPro: 'Advanced Systems Programming',
-                        edu_security: 'Networking and Data Security',
+                        edu_algorithm: '高级算法（Advanced Algorithms）',
+                        edu_acc: '高级计算理论（Advanced Computing Concepts）',
+                        edu_adt: '高级数据库导论（Advanced Database Topics）',
+                        edu_software: '高级软件工程导论（Advanced Software Eng. Topics）',
+                        edu_sysPro: '高级系统编程（Advanced Systems Programming）',
+                        edu_security: '网络与数据安全（Networking and Data Security）',
                         // postgraduate_p3: `I think front-end is an interface between the users and the back-end service, the quality of the front-end may directly 
                         // affect the user's impression of the overall software product.`,
                         // postgraduate_p4: `So high quality code writing and perfect interactive 
                         // experience is what I have been pursuing as a front-end developer.`,
                         // postgraduate_p5: `I've always believed that software development is 
                         // more like creating a work of art and every detail should be paid attention to.`,
-                        fullTime: 'Permanent Full-time',
-                        intern: 'Internship',
-                        partTime: 'Part-time (remote)',
-                        atPresent: 'at present',
-                        suspend: 'suspended',
+                        fullTime: '全职',
+                        intern: '实习',
+                        partTime: '兼职（远程）',
+                        atPresent: '目前',
+                        suspend: '暂停开发',
                         work_content: `After I graduated from University of Windsor and got my Master's degree, I worked as a front-end engineer and I have been 
                         continuously learning development skills. Now, I am trying to develop a complete web application by my own 
                         out of my work, including both front-end and back-end and deploy it on a cloude server.
                         I believe that I will continue to explore technology and get happiness from it in the future, and continue to grow 
                         into a more mature software engineer.`,
-                        company_name_li_auto: `Li Auto Inc.`,
-                        frontendEng: 'Front end Engineer',
-                        frontendDev: 'Front end Developer',
-                        fullStackdDev: 'Full Stack Developer',
-                        liAutoLoc: 'Beijing, China',
+                        company_name_li_auto: `理想汽车`,
+                        frontendEng: '前端研发工程师',
+                        frontendDev: '前端开发工程师',
+                        fullStackdDev: '全栈开发工程师',
+                        liAutoLoc: '中国，北京',
                         li_auto_intro: 'Li Auto Inc. is a leader in China’s new energy vehicle market. The Company designs, develops, manufactures, and sells premium smart electric vehicles. ',
                         li_auto_work_content: `In Li Auto, I worked in the department called "Energy Efficiency Engineering",
                         which aims to improve the efficiency of all software development departments in the company through technical means, as well as
@@ -284,7 +286,7 @@ i18n.use(initReactI18next)
                         li_auto_work_content_item1: `Responsible for the development of internal management systems and debug REST APIs, independently in charge of front-end part of at least two projects that used by all employees (around 12,000) in whole company.`,
                         li_auto_work_content_item2: `Participated in the development of the exclusive UI components library for the department of Front-end Development, which improved development efficiency by 60% in UI building.`,
                         li_auto_work_content_item3: `Earned an E (exceptional) grade for the OKR evaluation in the 1st quarter of 2022.`,
-                        company_name_yuanfudao: 'Beijing YuanLi Future Technology Co., LTD',
+                        company_name_yuanfudao: '北京猿力未来科技有限公司',
                         yuanfudao_intro: `Yuanfudao is the largest online live courseplatform servicing primary and secondary school students in China, with a paying userbase of over 1 million.`,
                         yuanfudao_work_content: `In Yuanfudao, my department was "user growth group", which develops all sorts of marketing campaigns
                         to promote Yuanfudao app and attract new users to purchase our online courses. "user growth group" was a core department in business of the company.`,
@@ -293,7 +295,7 @@ i18n.use(initReactI18next)
                         yuanfudao_content_item3: 'Resolved the problem of video full screen under some versions of Android environment by implementing a fake full screen behavior instead of the original behavior of the player.',
                         yuanfudao_content_item4: 'Did code review and unit tests to guarantee the quality of the code in every project.',
                         company_name_maple_data: 'Maple Data Strategy Inc.',
-                        maple_data_loc: 'Toronto, ON, Canada',
+                        maple_data_loc: '多伦多（Toronto）, 加拿大（Canada）',
                         maple_data_intro: 'Maple Data Strategy a leading IT Service and Training provider in Canada. Maple Data Strategy designs customized end to end business application solutions for on-premise, cloud and hybrid environments. ',
                         maple_data_work_content_p1: `In Sep 2020, I got an internship opportunity in Maple Data Strategy, which was an accelerator of my Front end skills learning, I learnt Vue.js and React.js. In
                         Jan 2021, I went back to China and kept working remotely in Maple Data Strategy.`,
@@ -305,7 +307,7 @@ i18n.use(initReactI18next)
                         maple_data_content_item4: 'Learnt React.js and Vue.js at internship stage.',
                         introduction: 'Introduction',
                         highlights: 'Highlights',
-                        frontend_leader: 'Front end Leader',
+                        frontend_leader: '前端负责人',
 
 
                         UWCSSA_desc1: `This is a website for the community of Chinese students and scholars in University of Windsor.`,
@@ -361,11 +363,11 @@ i18n.use(initReactI18next)
                         which is an embodiment of my learning abilities and problem-solving abilities.`,
                         healthCare_highlight2: 'Designed and implemented the function of online chat by polling.',
 
-                        weChatNo: 'WeChat No: LJX1023704808',
-                        china: 'China: ',
-                        canada: 'Canada: ',
+                        weChatNo: '微信号: LJX1023704808',
+                        china: '中国: ',
+                        canada: '加拿大: ',
 
-                        welcomeToVisit: 'Welcome to visit: ',
+                        welcomeToVisit: '欢迎访问: ',
                         torontoCanada: 'Toronto, Ontario, Canada'
                     }
                 }
