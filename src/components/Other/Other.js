@@ -31,7 +31,6 @@ const Other  = () => {
         >
             <TitleContainer title={t('description.other_con')}/>
             <Footer />
-           
         </Box>
     );  
 };
