@@ -62,7 +62,7 @@ const Footer = () => {
                     }}>
                     <img width='100%' src='./logo_leo.png' alt='logo'/>
                 </Box>
-                {t('description.name')}
+                {t('description.footerName')}
             </Box>
 
             <Box
@@ -182,7 +182,7 @@ const Footer = () => {
                     }}>
                     <img width='100%' src='./logo_leo.png' alt='logo'/>
                 </Box>
-                {t('description.name')}
+                {t('description.footerName')}
             </Box>
 
 

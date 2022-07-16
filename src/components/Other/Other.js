@@ -8,6 +8,7 @@
 import React from "react";
 import Box from '@mui/material/Box';
 import style from './Other.less';
+import FlexBox from "../common/FlexBox";
 // import CopyrightIcon from '@mui/icons-material/Copyright';
 // import EmailIcon from '@mui/icons-material/Email';
 // import LocationOnIcon from '@mui/icons-material/LocationOn';
@@ -15,6 +16,7 @@ import TitleContainer from "../common/TitleContainer";
 // import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import { useTranslation } from "react-i18next";
 import Footer from "./components/Footer";
+import ContactInfo from "../common/ContactInfo";
 
 const Other  = () => {
     
@@ -30,6 +32,28 @@ const Other  = () => {
             style={{ height: 'calc(100vh - 72px)' }}
         >
             <TitleContainer title={t('description.other_con')}/>
+            <FlexBox
+                sx={{
+                        display: 'none',
+                        "@media screen and (max-width: 900px)": {
+                            display: 'flex'
+                        },
+                    }}
+                >
+                    <ContactInfo
+                    open={true}
+                    style={{
+                        position: 'relative',
+                        top: '0px',
+                        right: 0,
+                        width: '250px !important',
+                        height: '40px',
+                        paddingX: 0,
+                        mt: 2,
+                        borderRadius: '20px'
+                    }}
+                />
+            </FlexBox>
             <Footer />
         </Box>
     );  

@@ -61,8 +61,8 @@ const WorkExp  = () => {
                                 <CompanyName
                                     name={t('description.company_name_li_auto')}
                                     type={t('description.fullTime')}
-                                    startTime='2021.11'
-                                    endTime='2022.06'
+                                    startTime='2021.10'
+                                    endTime='2022.07'
                                     location={t('description.liAutoLoc')}
                                     position={t('description.frontendEng')}
                                 />
@@ -299,7 +299,7 @@ const WorkExp  = () => {
                                             <WorkDetailInfo 
                                                  type={t('description.partTime')}
                                                  startTime='2021.06'
-                                                 endTime={t('description.atPresent')}
+                                                 endTime={t('description.atPresent_work')}
                                                  location={t('description.maple_data_loc')}
                                                  position={t('description.frontendDev')}
                                             />
@@ -465,8 +465,8 @@ const WorkExp  = () => {
                                             <CompanyName
                                                 name={t('description.company_name_li_auto')}
                                                 type={t('description.fullTime')}
-                                                startTime='2021.11'
-                                                endTime='2022.06'
+                                                startTime='2021.10'
+                                                endTime='2022.07'
                                                 location={t('description.liAutoLoc')}
                                                 position={t('description.frontendEng')}
                                             />
@@ -692,7 +692,7 @@ const WorkExp  = () => {
                                             <WorkDetailInfo 
                                                  type={t('description.partTime')}
                                                  startTime='2021.06'
-                                                 endTime={t('description.atPresent')}
+                                                 endTime={t('description.atPresent_work')}
                                                  location={t('description.maple_data_loc')}
                                                  position={t('description.frontendDev')}
                                             />

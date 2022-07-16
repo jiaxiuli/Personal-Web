@@ -90,6 +90,7 @@ i18n.use(initReactI18next)
                         intern: 'Internship',
                         partTime: 'Part-time (remote)',
                         atPresent: 'at present',
+                        atPresent_work: 'at present',
                         suspend: 'suspended',
                         work_content: `After I graduated from University of Windsor and got my Master's degree, I worked as a front-end engineer and I have been 
                         continuously learning development skills. Now, I am trying to develop a complete web application by my own 
@@ -185,6 +186,8 @@ i18n.use(initReactI18next)
                         which is an embodiment of my learning abilities and problem-solving abilities.`,
                         healthCare_highlight2: 'Designed and implemented the function of online chat by polling.',
 
+                        footerName: 'Jiaxiu Li ( Leo )',
+
                         weChatNo: 'WeChat No: LJX1023704808',
                         china: 'China: ',
                         canada: 'Canada: ',
@@ -268,6 +271,7 @@ i18n.use(initReactI18next)
                         intern: '实习',
                         partTime: '兼职（远程）',
                         atPresent: '开发中',
+                        atPresent_work: '目前',
                         suspend: '暂停开发',
                         work_content: `After I graduated from University of Windsor and got my Master's degree, I worked as a front-end engineer and I have been 
                         continuously learning development skills. Now, I am trying to develop a complete web application by my own 
@@ -318,41 +322,38 @@ i18n.use(initReactI18next)
                         bhpm_desc1: '这是一个在线拍卖系统，为Bowell Gemology Inc.公司所开发，是一个位于加拿大多伦多的华人拍卖行。',
                         bhpm_desc2: `在这个项目中，我担任前端开发的角色。我负责构建前端页面，通过GraphQL与后端进行数据交互，并处理前端数据的渲染。`,
                         bhpm_desc3:`我与开发团队高效地合作，包括与后端开发人员的接口联调工作，能够快速定位问题，以及和其他前端开发人员调试接口，以设计合理的可重用组件。`,
-                        bhpm_highlight1: `AWS AppSync and GraphQL subscriptions were used to implement the updating of real-time data to subscribing Web clients, so that the bidding information
-                        can be synchronized to all users in real time.`,
-                        bhpm_highlight2: 'Amazon Cognito user pool is used to manage users and the authentication and authorization of the users.',
-                        bhpm_highlight3: `All of the network requests and responses were managed by redux (redux toolkit).`,
-                        bhpm_highlight4: `Website internationalization is implemented using the npm package called "react-i18next". The website allows switching between English and Chinese.`,
+                        bhpm_highlight1: `使用AWS AppSync以及GraphQL订阅实现了服务端到web客户段的消息推送，实时数据更新，从而实现了拍卖信息向所有用户同步的功能。`,
+                        bhpm_highlight2: '使用Amazon Cognito进行用户管理，实现注册登录，邮箱验证，以及不同角色用户的权限控制功能。',
+                        bhpm_highlight3: `网络请求由Redux toolkit结合GraphQL进行统一管理。`,
+                        bhpm_highlight4: `网站国际化是通过npm包“react-i18next”实现的。该网站允许在英文和中文之间切换。`,
 
-                        NTF_desc1: 'This project is an activity for all employees in Li Auto company to draw a digital collection as gifts, in order to celebrate the company\'s 7th anniversary.',
+                        NTF_desc1: '这个项目是为了庆祝理想汽车成立7周年而做的一个抽奖活动，面向公司所有员工抽取NFT数字藏品。',
                         // NTF_desc2: 'The rule of the activity was that users need to answer a couple of questions, after which they can draw their NTF collections.',
-                        NTF_desc2: `I was responsible for the front end development of the main flow of the NTF collections drawing. Including answering questions,
-                        filpping the card to draw the materials and finally compounding the NTF collections using the materials.`,
-                        NTF_desc3: 'There were a few api calls needed and most of the work were interactive animations and the improvement of user experience.',
-                        NTF_highlight1: `Interactive animation and user experience are the key points of my part of work.`,
-                        NTF_highlight2: 'I designed and used serveral different types of animation libs to achieve natural transitions. As shown in the video.',
-                        NTF_highlight3: 'The complex animation of the parts of drawing and compositing is implemented with a well-designed and creative solution.',
+                        NTF_desc2: `我负责了这个项目的前端最主要的部分，抽奖的主流程，包括观看视频后回答问题，问题全部回答正确才能进行抽奖，点击卡片反转抽奖，以及通过抽取的素材合成最终的NFT数字藏品。`,
+                        NTF_desc3: '这个项目的前端部分并没有涉及很多前后端的交互，主要是通过动画效果来优化用户的使用体验。',
+                        NTF_highlight1: `交互动画和用户体验是前端最重要的部分，需要进行比较复杂的dom操作。`,
+                        NTF_highlight2: '结合使用多种不同类型的动画库，包括CSS和JS动画库，设计和实现了流畅自然的过渡效果和交互动画。如视频所示。',
+                        NTF_highlight3: '关于抽奖过程以及最终合成NTF数字藏品的复杂动画，我设计了并实现了一个创造性的解决方案。',
 
-                        lifeLink_desc1: `I did this project for myself to learn and practice system design abilities and some back end skills. This is a social media application for people to 
-                        post articles and pictures to share their life, and interact with their friends.`,
-                        lifeLink_desc2: 'However, after starting the project for a period of time, the project had to be discontinued due to work and other projects.',
-                        lifeLink_desc3: `Currently, I have completed some modules, including user authentication and profile, post articles and pictures, browse posts from friends and "like" or "collect" the posts.`,
-                        lifeLink_highlight1: `Build the whole APP from 0, including the front end, back end and database, as well as product functions and UI design.`,
-                        lifeLink_highlight2: 'Able to think independently and solved technical and logical-designed problems independently.',
+                        lifeLink_desc1: `这是一个我自己的一个个人项目，目的是通过实践的方式学习，练习一些后端技术和整体系统设计的思路。这是一个社交媒体，用户可以发布文章和照片来分享他们的生活，在这个web app上与朋友交互。`,
+                        lifeLink_desc2: '然而，项目启动一段时间后，由于自己的工作和其他项目的原因，没有时间继续开发这个项目了，所以项目不得不中断。',
+                        lifeLink_desc3: `目前，我已经完成了一些模块，包括用户认证和个人资料，发布文章和图片，浏览朋友的帖子，对帖子进行点赞或收藏。`,
+                        lifeLink_highlight1: `从0到1设计并构建了整个系统，包括前端后端的接口交互逻辑，数据库的设计，还有UI设计和产品功能的设计。`,
+                        lifeLink_highlight2: '在这个项目的开发过程中，能够独立思考并解决所遇到的问题，通过实践项目整体的逻辑设计，也收获了很多。',
 
-                        iconFont_desc1: `This project is a platform that designed to improve collaboration among front end developers, UI designers, and product managers.`,
-                        iconFont_desc2: `This platform was developed for Beijing YuanLi Future Technology Co., LTD, used by all research and development staffs in the company, around 20,000+.`,
-                        iconFont_desc3: `Its main function is to support the creation of atlas and projects, while users can add an atlas or a project collaborator as an administrator, users can also browse all atlas and favorites ICONS from them.`,
-                        iconFont_desc4: `I was a front end developer in this project and responsible for the development of the front end parts of atlas and projects.`,
-                        iconFont_desc5: 'I implemented a reusable animation effect of "favorite" that only needed to pass different parameters on different pages in the project.',
+                        iconFont_desc1: `这个项目是一个图标管理平台，旨在提高前端开发人员、UI设计师和产品经理之间的协作效率。`,
+                        iconFont_desc2: `这个项目是在参加猿辅导为期一个月的校招生培训计划“新牛计划”期间所开发，是由刚入职的校招生组成一个小组进行合作开发，上线之后供全公司研发人员使用。`,
+                        iconFont_desc3: `项目的主要功能是支持图集和项目的创建，用户可以作为管理员添加图集或项目合作者，设置图集是否为私密图集，用户还可以浏览所有的公开图集，并收藏其他图集中的图标到自己图集或项目中。`,
+                        iconFont_desc4: `在这个项目中，我是前端开发，主要负责图集和项目模块的前端页面开发和接口联调工作。`,
+                        iconFont_desc5: '在开发过程中，我实现了一个灵活可以复用的方法，用于在收藏图标进入图集的时候的交互动画，可以灵活的用在项目中的多个页面中，具有良好的可移植性。',
 
-                        healthCare_desc1: 'This is a platform that provides online medical service, a full stack project finished by my own in my studenthood!',
-                        healthCare_desc2: 'There are two kinds of account, patients and doctors, which is determined when registration by the user. ',
-                        healthCare_desc3: `Patients are able to edit their personal profile, add a symptom record and send to a doctor while doctors can reply to the patients. As well as make an 
-                        offline appointment and online chat for all registered users.`,
-                        healthCare_highlight1: `This project was the starting point of my front end learning. I finished this project in 3 months with few front end knowledge originally, 
-                        which is an embodiment of my learning abilities and problem-solving abilities.`,
-                        healthCare_highlight2: 'Designed and implemented the function of online chat by polling.',
+                        healthCare_desc1: '这是一个提供在线医疗服务的平台，是我在学生时代自己完成的一个全栈项目!',
+                        healthCare_desc2: '系统分为两种账户类型，医生和病人，由用户在注册的时候选择确定，两种账户有不同的功能。',
+                        healthCare_desc3: `首先，医生和病人都有自己的账户信息，可以由用户进行自定义编辑。病人可以添加一个病例，并把这个病例发送给指定的医生，医生在收到后可以回复诊断和治疗方案。同时系统还提供了在线聊天和线下预约的功能。`,
+                        healthCare_highlight1: `我一直把这个项目视作我真正入门前端的一个项目，从前端的0基础，到使用jQuery和Python完成这个项目，总共用了3个月的时间，我认为这是我解决问题能力和学习能力的一种体现，完成这个项目给我带来了很大的成就感。`,
+                        healthCare_highlight2: '设计和实现了在线聊天功能使用客户段轮询的方式。',
+
+                        footerName: '李佳修的个人网站',
 
                         weChatNo: '微信号: LJX1023704808',
                         china: '中国: ',

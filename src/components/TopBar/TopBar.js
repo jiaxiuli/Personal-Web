@@ -12,7 +12,7 @@ const TabsContainer = styled(Box)(({theme}) => ({
     width: '100%',
     backgroundColor: '#1D2640',
     display: 'flex',
-    justifyContent: 'space-between',
+    justifyContent: 'space-between !important',
     alignItems: 'center',
     boxSizing: 'border-box',
     padding: '8px 20px',
