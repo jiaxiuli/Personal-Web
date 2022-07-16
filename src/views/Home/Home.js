@@ -96,9 +96,10 @@ const Home = () => {
 
     const checkContactInfoOpen = () => {
         const scrollTop = $('html, body').scrollTop();
-        const scrollHeight = $(document).height();
-        const windowHeight = $(window).height();
-        setContactOpen(scrollTop === 0 || (scrollTop + windowHeight === scrollHeight));
+        // const scrollHeight = $(document).height();
+        // const windowHeight = $(window).height();
+        // setContactOpen(scrollTop === 0 || (scrollTop + windowHeight === scrollHeight)); // 滚动条到底时展开联系方式
+        setContactOpen(scrollTop === 0);
     }
 
     return (

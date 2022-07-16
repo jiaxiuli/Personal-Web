@@ -193,7 +193,10 @@ i18n.use(initReactI18next)
                         canada: 'Canada: ',
 
                         welcomeToVisit: 'Welcome to visit: ',
-                        torontoCanada: 'Toronto, Ontario, Canada'
+                        torontoCanada: 'Toronto, Ontario, Canada',
+
+                        music: `Music is an integral part of my life. I play the guitar, drums and piano. During the four years of undergraduate study, I participated in the music festival band performance again and again, and also gained many friends with the same hobby.`,
+                        music2: 'The memories of these wonderful experiences, as well as the music itself, are a lifetime treasure for me.'
 
                     }
                 }
@@ -360,7 +363,10 @@ i18n.use(initReactI18next)
                         canada: '加拿大: ',
 
                         welcomeToVisit: '欢迎访问: ',
-                        torontoCanada: 'Toronto, Ontario, Canada'
+                        torontoCanada: 'Toronto, Ontario, Canada',
+
+                        music: `音乐是我生活中不可缺少的一部分，我演奏吉他，架子鼓和钢琴。大学本科的四年中，我参加了一次又一次的音乐节乐队演出，也收获了许多有着相同爱好的朋友。`,
+                        music2: '不管是这些美好的经历的回忆，还是音乐本身，对我来说都是一生的财富。'
                     }
                 }
             }

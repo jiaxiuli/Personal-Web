@@ -9,14 +9,13 @@ import React from "react";
 import Box from '@mui/material/Box';
 import style from './Other.less';
 import FlexBox from "../common/FlexBox";
-// import CopyrightIcon from '@mui/icons-material/Copyright';
-// import EmailIcon from '@mui/icons-material/Email';
-// import LocationOnIcon from '@mui/icons-material/LocationOn';
 import TitleContainer from "../common/TitleContainer";
-// import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import { useTranslation } from "react-i18next";
 import Footer from "./components/Footer";
 import ContactInfo from "../common/ContactInfo";
+import ImageList from './components/ImageList';
+import StyledTextContainer from '../common/StyledTextContainer';
+import StyledCard from "../common/StyledCard";
 
 const Other  = () => {
     
@@ -26,6 +25,7 @@ const Other  = () => {
         <Box
             className={style.main}
             sx={{
+                width: '100%',
                 display: 'flex',
                 flexDirection: 'column'
             }}
@@ -49,10 +49,44 @@ const Other  = () => {
                         width: '250px !important',
                         height: '40px',
                         paddingX: 0,
-                        mt: 2,
+                        mb: 1,
                         borderRadius: '20px'
                     }}
                 />
+            </FlexBox>
+            <FlexBox sx={{width: '100%', flexDirection: 'column'}}>
+                <StyledCard
+                    sx={{
+                        width : '75%',
+                        p: 2,
+                        "@media screen and (max-width: 1300px)": {
+                            width : '90%',
+                        },
+                        "@media screen and (max-width: 1000px)": {
+                            width : '95%',
+                        }
+                    }}>
+                    <StyledTextContainer>
+                        {t('description.music')}
+                    </StyledTextContainer>
+                    <StyledTextContainer sx={{mt: 2}}>
+                        {t('description.music2')}
+                    </StyledTextContainer>
+                </StyledCard>
+                <Box
+                    sx={{
+                        width: '75%',
+                        pb: 4,
+                        "@media screen and (max-width: 1300px)": {
+                            width : '90%',
+                        },
+                        "@media screen and (max-width: 1000px)": {
+                            width : '95%',
+                        }
+                    }}
+                >
+                    <ImageList />
+                </Box>
             </FlexBox>
             <Footer />
         </Box>

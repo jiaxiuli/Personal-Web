@@ -19,19 +19,19 @@ export default function QuiltedImageList({ direction='vertical', work }) {
   const [itemDataV, setItemDataV] = React.useState([
     {
       img: './photos/li-auto-work.jpg',
-      title: 'Breakfast',
+      title: 'li-auto-work',
       rows: 2,
       cols: 4,
     },
     {
       img: './photos/li-auto-place.jpg',
-      title: 'Burger',
+      title: 'li-auto-place',
       cols: 2,
       rows: 1,
     },
     {
       img: './photos/li-auto-card.jpg',
-      title: 'Camera',
+      title: 'li-auto-card',
       cols: 2,
       rows: 1,
     }])
@@ -39,19 +39,19 @@ export default function QuiltedImageList({ direction='vertical', work }) {
     const [itemDataH, setItemDataH] = React.useState([
       {
         img: './photos/li-auto-work.jpg',
-        title: 'Breakfast',
+        title: 'li-auto-work',
         rows: 1,
         cols: 2,
       },
       {
         img: './photos/li-auto-place.jpg',
-        title: 'Burger',
+        title: 'li-auto-place',
         cols: 1,
         rows: 1,
       },
       {
         img: './photos/li-auto-card.jpg',
-        title: 'Camera',
+        title: 'li-auto-card',
         cols: 1,
         rows: 1,
       }
@@ -62,38 +62,38 @@ export default function QuiltedImageList({ direction='vertical', work }) {
         setItemDataV([
           {
             img: './photos/li-auto-work.jpg',
-            title: 'Breakfast',
+            title: 'li-auto-work',
             rows: 2,
             cols: 4,
           },
           {
             img: './photos/li-auto-place.jpg',
-            title: 'Burger',
+            title: 'li-auto-place',
             cols: 2,
             rows: 1,
           },
           {
             img: './photos/li-auto-card.jpg',
-            title: 'Camera',
+            title: 'li-auto-card',
             cols: 2,
             rows: 1,
           }]);
         setItemDataH([
             {
               img: './photos/li-auto-work.jpg',
-              title: 'Breakfast',
+              title: 'li-auto-work',
               rows: 1,
               cols: 2,
             },
             {
               img: './photos/li-auto-place.jpg',
-              title: 'Burger',
+              title: 'li-auto-place',
               cols: 1,
               rows: 1,
             },
             {
               img: './photos/li-auto-card.jpg',
-              title: 'Camera',
+              title: 'li-auto-card',
               cols: 1,
               rows: 1,
             }
@@ -104,38 +104,38 @@ export default function QuiltedImageList({ direction='vertical', work }) {
         setItemDataV([
           {
             img: './photos/yuanfudao_env.jpg',
-            title: 'Breakfast',
+            title: 'yuanfudao_env',
             rows: 2,
             cols: 4,
           },
           {
             img: './photos/yuanfudao_place.jpg',
-            title: 'Burger',
+            title: 'yuanfudao_place',
             cols: 2,
             rows: 1,
           },
           {
             img: './photos/yuanfudao_card.jpg',
-            title: 'Camera',
+            title: 'yuanfudao_card',
             cols: 2,
             rows: 1,
           }]);
         setItemDataH([
             {
               img: './photos/yuanfudao_env.jpg',
-              title: 'Breakfast',
+              title: 'yuanfudao_env',
               rows: 1,
               cols: 2,
             },
             {
               img: './photos/yuanfudao_place.jpg',
-              title: 'Burger',
+              title: 'yuanfudao_place',
               cols: 1,
               rows: 1,
             },
             {
               img: './photos/yuanfudao_card.jpg',
-              title: 'Camera',
+              title: 'yuanfudao_card',
               cols: 1,
               rows: 1,
             }
