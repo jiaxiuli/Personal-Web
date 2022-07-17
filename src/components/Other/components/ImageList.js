@@ -58,7 +58,7 @@ const itemData = [
     cols: 2,
   },
   {
-    img: './other_photo/photo13.JPG',
+    img: './other_photo/other_photo13.jpg',
     title: 'music palying',
   },
   {
@@ -112,7 +112,7 @@ const itemData = [
     rows: 1,
   },
   {
-    img: './other_photo/photo1.jpg',
+    img: './other_photo/other_photo1.JPG',
     title: 'music palying',
   },
   {
