@@ -118,8 +118,8 @@ const ContactInfo = ({ open, setOpen, style }) => {
                                 alignItems: 'center'
                             }}
                         >
-                            <StyledTextContainer>lijiaxiu1020@gmail.com</StyledTextContainer>
-                            <IconButton aria-label="copy" onClick={() => navigator.clipboard.writeText('lijiaxiu1020@gmail.com', true)}>
+                            <StyledTextContainer>leo.sde.2022@gmail.com</StyledTextContainer>
+                            <IconButton aria-label="copy" onClick={() => navigator.clipboard.writeText('leo.sde.2022@gmail.com', true)}>
                                 <ContentCopyIcon sx={{color: '#fff'}} />
                             </IconButton>
                         </Box>
@@ -151,7 +151,7 @@ const ContactInfo = ({ open, setOpen, style }) => {
                 leaveTouchDelay={60 * 1000}
                 title={
                     <Box width='290px' paddingX={1} paddingY={2}>
-                         {/* <Box
+                         <Box
                             sx={{
                                 mb: 1,
                                 display: 'flex',
@@ -160,11 +160,11 @@ const ContactInfo = ({ open, setOpen, style }) => {
                             }}
                         >
                             <StyledTextContainer>{t('description.canada')}</StyledTextContainer>
-                            <StyledTextContainer>+1 226-787-4514</StyledTextContainer>
-                            <IconButton aria-label="copy" onClick={() => navigator.clipboard.writeText('+12267874514', true)}>
+                            <StyledTextContainer>+1 437-983-6661</StyledTextContainer>
+                            <IconButton aria-label="copy" onClick={() => navigator.clipboard.writeText('+14379836661', true)}>
                                 <ContentCopyIcon sx={{color: '#fff'}} />
                             </IconButton>
-                        </Box> */}
+                        </Box>
                         <Box
                             sx={{
                                 display: 'flex',
